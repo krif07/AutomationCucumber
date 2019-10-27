@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 56268400,
+              "duration": 56910600,
               "status": "passed"
             },
             "line": 6,
@@ -33,7 +33,7 @@
         "steps": [
           {
             "result": {
-              "duration": 37100,
+              "duration": 47700,
               "status": "passed"
             },
             "line": 10,
@@ -45,7 +45,7 @@
           },
           {
             "result": {
-              "duration": 39400,
+              "duration": 45500,
               "status": "passed"
             },
             "line": 11,
@@ -57,7 +57,7 @@
           },
           {
             "result": {
-              "duration": 31300,
+              "duration": 34800,
               "status": "passed"
             },
             "line": 12,
@@ -84,7 +84,7 @@
         "steps": [
           {
             "result": {
-              "duration": 52400,
+              "duration": 47200,
               "status": "passed"
             },
             "line": 6,
@@ -106,7 +106,7 @@
         "steps": [
           {
             "result": {
-              "duration": 37200,
+              "duration": 37500,
               "status": "passed"
             },
             "line": 16,
@@ -118,7 +118,7 @@
           },
           {
             "result": {
-              "duration": 33700,
+              "duration": 34900,
               "status": "passed"
             },
             "line": 17,
@@ -130,7 +130,7 @@
           },
           {
             "result": {
-              "duration": 45500,
+              "duration": 33400,
               "status": "passed"
             },
             "line": 18,
