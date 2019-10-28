@@ -5,24 +5,48 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
 import cucumber.api.junit.Cucumber;
+
+import static org.junit.Assert.assertTrue;
+
+import java.util.Map;
+
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 public class StepDefinition {
 
-    @Given("^Que el microservicio de consulta de saldos y consumos se encuentra operativo$")
+	private HttpPostHelp httpPostHelp;
+	private Map<String, String> response;
+	
+    public StepDefinition() {
+		super();
+		this.httpPostHelp = new HttpPostHelp("headerInfo");
+		response = httpPostHelp.getResponse();
+	}
+
+	@Given("^Que el microservicio de consulta de saldos y consumos se encuentra operativo$")
     public void que_el_microservicio_de_consulta_de_saldos_y_consumos_se_encuentra_operativo() throws Throwable {
-        System.out.println("1");
+    	
+		System.out.println("1");
+        System.out.println(response.get("status"));
+        assertTrue(response.get("status").equals("200"));
+        assertTrue(response.get("statusCode").equals("OK"));
     }
 
     @Given("^Que se solicita la firma del servicio$")
     public void que_se_solicita_la_firma_del_servicio() throws Throwable {
     	System.out.println("2");
+        System.out.println(response.get("status"));
+        assertTrue(response.get("status").equals("200"));
+        assertTrue(response.get("statusCode").equals("OK"));
     }
 
     @Given("^Que se consume el microservicio de consulta de saldos y consumos$")
     public void que_se_consume_el_microservicio_de_consulta_de_saldos_y_consumos() throws Throwable {
     	System.out.println("3");
+    	System.out.println(response.get("status"));
+        assertTrue(response.get("status").equals("200"));
+        assertTrue(response.get("statusCode").equals("OK"));
     }
 
     @When("^se acceda a la firma del microservicio$")

@@ -4,10 +4,6 @@ import static org.junit.Assert.*;
 
 import org.w3c.dom.*;
 
-import javax.xml.XMLConstants;
-import javax.xml.parsers.*;
-import java.io.*;
-
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.UnsupportedEncodingException;
@@ -15,10 +11,6 @@ import java.io.UnsupportedEncodingException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.validation.Schema;
-import javax.xml.validation.SchemaFactory;
-import javax.xml.validation.Validator;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
@@ -56,7 +48,7 @@ public class HttpPostTest {
 			+ "         <typ:getBalances>true</typ:getBalances>\r\n"
 			+ "      </typ:queryOCSBalancesAndBoltonsRequest>\r\n" + "   </soapenv:Body>\r\n" + "</soapenv:Envelope>";
 
-	// mvn jaxws:wsimport
+	
 	@Test
 	public void testHttpPost1() {
 
@@ -99,7 +91,7 @@ public class HttpPostTest {
 				is = new InputSource(new StringReader(responseXml));
 				Document document = builder.parse(is);
 
-				Element root = document.getDocumentElement();
+				//Element root = document.getDocumentElement();
 				
 				NodeList headerInfoList = document.getElementsByTagName("headerInfo");
 				

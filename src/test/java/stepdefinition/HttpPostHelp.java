@@ -1,8 +1,5 @@
 package stepdefinition;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,19 +10,29 @@ import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.junit.Test;
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 public class HttpPostHelp {
+	
+	
+
+	public HttpPostHelp(String tagNameToGet) {
+		
+		this.setTagNameToGet(tagNameToGet);
+		this.sendMessagePost(this.urlService, this.xmlRequest1);
+		
+	}
+	
+	private HashMap<String, String> response;
 
 	private String xmlRequest1 = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:v1=\"http://telefonica.ec/CommonBusinessEntities/BusinessInteractionABE/HeaderInfo/v1\" xmlns:typ=\"http://telefonica.ec/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v2/types\" xmlns:v11=\"http://telefonica.ec/Customer/CustomerABE/SubscriberIdentification/v1\">\r\n"
 			+ "   <soapenv:Header>\r\n" + "      <v1:headerInfo>\r\n"
@@ -114,10 +121,14 @@ public class HttpPostHelp {
 	
 	private String urlService = "http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3";
 	
-	public String sendPost(String urlServiceParam, String xml) {
+	private String tagNameToGet = "headerInfo";
+		
+	public void sendMessagePost(String urlServiceParam, String xml) {
 
 		HttpURLConnection conn = null;
 		try {
+			response = new HashMap<String, String>();
+			
 			URL url = new URL(urlServiceParam);
 			conn = (HttpURLConnection) url.openConnection();
 
@@ -136,6 +147,9 @@ public class HttpPostHelp {
 
 			Reader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
 
+			response.put("status", Integer.toString(conn.getResponseCode()));
+			response.put("statusCode", conn.getResponseMessage());
+						
 			StringBuilder sb = new StringBuilder();
 			for (int c; (c = in.read()) >= 0;)
 				sb.append((char) c);
@@ -151,20 +165,18 @@ public class HttpPostHelp {
 
 				is = new InputSource(new StringReader(responseXml));
 				Document document = builder.parse(is);
-
-				Element root = document.getDocumentElement();
 				
-				NodeList headerInfoList = document.getElementsByTagName("headerInfo");
+				NodeList headerInfoList = document.getElementsByTagName(getTagNameToGet());									
+								
+				response.put("parentNodeName", headerInfoList.item(0).getNodeName());
+				response.put("parentNodeText", headerInfoList.item(0).getTextContent());				
 				
-				NodeList cNodes = headerInfoList.item(0).getChildNodes();
+				if(headerInfoList.getLength() > 0) {
+					NodeList cNodes = headerInfoList.item(0).getChildNodes();
+					response.put("childNodeName", cNodes.item(0).getNodeName());
+					response.put("childNodeText", cNodes.item(0).getTextContent());
+				}
 				
-				System.out.println(cNodes.item(0).getNodeName());
-				System.out.println(cNodes.item(0).getTextContent());				
-
-				assertTrue(cNodes.item(0).getNodeName() == "application");				
-				assertEquals(cNodes.item(0).getTextContent(), "WHATSAPP");
-				
-				return cNodes.item(0).getNodeName() + "-" + cNodes.item(0).getTextContent();
 
 			} catch (ParserConfigurationException pce) {
 				pce.printStackTrace();
@@ -186,8 +198,7 @@ public class HttpPostHelp {
 		finally { 
 			conn.disconnect(); 
 		}
-		
-		return "";
+				
 	}
 
 	public String getXmlRequest1() {
@@ -209,6 +220,26 @@ public class HttpPostHelp {
 	public void setUrlService(String urlService) {
 		this.urlService = urlService;
 	}
+
+	public String getTagNameToGet() {
+		return tagNameToGet;
+	}
+
+	public void setTagNameToGet(String tagNameToGet) {
+		this.tagNameToGet = tagNameToGet;
+	}
+
+	public HashMap<String, String> getResponse() {
+		return response;
+	}
+
+	/*public String getSubTagNameToGet() {
+		return subTagNameToGet;
+	}
+
+	public void setSubTagNameToGet(String subTagNameToGet) {
+		this.subTagNameToGet = subTagNameToGet;
+	}*/
 
 	
 }
