@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="10" failures="0" name="cucumberoptions.TestRunner" time="0.002" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="cucumbertest.CurrenciesTest" time="20.674" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="13.0.1+9"/>
@@ -56,14 +56,5 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Scenario: Firma del microservicio disponible" name="Given Que el microservicio de consulta de saldos y consumos se encuentra operativo" time="0"/>
-  <testcase classname="Scenario: Firma del microservicio disponible" name="Given Que se solicita la firma del servicio" time="0"/>
-  <testcase classname="Scenario: Firma del microservicio disponible" name="When se acceda a la firma del microservicio" time="0"/>
-  <testcase classname="Scenario: Firma del microservicio disponible" name="Then se obtendra el wsdl correspondiente" time="0"/>
-  <testcase classname="Scenario: Firma del microservicio disponible" name="Scenario: Firma del microservicio disponible" time="0.001"/>
-  <testcase classname="Scenario: Respueta de microservicio exitosa" name="Given Que el microservicio de consulta de saldos y consumos se encuentra operativo" time="0"/>
-  <testcase classname="Scenario: Respueta de microservicio exitosa" name="Given Que se consume el microservicio de consulta de saldos y consumos" time="0"/>
-  <testcase classname="Scenario: Respueta de microservicio exitosa" name="When Se envía una solicitud al microservicio correcta" time="0"/>
-  <testcase classname="Scenario: Respueta de microservicio exitosa" name="Then el microservicio genera una respuesta exitosa" time="0"/>
-  <testcase classname="Scenario: Respueta de microservicio exitosa" name="Scenario: Respueta de microservicio exitosa" time="0.001"/>
+  <testcase classname="cucumbertest.CurrenciesTest" name="testGetLicenseKey" time="20.674"/>
 </testsuite>
