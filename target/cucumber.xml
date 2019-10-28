@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="7.085381">
-    <testcase classname="Microservicio consulta de saldos y consumos" name="Firma del microservicio disponible" time="2.617036">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="8.12189">
+    <testcase classname="Microservicio consulta de saldos y consumos" name="Firma del microservicio disponible" time="3.654513">
         <system-out>
             <![CDATA[Given Que el microservicio de consulta de saldos y consumos se encuentra operativo.passed
 Given Que se solicita la firma del servicio.................................passed
@@ -9,7 +9,7 @@ Then se obtendra el wsdl correspondiente....................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Microservicio consulta de saldos y consumos" name="Respueta de microservicio exitosa" time="4.468345">
+    <testcase classname="Microservicio consulta de saldos y consumos" name="Respueta de microservicio exitosa" time="4.467377">
         <system-out>
             <![CDATA[Given Que el microservicio de consulta de saldos y consumos se encuentra operativo.passed
 Given Que se consume el microservicio de consulta de saldos y consumos......passed

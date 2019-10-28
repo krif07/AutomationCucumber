@@ -28,7 +28,7 @@ public class HttpPostHelp {
 	public HttpPostHelp(String tagNameToGet) {
 		
 		this.setTagNameToGet(tagNameToGet);
-		this.sendMessagePost(this.urlService, this.xmlRequest1);
+		response = null;
 		
 	}
 	
