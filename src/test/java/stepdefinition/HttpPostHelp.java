@@ -25,9 +25,8 @@ public class HttpPostHelp {
 	
 	
 
-	public HttpPostHelp(String tagNameToGet) {
+	public HttpPostHelp() {
 		
-		this.setTagNameToGet(tagNameToGet);
 		response = null;
 		
 	}
@@ -121,7 +120,7 @@ public class HttpPostHelp {
 	
 	private String urlService = "http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3";
 	
-	private String tagNameToGet = "headerInfo";
+	private String tagNameToGet;
 		
 	public void sendMessagePost(String urlServiceParam, String xml) {
 
