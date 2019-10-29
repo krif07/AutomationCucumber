@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="6.204038">
-    <testcase classname="Microservicio consulta de saldos y consumos" name="Firma del microservicio disponible" time="3.063215">
-        <system-out>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="40.126161">
+    <testcase classname="Microservicio consulta de saldos y consumos" name="Firma del microservicio disponible" time="4.989553">
+        <failure message="java.lang.NullPointerException&#13;&#10;&#9;at stepdefinition.StepDefinition.se_obtendra_el_wsdl_correspondiente(StepDefinition.java:57)&#13;&#10;&#9;at ✽.Then se obtendra el wsdl correspondiente(Microservicio.feature:12)&#13;&#10;">
             <![CDATA[Given Que el microservicio de consulta de saldos y consumos se encuentra operativo.passed
-Given Que se solicita la firma del servicio.................................passed
-When se acceda a la firma del microservicio.................................passed
-Then se obtendra el wsdl correspondiente....................................passed
+Given Que se solicita la firma del servicio "http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3?wsdl".passed
+When se acceda a la firma del microservicio "WL5G3N3:queryOCSBalancesAndBoltonsRequest".passed
+Then se obtendra el wsdl correspondiente....................................failed
+
+StackTrace:
+java.lang.NullPointerException
+	at stepdefinition.StepDefinition.se_obtendra_el_wsdl_correspondiente(StepDefinition.java:57)
+	at ✽.Then se obtendra el wsdl correspondiente(Microservicio.feature:12)
 ]]>
-        </system-out>
+        </failure>
     </testcase>
-    <testcase classname="Microservicio consulta de saldos y consumos" name="Respueta de microservicio exitosa" time="3.140823">
+    <testcase classname="Microservicio consulta de saldos y consumos" name="Respueta de microservicio exitosa" time="35.136608">
         <system-out>
             <![CDATA[Given Que el microservicio de consulta de saldos y consumos se encuentra operativo.passed
 Given Que se consume el microservicio de consulta de saldos y consumos......passed

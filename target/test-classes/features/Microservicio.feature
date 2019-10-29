@@ -7,14 +7,17 @@ Given Que el microservicio de consulta de saldos y consumos se encuentra operati
 
 @tag1
 Scenario: Firma del microservicio disponible
-Given Que se solicita la firma del servicio
-When se acceda a la firma del microservicio
+Given Que se solicita la firma del servicio "http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3?wsdl"
+When se acceda a la firma del microservicio "WL5G3N3:queryOCSBalancesAndBoltonsRequest"
 Then se obtendra el wsdl correspondiente
+#    | urlServicio            																											| tag 											|
+#    | http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3?wsdl    	| WL5G3N3:queryOCSBalancesAndBoltonsRequest 	|
 
 @tag2
 Scenario: Respueta de microservicio exitosa
 Given Que se consume el microservicio de consulta de saldos y consumos
 When Se envía una solicitud al microservicio correcta
+| http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3 | ns2:queryOCSBalancesAndBoltonsResponse | ns2:showBalances | false |
 Then el microservicio genera una respuesta exitosa
 
 # Enviar parámetros desde gherkyn: para definir elementos, decir donde está definido el servicio (url)

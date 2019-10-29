@@ -3,6 +3,7 @@ package stepdefinition;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.StringReader;
@@ -27,7 +28,9 @@ public class HttpPostHelp {
 
 	public HttpPostHelp() {
 		
-		response = null;
+		this.urlService = getUrl1();
+		this.method = getMethodPost();
+		this.response = null;
 		
 	}
 	
@@ -118,32 +121,42 @@ public class HttpPostHelp {
 			"   </soapenv:Body>\r\n" + 
 			"</soapenv:Envelope>";
 	
-	private String urlService = "http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3";
+	private String url1 = "http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3";
+	private String url2 = "http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3?wsdl";
+	
+	private String methodGet = "GET";
+	private String methodPost = "POST";
+	
+	private String method;
+	
+	private String urlService = "";
 	
 	private String tagNameToGet;
 		
-	public void sendMessagePost(String urlServiceParam, String xml) {
+	public void sendMessagePost(String xml) {
 
 		HttpURLConnection conn = null;
 		try {
 			response = new HashMap<String, String>();
 			
-			URL url = new URL(urlServiceParam);
+			URL url = new URL(getUrlService());
 			conn = (HttpURLConnection) url.openConnection();
 
 			conn.setReadTimeout(10000);
 			conn.setConnectTimeout(15000);
 			conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-			conn.setRequestMethod("POST");
+			conn.setRequestMethod(getMethod());
 			conn.setDoInput(true);
 			conn.setDoOutput(true);
 
-			String body = xml;
-
 			BufferedOutputStream output = new BufferedOutputStream(conn.getOutputStream());
-			output.write(body.getBytes());
+			if(xml != null) {
+				String body = xml;
+				output.write(body.getBytes());
+			}
 			output.flush();
 
+			InputStream ie = conn.getInputStream();
 			Reader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
 
 			response.put("status", Integer.toString(conn.getResponseCode()));
@@ -154,6 +167,7 @@ public class HttpPostHelp {
 				sb.append((char) c);
 
 			String responseXml = sb.toString();
+			System.out.println(responseXml);
 
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder builder;
@@ -167,13 +181,16 @@ public class HttpPostHelp {
 				
 				NodeList headerInfoList = document.getElementsByTagName(getTagNameToGet());									
 								
-				response.put("parentNodeName", headerInfoList.item(0).getNodeName());
-				response.put("parentNodeText", headerInfoList.item(0).getTextContent());				
-				
 				if(headerInfoList.getLength() > 0) {
+					response.put("parentNodeName", headerInfoList.item(0).getNodeName());
+					response.put("parentNodeText", headerInfoList.item(0).getTextContent());
+					
 					NodeList cNodes = headerInfoList.item(0).getChildNodes();
-					response.put("childNodeName", cNodes.item(0).getNodeName());
-					response.put("childNodeText", cNodes.item(0).getTextContent());
+					
+					if(cNodes.getLength() > 0) {
+						response.put("childNodeName", cNodes.item(0).getNodeName());
+						response.put("childNodeText", cNodes.item(0).getTextContent());
+					}
 				}
 				
 
@@ -232,13 +249,37 @@ public class HttpPostHelp {
 		return response;
 	}
 
-	/*public String getSubTagNameToGet() {
-		return subTagNameToGet;
+	public String getUrl1() {
+		return url1;
 	}
 
-	public void setSubTagNameToGet(String subTagNameToGet) {
-		this.subTagNameToGet = subTagNameToGet;
-	}*/
+	public void setUrl1(String url1) {
+		this.url1 = url1;
+	}
 
+	public String getUrl2() {
+		return url2;
+	}
+
+	public void setUrl2(String url2) {
+		this.url2 = url2;
+	}
+
+	public String getMethodGet() {
+		return methodGet;
+	}
+
+	public String getMethodPost() {
+		return methodPost;
+	}
+
+	public String getMethod() {
+		return method;
+	}
+
+	public void setMethod(String method) {
+		this.method = method;
+	}
+	
 	
 }
