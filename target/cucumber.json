@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 92798100,
+              "duration": 65413800,
               "status": "passed"
             },
             "line": 6,
@@ -43,7 +43,7 @@
         "steps": [
           {
             "result": {
-              "duration": 102100,
+              "duration": 120000,
               "status": "passed"
             },
             "line": 18,
@@ -55,7 +55,7 @@
           },
           {
             "result": {
-              "duration": 15021813800,
+              "duration": 4050447400,
               "status": "passed"
             },
             "line": 19,
@@ -78,9 +78,8 @@
           },
           {
             "result": {
-              "duration": 1730900,
-              "error_message": "java.lang.NullPointerException\r\n\tat stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_exitosa(StepDefinition.java:95)\r\n\tat ✽.Then el microservicio genera una respuesta exitosa(Microservicio.feature:21)\r\n",
-              "status": "failed"
+              "duration": 62000,
+              "status": "passed"
             },
             "line": 21,
             "name": "el microservicio genera una respuesta exitosa",
@@ -106,7 +105,7 @@
         "steps": [
           {
             "result": {
-              "duration": 109400,
+              "duration": 53200,
               "status": "passed"
             },
             "line": 6,
@@ -128,7 +127,7 @@
         "steps": [
           {
             "result": {
-              "duration": 149900,
+              "duration": 37500,
               "status": "passed"
             },
             "line": 25,
@@ -140,7 +139,7 @@
           },
           {
             "result": {
-              "duration": 15006892400,
+              "duration": 2682376000,
               "status": "passed"
             },
             "line": 26,
@@ -166,9 +165,8 @@
           },
           {
             "result": {
-              "duration": 188200,
-              "error_message": "java.lang.NullPointerException\r\n\tat stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(StepDefinition.java:125)\r\n\tat ✽.Then el microservicio genera una respuesta del tag ns2:showBalances exitosa false(Microservicio.feature:27)\r\n",
-              "status": "failed"
+              "duration": 212600,
+              "status": "passed"
             },
             "line": 27,
             "name": "el microservicio genera una respuesta del tag ns2:showBalances exitosa false",
@@ -212,7 +210,7 @@
         "steps": [
           {
             "result": {
-              "duration": 59600,
+              "duration": 122100,
               "status": "passed"
             },
             "line": 6,
@@ -234,7 +232,7 @@
         "steps": [
           {
             "result": {
-              "duration": 25100,
+              "duration": 176900,
               "status": "passed"
             },
             "line": 25,
@@ -246,7 +244,7 @@
           },
           {
             "result": {
-              "duration": 15007102600,
+              "duration": 2903607900,
               "status": "passed"
             },
             "line": 26,
@@ -272,9 +270,8 @@
           },
           {
             "result": {
-              "duration": 1139300,
-              "error_message": "java.lang.NullPointerException\r\n\tat stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(StepDefinition.java:125)\r\n\tat ✽.Then el microservicio genera una respuesta del tag ns3:type exitosa SaldoRecargas(Microservicio.feature:27)\r\n",
-              "status": "failed"
+              "duration": 405400,
+              "status": "passed"
             },
             "line": 27,
             "name": "el microservicio genera una respuesta del tag ns3:type exitosa SaldoRecargas",
@@ -318,7 +315,7 @@
         "steps": [
           {
             "result": {
-              "duration": 135500,
+              "duration": 84900,
               "status": "passed"
             },
             "line": 6,
@@ -340,7 +337,7 @@
         "steps": [
           {
             "result": {
-              "duration": 98900,
+              "duration": 63300,
               "status": "passed"
             },
             "line": 25,
@@ -352,7 +349,7 @@
           },
           {
             "result": {
-              "duration": 15005551200,
+              "duration": 2352927300,
               "status": "passed"
             },
             "line": 26,
@@ -378,9 +375,8 @@
           },
           {
             "result": {
-              "duration": 850300,
-              "error_message": "java.lang.NullPointerException\r\n\tat stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(StepDefinition.java:125)\r\n\tat ✽.Then el microservicio genera una respuesta del tag ns6:subscriberBoltonId exitosa X93(Microservicio.feature:27)\r\n",
-              "status": "failed"
+              "duration": 95700,
+              "status": "passed"
             },
             "line": 27,
             "name": "el microservicio genera una respuesta del tag ns6:subscriberBoltonId exitosa X93",

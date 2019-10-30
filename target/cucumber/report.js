@@ -28,7 +28,7 @@ formatter.match({
   "location": "StepDefinition.que_el_microservicio_de_consulta_de_saldos_y_consumos_se_encuentra_operativo()"
 });
 formatter.result({
-  "duration": 92798100,
+  "duration": 65413800,
   "status": "passed"
 });
 formatter.scenario({
@@ -85,23 +85,22 @@ formatter.match({
   "location": "StepDefinition.que_se_consume_el_microservicio_de_consulta_de_saldos_y_consumos()"
 });
 formatter.result({
-  "duration": 102100,
+  "duration": 120000,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.se_envia_una_solicitud_al_microservicio_correcta(DataTable)"
 });
 formatter.result({
-  "duration": 15021813800,
+  "duration": 4050447400,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.el_microservicio_genera_una_respuesta_exitosa()"
 });
 formatter.result({
-  "duration": 1730900,
-  "error_message": "java.lang.NullPointerException\r\n\tat stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_exitosa(StepDefinition.java:95)\r\n\tat ✽.Then el microservicio genera una respuesta exitosa(Microservicio.feature:21)\r\n",
-  "status": "failed"
+  "duration": 62000,
+  "status": "passed"
 });
 formatter.scenarioOutline({
   "line": 24,
@@ -197,7 +196,7 @@ formatter.match({
   "location": "StepDefinition.que_el_microservicio_de_consulta_de_saldos_y_consumos_se_encuentra_operativo()"
 });
 formatter.result({
-  "duration": 109400,
+  "duration": 53200,
   "status": "passed"
 });
 formatter.scenario({
@@ -245,7 +244,7 @@ formatter.match({
   "location": "StepDefinition.que_se_consume_el_microservicio_de_consulta_de_saldos_y_consumos_2()"
 });
 formatter.result({
-  "duration": 149900,
+  "duration": 37500,
   "status": "passed"
 });
 formatter.match({
@@ -262,7 +261,7 @@ formatter.match({
   "location": "StepDefinition.se_enva_una_solicitud_al_microservicio_correcta_con(String,String)"
 });
 formatter.result({
-  "duration": 15006892400,
+  "duration": 2682376000,
   "status": "passed"
 });
 formatter.match({
@@ -279,9 +278,8 @@ formatter.match({
   "location": "StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(String,String)"
 });
 formatter.result({
-  "duration": 188200,
-  "error_message": "java.lang.NullPointerException\r\n\tat stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(StepDefinition.java:125)\r\n\tat ✽.Then el microservicio genera una respuesta del tag ns2:showBalances exitosa false(Microservicio.feature:27)\r\n",
-  "status": "failed"
+  "duration": 212600,
+  "status": "passed"
 });
 formatter.background({
   "line": 5,
@@ -299,7 +297,7 @@ formatter.match({
   "location": "StepDefinition.que_el_microservicio_de_consulta_de_saldos_y_consumos_se_encuentra_operativo()"
 });
 formatter.result({
-  "duration": 59600,
+  "duration": 122100,
   "status": "passed"
 });
 formatter.scenario({
@@ -347,7 +345,7 @@ formatter.match({
   "location": "StepDefinition.que_se_consume_el_microservicio_de_consulta_de_saldos_y_consumos_2()"
 });
 formatter.result({
-  "duration": 25100,
+  "duration": 176900,
   "status": "passed"
 });
 formatter.match({
@@ -364,7 +362,7 @@ formatter.match({
   "location": "StepDefinition.se_enva_una_solicitud_al_microservicio_correcta_con(String,String)"
 });
 formatter.result({
-  "duration": 15007102600,
+  "duration": 2903607900,
   "status": "passed"
 });
 formatter.match({
@@ -381,9 +379,8 @@ formatter.match({
   "location": "StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(String,String)"
 });
 formatter.result({
-  "duration": 1139300,
-  "error_message": "java.lang.NullPointerException\r\n\tat stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(StepDefinition.java:125)\r\n\tat ✽.Then el microservicio genera una respuesta del tag ns3:type exitosa SaldoRecargas(Microservicio.feature:27)\r\n",
-  "status": "failed"
+  "duration": 405400,
+  "status": "passed"
 });
 formatter.background({
   "line": 5,
@@ -401,7 +398,7 @@ formatter.match({
   "location": "StepDefinition.que_el_microservicio_de_consulta_de_saldos_y_consumos_se_encuentra_operativo()"
 });
 formatter.result({
-  "duration": 135500,
+  "duration": 84900,
   "status": "passed"
 });
 formatter.scenario({
@@ -449,7 +446,7 @@ formatter.match({
   "location": "StepDefinition.que_se_consume_el_microservicio_de_consulta_de_saldos_y_consumos_2()"
 });
 formatter.result({
-  "duration": 98900,
+  "duration": 63300,
   "status": "passed"
 });
 formatter.match({
@@ -466,7 +463,7 @@ formatter.match({
   "location": "StepDefinition.se_enva_una_solicitud_al_microservicio_correcta_con(String,String)"
 });
 formatter.result({
-  "duration": 15005551200,
+  "duration": 2352927300,
   "status": "passed"
 });
 formatter.match({
@@ -483,8 +480,7 @@ formatter.match({
   "location": "StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(String,String)"
 });
 formatter.result({
-  "duration": 850300,
-  "error_message": "java.lang.NullPointerException\r\n\tat stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(StepDefinition.java:125)\r\n\tat ✽.Then el microservicio genera una respuesta del tag ns6:subscriberBoltonId exitosa X93(Microservicio.feature:27)\r\n",
-  "status": "failed"
+  "duration": 95700,
+  "status": "passed"
 });
 });

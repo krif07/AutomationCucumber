@@ -1,59 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="4" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="60.138748">
-    <testcase classname="Microservicio consulta de saldos y consumos" name="Respueta de microservicio exitosa" time="15.116445">
-        <failure message="java.lang.NullPointerException&#13;&#10;&#9;at stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_exitosa(StepDefinition.java:95)&#13;&#10;&#9;at ✽.Then el microservicio genera una respuesta exitosa(Microservicio.feature:21)&#13;&#10;">
-            <![CDATA[Given Que el microservicio de consulta de saldos y consumos se encuentra operativo.passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="12.056205">
+<testcase classname="Microservicio consulta de saldos y consumos" name="Respueta de microservicio exitosa" time="4.116043">
+<system-out><![CDATA[Given Que el microservicio de consulta de saldos y consumos se encuentra operativo.passed
 Given Que se consume el microservicio de consulta de saldos y consumos......passed
 When Se envía una solicitud al microservicio correcta.......................passed
-Then el microservicio genera una respuesta exitosa..........................failed
-
-StackTrace:
-java.lang.NullPointerException
-	at stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_exitosa(StepDefinition.java:95)
-	at ✽.Then el microservicio genera una respuesta exitosa(Microservicio.feature:21)
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="Microservicio consulta de saldos y consumos" name="Respueta de microservicio exitosa 2" time="15.00734">
-        <failure message="java.lang.NullPointerException&#13;&#10;&#9;at stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(StepDefinition.java:125)&#13;&#10;&#9;at ✽.Then el microservicio genera una respuesta del tag ns2:showBalances exitosa false(Microservicio.feature:27)&#13;&#10;">
-            <![CDATA[Given Que el microservicio de consulta de saldos y consumos se encuentra operativo.passed
+Then el microservicio genera una respuesta exitosa..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Microservicio consulta de saldos y consumos" name="Respueta de microservicio exitosa 2" time="2.682679">
+<system-out><![CDATA[Given Que el microservicio de consulta de saldos y consumos se encuentra operativo.passed
 Given Que se consume el microservicio de consulta de saldos y consumos 2....passed
 When Se envía una solicitud al microservicio http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3 correcta  con ns2:queryOCSBalancesAndBoltonsResponse.passed
-Then el microservicio genera una respuesta del tag ns2:showBalances exitosa false.failed
-
-StackTrace:
-java.lang.NullPointerException
-	at stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(StepDefinition.java:125)
-	at ✽.Then el microservicio genera una respuesta del tag ns2:showBalances exitosa false(Microservicio.feature:27)
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="Microservicio consulta de saldos y consumos" name="Respueta de microservicio exitosa 2 2" time="15.008327">
-        <failure message="java.lang.NullPointerException&#13;&#10;&#9;at stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(StepDefinition.java:125)&#13;&#10;&#9;at ✽.Then el microservicio genera una respuesta del tag ns3:type exitosa SaldoRecargas(Microservicio.feature:27)&#13;&#10;">
-            <![CDATA[Given Que el microservicio de consulta de saldos y consumos se encuentra operativo.passed
+Then el microservicio genera una respuesta del tag ns2:showBalances exitosa false.passed
+]]></system-out>
+</testcase>
+<testcase classname="Microservicio consulta de saldos y consumos" name="Respueta de microservicio exitosa 2 2" time="2.904312">
+<system-out><![CDATA[Given Que el microservicio de consulta de saldos y consumos se encuentra operativo.passed
 Given Que se consume el microservicio de consulta de saldos y consumos 2....passed
 When Se envía una solicitud al microservicio http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3 correcta  con ns3:subscriberBalance.passed
-Then el microservicio genera una respuesta del tag ns3:type exitosa SaldoRecargas.failed
-
-StackTrace:
-java.lang.NullPointerException
-	at stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(StepDefinition.java:125)
-	at ✽.Then el microservicio genera una respuesta del tag ns3:type exitosa SaldoRecargas(Microservicio.feature:27)
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="Microservicio consulta de saldos y consumos" name="Respueta de microservicio exitosa 2 3" time="15.006636">
-        <failure message="java.lang.NullPointerException&#13;&#10;&#9;at stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(StepDefinition.java:125)&#13;&#10;&#9;at ✽.Then el microservicio genera una respuesta del tag ns6:subscriberBoltonId exitosa X93(Microservicio.feature:27)&#13;&#10;">
-            <![CDATA[Given Que el microservicio de consulta de saldos y consumos se encuentra operativo.passed
+Then el microservicio genera una respuesta del tag ns3:type exitosa SaldoRecargas.passed
+]]></system-out>
+</testcase>
+<testcase classname="Microservicio consulta de saldos y consumos" name="Respueta de microservicio exitosa 2 3" time="2.353171">
+<system-out><![CDATA[Given Que el microservicio de consulta de saldos y consumos se encuentra operativo.passed
 Given Que se consume el microservicio de consulta de saldos y consumos 2....passed
 When Se envía una solicitud al microservicio http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3 correcta  con ns6:subscriberBolton.passed
-Then el microservicio genera una respuesta del tag ns6:subscriberBoltonId exitosa X93.failed
-
-StackTrace:
-java.lang.NullPointerException
-	at stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(StepDefinition.java:125)
-	at ✽.Then el microservicio genera una respuesta del tag ns6:subscriberBoltonId exitosa X93(Microservicio.feature:27)
-]]>
-        </failure>
-    </testcase>
+Then el microservicio genera una respuesta del tag ns6:subscriberBoltonId exitosa X93.passed
+]]></system-out>
+</testcase>
 </testsuite>
