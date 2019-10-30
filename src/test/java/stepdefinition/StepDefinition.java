@@ -46,8 +46,7 @@ public class StepDefinition {
     	httpPostHelp.setMethod("GET");
     	
     	httpPostHelp.sendMessagePost(null);
-    	response = httpPostHelp.getResponse();
-    	assertTrue(response != null);    	
+    	response = httpPostHelp.getResponse();    	    	
     }
 
     @Then("^se obtendra el wsdl correspondiente$")
@@ -56,8 +55,7 @@ public class StepDefinition {
     	    	    	
         assertTrue(response.get("status").equals("200"));
         assertTrue(response.get("statusCode").equals("OK"));
-        assertTrue(response.get("childNodeName").equals("WL5G3N0:message"));
-        //assertTrue(response.get("childNodeText").equals("WHATSAPP"));
+        assertTrue(response.get("childNodeName").equals("WL5G3N0:message"));        
     }
     
     @Given("^Que se consume el microservicio de consulta de saldos y consumos$")
@@ -84,8 +82,7 @@ public class StepDefinition {
     	httpPostHelp.setMethod("POST");
     	
     	httpPostHelp.sendMessagePost(httpPostHelp.getXmlRequest1()); 
-    	response = httpPostHelp.getResponse();
-    	assertTrue(response != null);
+    	response = httpPostHelp.getResponse();    	
     }    
 
     @Then("^el microservicio genera una respuesta exitosa$")
@@ -114,8 +111,7 @@ public class StepDefinition {
     	httpPostHelp.setMethod("POST");
     	
     	httpPostHelp.sendMessagePost(httpPostHelp.getXmlRequest1()); 
-    	response = httpPostHelp.getResponse();
-    	assertTrue(response != null);
+    	response = httpPostHelp.getResponse();    	
     }
 
     @Then("^el microservicio genera una respuesta del tag (.+) exitosa (.+)$")
@@ -126,6 +122,38 @@ public class StepDefinition {
         assertTrue(response.get("statusCode").equals("OK"));
         assertTrue(response.get("childNodeName").equals(childtag));
         assertTrue(response.get("childNodeText").equals(childtagtext));
+    }
+    
+    @Given("^Se consume el microservicio$")
+    public void se_consume_el_microservicio() throws Throwable {
+    	System.out.println("5.1 se consume el microservicio");
+    	httpPostHelp = new HttpPostHelp();
+    }
+
+    @When("^Se envia la solicitud al tag getBalances con el estado (.+)$")
+    public void se_envia_la_solicitud_al_tag_getbalances_con_el_estado(String estado) throws Throwable {
+    	System.out.println("5.2 Se envia la solicitud al tag getBalances con el estado");
+    	
+    	
+    	httpPostHelp.setBalancesValueToXmlRequest1(estado);
+    	httpPostHelp.setMethod("POST");
+    	    	    	 
+    }
+
+    @Then("^el microservicio responde en este tag (.+) este estado (.+)$")
+    public void el_microservicio_responde_en_este_tag_este_estado(String tag, String estadorespuesta) throws Throwable {
+    	System.out.println("5.3 el el microservicio responde en este tag (.+) este estado (.+)");
+    	
+    	httpPostHelp.setTagNameToGet(tag);
+    	httpPostHelp.sendMessagePost(httpPostHelp.getXmlRequest1());
+    	response = httpPostHelp.getResponse();
+    	
+        assertTrue(response.get("status").equals("200"));
+        assertTrue(response.get("statusCode").equals("OK"));
+        
+        if(estadorespuesta.equals("true")) {
+        	assertTrue(response.get("childNodeName").equals("ns3:subscriberBalance"));
+        }
     }
 	
 }

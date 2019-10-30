@@ -1,31 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="12.056205">
-<testcase classname="Microservicio consulta de saldos y consumos" name="Respueta de microservicio exitosa" time="4.116043">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="6" time="23.034779">
+<testcase classname="Microservicio consulta de saldos y consumos" name="Respueta de microservicio exitosa" time="3.337768">
 <system-out><![CDATA[Given Que el microservicio de consulta de saldos y consumos se encuentra operativo.passed
 Given Que se consume el microservicio de consulta de saldos y consumos......passed
 When Se envía una solicitud al microservicio correcta.......................passed
 Then el microservicio genera una respuesta exitosa..........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Microservicio consulta de saldos y consumos" name="Respueta de microservicio exitosa 2" time="2.682679">
+<testcase classname="Microservicio consulta de saldos y consumos" name="Respueta de microservicio exitosa 2" time="5.460055">
 <system-out><![CDATA[Given Que el microservicio de consulta de saldos y consumos se encuentra operativo.passed
 Given Que se consume el microservicio de consulta de saldos y consumos 2....passed
 When Se envía una solicitud al microservicio http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3 correcta  con ns2:queryOCSBalancesAndBoltonsResponse.passed
 Then el microservicio genera una respuesta del tag ns2:showBalances exitosa false.passed
 ]]></system-out>
 </testcase>
-<testcase classname="Microservicio consulta de saldos y consumos" name="Respueta de microservicio exitosa 2 2" time="2.904312">
+<testcase classname="Microservicio consulta de saldos y consumos" name="Respueta de microservicio exitosa 2 2" time="2.95079">
 <system-out><![CDATA[Given Que el microservicio de consulta de saldos y consumos se encuentra operativo.passed
 Given Que se consume el microservicio de consulta de saldos y consumos 2....passed
 When Se envía una solicitud al microservicio http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3 correcta  con ns3:subscriberBalance.passed
 Then el microservicio genera una respuesta del tag ns3:type exitosa SaldoRecargas.passed
 ]]></system-out>
 </testcase>
-<testcase classname="Microservicio consulta de saldos y consumos" name="Respueta de microservicio exitosa 2 3" time="2.353171">
+<testcase classname="Microservicio consulta de saldos y consumos" name="Respueta de microservicio exitosa 2 3" time="3.10692">
 <system-out><![CDATA[Given Que el microservicio de consulta de saldos y consumos se encuentra operativo.passed
 Given Que se consume el microservicio de consulta de saldos y consumos 2....passed
 When Se envía una solicitud al microservicio http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3 correcta  con ns6:subscriberBolton.passed
 Then el microservicio genera una respuesta del tag ns6:subscriberBoltonId exitosa X93.passed
+]]></system-out>
+</testcase>
+<testcase classname="Microservicio consulta de saldos y consumos" name="La respuesta tieen los balances" time="4.986004">
+<system-out><![CDATA[Given Que el microservicio de consulta de saldos y consumos se encuentra operativo.passed
+Given Se consume el microservicio...........................................passed
+When Se envia la solicitud al tag getBalances con el estado true............passed
+Then el microservicio responde en este tag ns2:subscriberBalancesList este estado true.passed
+]]></system-out>
+</testcase>
+<testcase classname="Microservicio consulta de saldos y consumos" name="La respuesta tieen los balances 2" time="3.193242">
+<system-out><![CDATA[Given Que el microservicio de consulta de saldos y consumos se encuentra operativo.passed
+Given Se consume el microservicio...........................................passed
+When Se envia la solicitud al tag getBalances con el estado false...........passed
+Then el microservicio responde en este tag ns2:subscriberBalancesList este estado false.passed
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -32,6 +32,18 @@ Examples:
 | http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3 | ns3:subscriberBalance 				  | ns3:type 		 		| SaldoRecargas |
 | http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3 | ns6:subscriberBolton 				  | ns6:subscriberBoltonId 	| X93 			|
 
+
+@tag3
+Scenario Outline: La respuesta tieen los balances
+Given Se consume el microservicio
+When Se envia la solicitud al tag getBalances con el estado <estado>
+Then el microservicio responde en este tag <tag> este estado <estadoRespuesta>
+
+Examples:
+| estado | tag 												| estadoRespuesta |
+| true   | ns2:subscriberBalancesList | true 						|
+| false  | ns2:subscriberBalancesList | false						|
+
 # Enviar parámetros desde gherkyn: para definir elementos, decir donde está definido el servicio (url)
 # Enviar parámetros del request 
 
