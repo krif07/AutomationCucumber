@@ -20,6 +20,18 @@ When Se envía una solicitud al microservicio correcta
 | http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3 | ns2:queryOCSBalancesAndBoltonsResponse | ns2:showBalances | false |
 Then el microservicio genera una respuesta exitosa
 
+@tag3
+Scenario Outline: Respueta de microservicio exitosa 2
+Given Que se consume el microservicio de consulta de saldos y consumos 2
+When Se envía una solicitud al microservicio <urlServicio> correcta  con <parentTag>
+Then el microservicio genera una respuesta del tag <childTag> exitosa <childTagText>
+
+Examples:
+| urlServicio 																											 | parentTag							  | childTag 		 		| childTagText  |
+| http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3 | ns2:queryOCSBalancesAndBoltonsResponse | ns2:showBalances 		| false 		|
+| http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3 | ns3:subscriberBalance 				  | ns3:type 		 		| SaldoRecargas |
+| http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3 | ns6:subscriberBolton 				  | ns6:subscriberBoltonId 	| X93 			|
+
 # Enviar parámetros desde gherkyn: para definir elementos, decir donde está definido el servicio (url)
 # Enviar parámetros del request 
 

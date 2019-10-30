@@ -97,5 +97,35 @@ public class StepDefinition {
         assertTrue(response.get("childNodeName").equals(this.childTag));
         assertTrue(response.get("childNodeText").equals(this.childTagText));
     }
+    
+    
+    @Given("^Que se consume el microservicio de consulta de saldos y consumos 2$")
+    public void que_se_consume_el_microservicio_de_consulta_de_saldos_y_consumos_2() throws Throwable {
+    	System.out.println("4.1 Que se consume el microservicio de consulta de saldos y consumos 2");
+    	httpPostHelp = new HttpPostHelp();
+    }
+
+    @When("^Se envía una solicitud al microservicio (.+) correcta  con (.+)$")
+    public void se_enva_una_solicitud_al_microservicio_correcta_con(String urlservicio, String parenttag) throws Throwable {
+    	System.out.println("4.2 Se envía una solicitud al microservicio correcta");
+    	
+    	httpPostHelp.setUrlService(urlservicio);
+    	httpPostHelp.setTagNameToGet(parenttag);
+    	httpPostHelp.setMethod("POST");
+    	
+    	httpPostHelp.sendMessagePost(httpPostHelp.getXmlRequest1()); 
+    	response = httpPostHelp.getResponse();
+    	assertTrue(response != null);
+    }
+
+    @Then("^el microservicio genera una respuesta del tag (.+) exitosa (.+)$")
+    public void el_microservicio_genera_una_respuesta_del_tag_exitosa(String childtag, String childtagtext) throws Throwable {
+    	System.out.println("4.3 el microservicio genera una respuesta exitosa");
+    	    	
+        assertTrue(response.get("status").equals("200"));
+        assertTrue(response.get("statusCode").equals("OK"));
+        assertTrue(response.get("childNodeName").equals(childtag));
+        assertTrue(response.get("childNodeText").equals(childtagtext));
+    }
 
 }
