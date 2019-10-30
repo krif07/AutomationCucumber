@@ -11,93 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 100733200,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "Que el microservicio de consulta de saldos y consumos se encuentra operativo",
-            "match": {
-              "location": "StepDefinition.que_el_microservicio_de_consulta_de_saldos_y_consumos_se_encuentra_operativo()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 9,
-        "name": "Firma del microservicio disponible",
-        "description": "",
-        "id": "microservicio-consulta-de-saldos-y-consumos;firma-del-microservicio-disponible",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1407500,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "Que se solicita la firma del servicio \"http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3?wsdl\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3?wsdl",
-                  "offset": 39
-                }
-              ],
-              "location": "StepDefinition.que_se_solicita_la_firma_del_servicio(String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 517598300,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "se acceda a la firma del microservicio \"WL5G3N3:queryOCSBalancesAndBoltonsRequest\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "WL5G3N3:queryOCSBalancesAndBoltonsRequest",
-                  "offset": 40
-                }
-              ],
-              "location": "StepDefinition.se_acceda_a_la_firma_del_microservicio(String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1149200,
-              "error_message": "java.lang.NullPointerException\r\n\tat stepdefinition.StepDefinition.se_obtendra_el_wsdl_correspondiente(StepDefinition.java:57)\r\n\tat ✽.Then se obtendra el wsdl correspondiente(Microservicio.feature:12)\r\n",
-              "status": "failed"
-            },
-            "line": 12,
-            "name": "se obtendra el wsdl correspondiente",
-            "match": {
-              "location": "StepDefinition.se_obtendra_el_wsdl_correspondiente()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 8,
-            "name": "@tag1"
-          }
-        ]
-      },
-      {
-        "line": 5,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 122300,
+              "duration": 92798100,
               "status": "passed"
             },
             "line": 6,
@@ -129,7 +43,7 @@
         "steps": [
           {
             "result": {
-              "duration": 109500,
+              "duration": 102100,
               "status": "passed"
             },
             "line": 18,
@@ -141,7 +55,7 @@
           },
           {
             "result": {
-              "duration": 3909836400,
+              "duration": 15021813800,
               "status": "passed"
             },
             "line": 19,
@@ -164,8 +78,9 @@
           },
           {
             "result": {
-              "duration": 205100,
-              "status": "passed"
+              "duration": 1730900,
+              "error_message": "java.lang.NullPointerException\r\n\tat stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_exitosa(StepDefinition.java:95)\r\n\tat ✽.Then el microservicio genera una respuesta exitosa(Microservicio.feature:21)\r\n",
+              "status": "failed"
             },
             "line": 21,
             "name": "el microservicio genera una respuesta exitosa",
@@ -191,7 +106,7 @@
         "steps": [
           {
             "result": {
-              "duration": 110400,
+              "duration": 109400,
               "status": "passed"
             },
             "line": 6,
@@ -213,7 +128,7 @@
         "steps": [
           {
             "result": {
-              "duration": 70900,
+              "duration": 149900,
               "status": "passed"
             },
             "line": 25,
@@ -225,7 +140,7 @@
           },
           {
             "result": {
-              "duration": 2823963500,
+              "duration": 15006892400,
               "status": "passed"
             },
             "line": 26,
@@ -251,8 +166,9 @@
           },
           {
             "result": {
-              "duration": 269300,
-              "status": "passed"
+              "duration": 188200,
+              "error_message": "java.lang.NullPointerException\r\n\tat stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(StepDefinition.java:125)\r\n\tat ✽.Then el microservicio genera una respuesta del tag ns2:showBalances exitosa false(Microservicio.feature:27)\r\n",
+              "status": "failed"
             },
             "line": 27,
             "name": "el microservicio genera una respuesta del tag ns2:showBalances exitosa false",
@@ -296,7 +212,7 @@
         "steps": [
           {
             "result": {
-              "duration": 154500,
+              "duration": 59600,
               "status": "passed"
             },
             "line": 6,
@@ -318,7 +234,7 @@
         "steps": [
           {
             "result": {
-              "duration": 93000,
+              "duration": 25100,
               "status": "passed"
             },
             "line": 25,
@@ -330,7 +246,7 @@
           },
           {
             "result": {
-              "duration": 2843604100,
+              "duration": 15007102600,
               "status": "passed"
             },
             "line": 26,
@@ -356,8 +272,9 @@
           },
           {
             "result": {
-              "duration": 159100,
-              "status": "passed"
+              "duration": 1139300,
+              "error_message": "java.lang.NullPointerException\r\n\tat stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(StepDefinition.java:125)\r\n\tat ✽.Then el microservicio genera una respuesta del tag ns3:type exitosa SaldoRecargas(Microservicio.feature:27)\r\n",
+              "status": "failed"
             },
             "line": 27,
             "name": "el microservicio genera una respuesta del tag ns3:type exitosa SaldoRecargas",
@@ -401,7 +318,7 @@
         "steps": [
           {
             "result": {
-              "duration": 95500,
+              "duration": 135500,
               "status": "passed"
             },
             "line": 6,
@@ -423,7 +340,7 @@
         "steps": [
           {
             "result": {
-              "duration": 68500,
+              "duration": 98900,
               "status": "passed"
             },
             "line": 25,
@@ -435,7 +352,7 @@
           },
           {
             "result": {
-              "duration": 2833585600,
+              "duration": 15005551200,
               "status": "passed"
             },
             "line": 26,
@@ -461,8 +378,9 @@
           },
           {
             "result": {
-              "duration": 399600,
-              "status": "passed"
+              "duration": 850300,
+              "error_message": "java.lang.NullPointerException\r\n\tat stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(StepDefinition.java:125)\r\n\tat ✽.Then el microservicio genera una respuesta del tag ns6:subscriberBoltonId exitosa X93(Microservicio.feature:27)\r\n",
+              "status": "failed"
             },
             "line": 27,
             "name": "el microservicio genera una respuesta del tag ns6:subscriberBoltonId exitosa X93",

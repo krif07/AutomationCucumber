@@ -22,7 +22,7 @@ public class StepDefinition {
 	private String childTagText;
 	private String urlServicio;
 	
-    
+	
 	@Given("^Que el microservicio de consulta de saldos y consumos se encuentra operativo$")
     public void que_el_microservicio_de_consulta_de_saldos_y_consumos_se_encuentra_operativo() throws Throwable {
     	
@@ -127,5 +127,5 @@ public class StepDefinition {
         assertTrue(response.get("childNodeName").equals(childtag));
         assertTrue(response.get("childNodeText").equals(childtagtext));
     }
-
+	
 }
