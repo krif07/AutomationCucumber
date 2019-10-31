@@ -28,7 +28,7 @@ formatter.match({
   "location": "StepDefinition.que_el_microservicio_de_consulta_de_saldos_y_consumos_se_encuentra_operativo()"
 });
 formatter.result({
-  "duration": 58416600,
+  "duration": 98868200,
   "status": "passed"
 });
 formatter.scenario({
@@ -85,21 +85,21 @@ formatter.match({
   "location": "StepDefinition.que_se_consume_el_microservicio_de_consulta_de_saldos_y_consumos()"
 });
 formatter.result({
-  "duration": 76600,
+  "duration": 114200,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.se_envia_una_solicitud_al_microservicio_correcta(DataTable)"
 });
 formatter.result({
-  "duration": 3277121000,
+  "duration": 4099499300,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.el_microservicio_genera_una_respuesta_exitosa()"
 });
 formatter.result({
-  "duration": 2153900,
+  "duration": 2852900,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -196,7 +196,7 @@ formatter.match({
   "location": "StepDefinition.que_el_microservicio_de_consulta_de_saldos_y_consumos_se_encuentra_operativo()"
 });
 formatter.result({
-  "duration": 74300,
+  "duration": 69800,
   "status": "passed"
 });
 formatter.scenario({
@@ -244,7 +244,7 @@ formatter.match({
   "location": "StepDefinition.que_se_consume_el_microservicio_de_consulta_de_saldos_y_consumos_2()"
 });
 formatter.result({
-  "duration": 47200,
+  "duration": 63900,
   "status": "passed"
 });
 formatter.match({
@@ -261,7 +261,7 @@ formatter.match({
   "location": "StepDefinition.se_enva_una_solicitud_al_microservicio_correcta_con(String,String)"
 });
 formatter.result({
-  "duration": 5459639400,
+  "duration": 2550970400,
   "status": "passed"
 });
 formatter.match({
@@ -278,7 +278,7 @@ formatter.match({
   "location": "StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(String,String)"
 });
 formatter.result({
-  "duration": 293700,
+  "duration": 145700,
   "status": "passed"
 });
 formatter.background({
@@ -297,7 +297,7 @@ formatter.match({
   "location": "StepDefinition.que_el_microservicio_de_consulta_de_saldos_y_consumos_se_encuentra_operativo()"
 });
 formatter.result({
-  "duration": 260700,
+  "duration": 63500,
   "status": "passed"
 });
 formatter.scenario({
@@ -345,7 +345,7 @@ formatter.match({
   "location": "StepDefinition.que_se_consume_el_microservicio_de_consulta_de_saldos_y_consumos_2()"
 });
 formatter.result({
-  "duration": 81500,
+  "duration": 82700,
   "status": "passed"
 });
 formatter.match({
@@ -362,7 +362,7 @@ formatter.match({
   "location": "StepDefinition.se_enva_una_solicitud_al_microservicio_correcta_con(String,String)"
 });
 formatter.result({
-  "duration": 2950060400,
+  "duration": 3040507700,
   "status": "passed"
 });
 formatter.match({
@@ -379,7 +379,7 @@ formatter.match({
   "location": "StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(String,String)"
 });
 formatter.result({
-  "duration": 387100,
+  "duration": 365200,
   "status": "passed"
 });
 formatter.background({
@@ -398,7 +398,7 @@ formatter.match({
   "location": "StepDefinition.que_el_microservicio_de_consulta_de_saldos_y_consumos_se_encuentra_operativo()"
 });
 formatter.result({
-  "duration": 66100,
+  "duration": 107200,
   "status": "passed"
 });
 formatter.scenario({
@@ -446,7 +446,7 @@ formatter.match({
   "location": "StepDefinition.que_se_consume_el_microservicio_de_consulta_de_saldos_y_consumos_2()"
 });
 formatter.result({
-  "duration": 89900,
+  "duration": 82600,
   "status": "passed"
 });
 formatter.match({
@@ -463,7 +463,7 @@ formatter.match({
   "location": "StepDefinition.se_enva_una_solicitud_al_microservicio_correcta_con(String,String)"
 });
 formatter.result({
-  "duration": 3106432200,
+  "duration": 2432548400,
   "status": "passed"
 });
 formatter.match({
@@ -480,7 +480,7 @@ formatter.match({
   "location": "StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(String,String)"
 });
 formatter.result({
-  "duration": 331300,
+  "duration": 214300,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -564,7 +564,7 @@ formatter.match({
   "location": "StepDefinition.que_el_microservicio_de_consulta_de_saldos_y_consumos_se_encuentra_operativo()"
 });
 formatter.result({
-  "duration": 94400,
+  "duration": 115000,
   "status": "passed"
 });
 formatter.scenario({
@@ -611,7 +611,7 @@ formatter.match({
   "location": "StepDefinition.se_consume_el_microservicio()"
 });
 formatter.result({
-  "duration": 108100,
+  "duration": 65700,
   "status": "passed"
 });
 formatter.match({
@@ -624,7 +624,7 @@ formatter.match({
   "location": "StepDefinition.se_envia_la_solicitud_al_tag_getbalances_con_el_estado(String)"
 });
 formatter.result({
-  "duration": 204400,
+  "duration": 121800,
   "status": "passed"
 });
 formatter.match({
@@ -641,7 +641,7 @@ formatter.match({
   "location": "StepDefinition.el_microservicio_responde_en_este_tag_este_estado(String,String)"
 });
 formatter.result({
-  "duration": 4985597600,
+  "duration": 3656261200,
   "status": "passed"
 });
 formatter.background({
@@ -660,7 +660,7 @@ formatter.match({
   "location": "StepDefinition.que_el_microservicio_de_consulta_de_saldos_y_consumos_se_encuentra_operativo()"
 });
 formatter.result({
-  "duration": 229800,
+  "duration": 120800,
   "status": "passed"
 });
 formatter.scenario({
@@ -707,7 +707,7 @@ formatter.match({
   "location": "StepDefinition.se_consume_el_microservicio()"
 });
 formatter.result({
-  "duration": 100800,
+  "duration": 96200,
   "status": "passed"
 });
 formatter.match({
@@ -720,7 +720,7 @@ formatter.match({
   "location": "StepDefinition.se_envia_la_solicitud_al_tag_getbalances_con_el_estado(String)"
 });
 formatter.result({
-  "duration": 136800,
+  "duration": 152100,
   "status": "passed"
 });
 formatter.match({
@@ -737,7 +737,7 @@ formatter.match({
   "location": "StepDefinition.el_microservicio_responde_en_este_tag_este_estado(String,String)"
 });
 formatter.result({
-  "duration": 3192774200,
+  "duration": 3297489300,
   "status": "passed"
 });
 });
