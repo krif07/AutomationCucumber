@@ -1,5 +1,5 @@
 package stepdefinition;
-
+/*
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
@@ -13,10 +13,10 @@ import java.util.Map;
 
 import org.junit.runner.RunWith;
 
-@RunWith(Cucumber.class)
+@RunWith(Cucumber.class)*/
 public class StepDefinition {
 
-	private HttpPostHelp httpPostHelp;
+	/*private HttpPostHelp httpPostHelp;
 	private Map<String, String> response;
 	private String childTag;
 	private String childTagText;
@@ -70,9 +70,9 @@ public class StepDefinition {
     public void se_envia_una_solicitud_al_microservicio_correcta(DataTable data) throws Throwable {
     	System.out.println("3.2 Se envía una solicitud al microservicio correcta");
     	
-    	/*
-    	 * | http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3 | ns2:queryOCSBalancesAndBoltonsResponse | ns2:showBalances | false |
-    	 */
+    	
+    	 // | http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3 | ns2:queryOCSBalancesAndBoltonsResponse | ns2:showBalances | false |
+    	 
     	List<List<String>> obj = data.raw();
     	String url = obj.get(0).get(0);
     	String parentTag = obj.get(0).get(1);
@@ -126,6 +126,6 @@ public class StepDefinition {
         assertTrue(response.get("statusCode").equals("OK"));
         assertTrue(response.get("childNodeName").equals(childtag));
         assertTrue(response.get("childNodeText").equals(childtagtext));
-    }
+    }*/
 	
 }

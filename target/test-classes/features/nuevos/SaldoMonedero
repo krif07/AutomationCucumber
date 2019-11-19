@@ -1,0 +1,25 @@
+# Feature: consultar el saldo de los monederos de un abonado en Altamira
+# queryOCSBalances (msisdn=963500797, recordsNumber=30)
+
+# Background:
+# Given que el abonado que consulta el saldo se encuentra activo y registra saldos de monederos en Altamira.
+
+# Scenario: error de time out al consultar saldo monederos
+# Given que el abonado consulta saldo de monederos
+# When Altamira no responde en el tiempo parametrizado
+# Then devolvera un error de time out estandar
+
+# Scenario: mensaje de error al consultar saldo monederos
+# Given que el abonado consulta saldo de monederos
+# When Altamira retorna un error
+# Then devolvera el mensaje de error en el formato estandar
+
+# Scenario: entregar valores registrados en monederos para saldo monederos
+# Given que los escenarios 1 o 2 fueron fallidos y que el abonado consulta saldo de monederos
+# When los valores retornados de Altamira son mayores a cero
+# Then entregar los valores registrados en los monederos para el abonado en Altamira.
+
+# Scenario: devolver valor cero como saldo de monederos para saldo monederos
+# Given que los escenarios 1 o 2 fueron fallidos y que el abonado consulta saldo de monederos
+# When los valores retornados de Altamira son menores a cero
+# Then devolvera el valor cero como saldo de monederos

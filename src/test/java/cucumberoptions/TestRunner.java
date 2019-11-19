@@ -26,9 +26,7 @@ import cucumber.api.junit.Cucumber;
 				"pretty", "html:target/cucumber", 
 				"json:target/cucumber.json",
 				"junit:target/cucumber.xml"
-		},
-		tags="@tag2, @tag3"		
-		)
+		})
 public class TestRunner {
 
 }

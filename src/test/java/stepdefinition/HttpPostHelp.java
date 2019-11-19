@@ -1,5 +1,5 @@
 package stepdefinition;
-
+/*
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -21,11 +21,11 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
-
+*/
 public class HttpPostHelp {
 	
 	
-
+/*
 	public HttpPostHelp() {
 		
 		this.urlService = getUrl1();
@@ -280,6 +280,6 @@ public class HttpPostHelp {
 	public void setMethod(String method) {
 		this.method = method;
 	}
-	
+	*/
 	
 }

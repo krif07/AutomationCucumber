@@ -1,0 +1,25 @@
+# Feature: consultar informacion de un abonado en Altamira
+# (msisdn= )
+
+# Background:
+# Given que el abonado que consulta el saldo se encuentra activo Y registra saldos de bonos en Altamira Y los bonos se encuentran en los estados parametrizados.
+
+# Scenario:
+# Given que el abonado consulta saldos
+# When Altamira no responde en el tiempo parametrizado
+# Then devolvera un error de time out estandar
+
+# Scenario:
+# Given que el abonado consulta saldos
+# When Altamira retorna un error
+# Then devolvera el mensaje de error en el formato estandar
+
+# Scenario:
+# Given que los escenarios 1 o 2 fueron fallidos y que existe información del abonado en Altamira
+# When el estado del abonado este dentro de los valores parametrizados
+# Then entregar la información del abonado en Altamira. (plan, fecha de alta, ciclo, estado)
+
+# Scenario:
+# Given que los escenarios 1 o 2 fueron fallidos y que existe información del abonado en Altamira
+# When el estado del abonado no este dentro de los valores parametrizados
+# Then devolvera el mensaje de error en formato estandar

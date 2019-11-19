@@ -1,9 +1,9 @@
 [
   {
-    "line": 2,
+    "line": 1,
     "elements": [
       {
-        "line": 5,
+        "line": 3,
         "name": "",
         "description": "",
         "type": "background",
@@ -11,421 +11,83 @@
         "steps": [
           {
             "result": {
-              "duration": 92798100,
+              "duration": 57882700,
               "status": "passed"
             },
-            "line": 6,
-            "name": "Que el microservicio de consulta de saldos y consumos se encuentra operativo",
+            "line": 4,
+            "name": "que el abonado que consulta el saldo se encuentra activo Y registra saldos de bonos en Altamira Y los bonos se encuentran en los estados parametrizados.",
             "match": {
-              "location": "StepDefinition.que_el_microservicio_de_consulta_de_saldos_y_consumos_se_encuentra_operativo()"
+              "location": "SaldoBonosStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados()"
             },
             "keyword": "Given "
           }
         ]
       },
       {
-        "comments": [
-          {
-            "line": 13,
-            "value": "#    | urlServicio            \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t| tag \t\t\t\t\t\t\t\t\t\t\t|"
-          },
-          {
-            "line": 14,
-            "value": "#    | http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3?wsdl    \t| WL5G3N3:queryOCSBalancesAndBoltonsRequest \t|"
-          }
-        ],
-        "line": 17,
-        "name": "Respueta de microservicio exitosa",
+        "line": 23,
+        "name": "devolver valor cero como saldo de monederos para saldo bonos",
         "description": "",
-        "id": "microservicio-consulta-de-saldos-y-consumos;respueta-de-microservicio-exitosa",
+        "id": "consultar-el-saldo-de-los-bonos-de-un-abonado-en-altamira;devolver-valor-cero-como-saldo-de-monederos-para-saldo-bonos;;2",
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 102100,
+              "duration": 1304300,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
+            "match": {
+              "arguments": [
+                {
+                  "val": "963500797",
+                  "offset": 58
+                },
+                {
+                  "val": "http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
+                  "offset": 92
+                }
+              ],
+              "location": "SaldoBonosStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_bonos(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 20600,
               "status": "passed"
             },
             "line": 18,
-            "name": "Que se consume el microservicio de consulta de saldos y consumos",
+            "name": "los valores retornados de Altamira son menores a cero",
             "match": {
-              "location": "StepDefinition.que_se_consume_el_microservicio_de_consulta_de_saldos_y_consumos()"
+              "location": "SaldoBonosStepDefinition.los_valores_retornados_de_altamira_son_menores_a_cero()"
             },
-            "keyword": "Given "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 15021813800,
+              "duration": 20700,
               "status": "passed"
             },
             "line": 19,
-            "name": "Se envía una solicitud al microservicio correcta",
+            "name": "devolvera el valor cero como saldo de monederos",
             "match": {
-              "location": "StepDefinition.se_envia_una_solicitud_al_microservicio_correcta(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3",
-                  "ns2:queryOCSBalancesAndBoltonsResponse",
-                  "ns2:showBalances",
-                  "false"
-                ],
-                "line": 20
-              }
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1730900,
-              "error_message": "java.lang.NullPointerException\r\n\tat stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_exitosa(StepDefinition.java:95)\r\n\tat ✽.Then el microservicio genera una respuesta exitosa(Microservicio.feature:21)\r\n",
-              "status": "failed"
-            },
-            "line": 21,
-            "name": "el microservicio genera una respuesta exitosa",
-            "match": {
-              "location": "StepDefinition.el_microservicio_genera_una_respuesta_exitosa()"
+              "location": "SaldoBonosStepDefinition.devolvera_el_valor_cero_como_saldo_de_monederos()"
             },
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 16,
-            "name": "@tag2"
-          }
-        ]
-      },
-      {
-        "line": 5,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 109400,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "Que el microservicio de consulta de saldos y consumos se encuentra operativo",
-            "match": {
-              "location": "StepDefinition.que_el_microservicio_de_consulta_de_saldos_y_consumos_se_encuentra_operativo()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 31,
-        "name": "Respueta de microservicio exitosa 2",
-        "description": "",
-        "id": "microservicio-consulta-de-saldos-y-consumos;respueta-de-microservicio-exitosa-2;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 149900,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "Que se consume el microservicio de consulta de saldos y consumos 2",
-            "match": {
-              "location": "StepDefinition.que_se_consume_el_microservicio_de_consulta_de_saldos_y_consumos_2()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 15006892400,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "Se envía una solicitud al microservicio http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3 correcta  con ns2:queryOCSBalancesAndBoltonsResponse",
-            "match": {
-              "arguments": [
-                {
-                  "val": "http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3",
-                  "offset": 40
-                },
-                {
-                  "val": "ns2:queryOCSBalancesAndBoltonsResponse",
-                  "offset": 173
-                }
-              ],
-              "location": "StepDefinition.se_enva_una_solicitud_al_microservicio_correcta_con(String,String)"
-            },
-            "matchedColumns": [
-              0,
-              1
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 188200,
-              "error_message": "java.lang.NullPointerException\r\n\tat stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(StepDefinition.java:125)\r\n\tat ✽.Then el microservicio genera una respuesta del tag ns2:showBalances exitosa false(Microservicio.feature:27)\r\n",
-              "status": "failed"
-            },
-            "line": 27,
-            "name": "el microservicio genera una respuesta del tag ns2:showBalances exitosa false",
-            "match": {
-              "arguments": [
-                {
-                  "val": "ns2:showBalances",
-                  "offset": 46
-                },
-                {
-                  "val": "false",
-                  "offset": 71
-                }
-              ],
-              "location": "StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(String,String)"
-            },
-            "matchedColumns": [
-              2,
-              3
-            ],
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 1,
-            "name": "@tag"
-          },
-          {
-            "line": 23,
-            "name": "@tag3"
-          }
-        ]
-      },
-      {
-        "line": 5,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 59600,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "Que el microservicio de consulta de saldos y consumos se encuentra operativo",
-            "match": {
-              "location": "StepDefinition.que_el_microservicio_de_consulta_de_saldos_y_consumos_se_encuentra_operativo()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 32,
-        "name": "Respueta de microservicio exitosa 2",
-        "description": "",
-        "id": "microservicio-consulta-de-saldos-y-consumos;respueta-de-microservicio-exitosa-2;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 25100,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "Que se consume el microservicio de consulta de saldos y consumos 2",
-            "match": {
-              "location": "StepDefinition.que_se_consume_el_microservicio_de_consulta_de_saldos_y_consumos_2()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 15007102600,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "Se envía una solicitud al microservicio http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3 correcta  con ns3:subscriberBalance",
-            "match": {
-              "arguments": [
-                {
-                  "val": "http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3",
-                  "offset": 40
-                },
-                {
-                  "val": "ns3:subscriberBalance",
-                  "offset": 173
-                }
-              ],
-              "location": "StepDefinition.se_enva_una_solicitud_al_microservicio_correcta_con(String,String)"
-            },
-            "matchedColumns": [
-              0,
-              1
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1139300,
-              "error_message": "java.lang.NullPointerException\r\n\tat stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(StepDefinition.java:125)\r\n\tat ✽.Then el microservicio genera una respuesta del tag ns3:type exitosa SaldoRecargas(Microservicio.feature:27)\r\n",
-              "status": "failed"
-            },
-            "line": 27,
-            "name": "el microservicio genera una respuesta del tag ns3:type exitosa SaldoRecargas",
-            "match": {
-              "arguments": [
-                {
-                  "val": "ns3:type",
-                  "offset": 46
-                },
-                {
-                  "val": "SaldoRecargas",
-                  "offset": 63
-                }
-              ],
-              "location": "StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(String,String)"
-            },
-            "matchedColumns": [
-              2,
-              3
-            ],
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 1,
-            "name": "@tag"
-          },
-          {
-            "line": 23,
-            "name": "@tag3"
-          }
-        ]
-      },
-      {
-        "line": 5,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 135500,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "Que el microservicio de consulta de saldos y consumos se encuentra operativo",
-            "match": {
-              "location": "StepDefinition.que_el_microservicio_de_consulta_de_saldos_y_consumos_se_encuentra_operativo()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 33,
-        "name": "Respueta de microservicio exitosa 2",
-        "description": "",
-        "id": "microservicio-consulta-de-saldos-y-consumos;respueta-de-microservicio-exitosa-2;;4",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 98900,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "Que se consume el microservicio de consulta de saldos y consumos 2",
-            "match": {
-              "location": "StepDefinition.que_se_consume_el_microservicio_de_consulta_de_saldos_y_consumos_2()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 15005551200,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "Se envía una solicitud al microservicio http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3 correcta  con ns6:subscriberBolton",
-            "match": {
-              "arguments": [
-                {
-                  "val": "http://10.112.229.140:9011/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v3",
-                  "offset": 40
-                },
-                {
-                  "val": "ns6:subscriberBolton",
-                  "offset": 173
-                }
-              ],
-              "location": "StepDefinition.se_enva_una_solicitud_al_microservicio_correcta_con(String,String)"
-            },
-            "matchedColumns": [
-              0,
-              1
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 850300,
-              "error_message": "java.lang.NullPointerException\r\n\tat stepdefinition.StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(StepDefinition.java:125)\r\n\tat ✽.Then el microservicio genera una respuesta del tag ns6:subscriberBoltonId exitosa X93(Microservicio.feature:27)\r\n",
-              "status": "failed"
-            },
-            "line": 27,
-            "name": "el microservicio genera una respuesta del tag ns6:subscriberBoltonId exitosa X93",
-            "match": {
-              "arguments": [
-                {
-                  "val": "ns6:subscriberBoltonId",
-                  "offset": 46
-                },
-                {
-                  "val": "X93",
-                  "offset": 77
-                }
-              ],
-              "location": "StepDefinition.el_microservicio_genera_una_respuesta_del_tag_exitosa(String,String)"
-            },
-            "matchedColumns": [
-              2,
-              3
-            ],
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 1,
-            "name": "@tag"
-          },
-          {
-            "line": 23,
-            "name": "@tag3"
           }
         ]
       }
     ],
-    "name": "Microservicio consulta de saldos y consumos",
+    "name": "consultar el saldo de los bonos de un abonado en Altamira",
     "description": "",
-    "id": "microservicio-consulta-de-saldos-y-consumos",
+    "id": "consultar-el-saldo-de-los-bonos-de-un-abonado-en-altamira",
     "keyword": "Feature",
-    "uri": "Microservicio.feature",
-    "tags": [
-      {
-        "line": 1,
-        "name": "@tag"
-      }
-    ]
+    "uri": "SaldoBonos.feature"
   }
 ]

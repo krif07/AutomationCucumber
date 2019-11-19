@@ -48,7 +48,7 @@ public class HttpPostTest {
 			+ "         <typ:getBalances>true</typ:getBalances>\r\n"
 			+ "      </typ:queryOCSBalancesAndBoltonsRequest>\r\n" + "   </soapenv:Body>\r\n" + "</soapenv:Envelope>";
 
-	
+	/*
 	@Test
 	public void testHttpPost1() {
 
@@ -115,7 +115,7 @@ public class HttpPostTest {
 					}
 				}*/
 
-
+/*
 			} catch (ParserConfigurationException pce) {
 				pce.printStackTrace();
 			} catch (SAXException saxe) {
@@ -137,5 +137,5 @@ public class HttpPostTest {
 			conn.disconnect(); 
 		}
 	}
-
+*/
 }
