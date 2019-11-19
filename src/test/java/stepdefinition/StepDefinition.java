@@ -46,8 +46,7 @@ public class StepDefinition {
     	httpPostHelp.setMethod("GET");
     	
     	httpPostHelp.sendMessagePost(null);
-    	response = httpPostHelp.getResponse();
-    	assertTrue(response != null);    	
+    	response = httpPostHelp.getResponse();    	    	
     }
 
     @Then("^se obtendra el wsdl correspondiente$")
@@ -56,8 +55,7 @@ public class StepDefinition {
     	    	    	
         assertTrue(response.get("status").equals("200"));
         assertTrue(response.get("statusCode").equals("OK"));
-        assertTrue(response.get("childNodeName").equals("WL5G3N0:message"));
-        //assertTrue(response.get("childNodeText").equals("WHATSAPP"));
+        assertTrue(response.get("childNodeName").equals("WL5G3N0:message"));        
     }
     
     @Given("^Que se consume el microservicio de consulta de saldos y consumos$")
@@ -84,8 +82,7 @@ public class StepDefinition {
     	httpPostHelp.setMethod("POST");
     	
     	httpPostHelp.sendMessagePost(httpPostHelp.getXmlRequest1()); 
-    	response = httpPostHelp.getResponse();
-    	assertTrue(response != null);
+    	response = httpPostHelp.getResponse();    	
     }    
 
     @Then("^el microservicio genera una respuesta exitosa$")
@@ -114,8 +111,7 @@ public class StepDefinition {
     	httpPostHelp.setMethod("POST");
     	
     	httpPostHelp.sendMessagePost(httpPostHelp.getXmlRequest1()); 
-    	response = httpPostHelp.getResponse();
-    	assertTrue(response != null);
+    	response = httpPostHelp.getResponse();    	
     }
 
     @Then("^el microservicio genera una respuesta del tag (.+) exitosa (.+)$")
@@ -126,6 +122,8 @@ public class StepDefinition {
         assertTrue(response.get("statusCode").equals("OK"));
         assertTrue(response.get("childNodeName").equals(childtag));
         assertTrue(response.get("childNodeText").equals(childtagtext));
+
     }*/
+
 	
 }

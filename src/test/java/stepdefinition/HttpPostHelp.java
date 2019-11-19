@@ -181,7 +181,7 @@ public class HttpPostHelp {
 				
 				NodeList headerInfoList = document.getElementsByTagName(getTagNameToGet());									
 								
-				if(headerInfoList.getLength() > 0) {
+				if(headerInfoList != null && headerInfoList.getLength() > 0) {
 					response.put("parentNodeName", headerInfoList.item(0).getNodeName());
 					response.put("parentNodeText", headerInfoList.item(0).getTextContent());
 					
@@ -219,6 +219,28 @@ public class HttpPostHelp {
 
 	public String getXmlRequest1() {
 		return xmlRequest1;
+	}
+	
+	public void setBalancesValueToXmlRequest1(String tagGetBalancesValue) {
+		this.xmlRequest1 = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:v1=\"http://telefonica.ec/CommonBusinessEntities/BusinessInteractionABE/HeaderInfo/v1\" xmlns:typ=\"http://telefonica.ec/Customer/ChargeCalculationAndBalanceManagement/BalanceManagement/ManageBalanceOperations/v2/types\" xmlns:v11=\"http://telefonica.ec/Customer/CustomerABE/SubscriberIdentification/v1\">\r\n"
+				+ "   <soapenv:Header>\r\n" + "      <v1:headerInfo>\r\n"
+				+ "         <v1:application>WHATSAPP</v1:application>\r\n"
+				+ "         <v1:serviceChannel>WHATSAPP</v1:serviceChannel>\r\n"
+				+ "         <v1:password>WHATSAPP_022019</v1:password>\r\n"
+				+ "         <v1:userLogin>XXX</v1:userLogin>\r\n" + "         <v1:ipAddress>172.16.4.6</v1:ipAddress>\r\n"
+				+ "         <v1:transactionTimestamp>2017-01-01T11:57:16</v1:transactionTimestamp>\r\n"
+				+ "         <v1:serviceName>XXXX</v1:serviceName>\r\n" + "         <v1:version>1.0</v1:version>\r\n"
+				+ "      </v1:headerInfo>\r\n" + "   </soapenv:Header>\r\n" + "   <soapenv:Body>\r\n"
+				+ "      <typ:queryOCSBalancesAndBoltonsRequest>\r\n" + "         <typ:subscriberIdentification>\r\n"
+				+ "            <v11:identificationValue>987421201</v11:identificationValue>\r\n"
+				+ "            <v11:identificationType>MSISDN</v11:identificationType>\r\n"
+				+ "         </typ:subscriberIdentification>\r\n"
+				+ "         <typ:subscriberType>VPN</typ:subscriberType>\r\n"
+				+ "         <typ:tariffPlanId>1H</typ:tariffPlanId>\r\n" + "         <!--Optional:-->\r\n"
+				+ "         <typ:getTheSumOfBoltons>false</typ:getTheSumOfBoltons>\r\n" + "         <!--Optional:-->\r\n"
+				+ "         <typ:getBalances>"+ tagGetBalancesValue +"</typ:getBalances>\r\n"
+				+ "      </typ:queryOCSBalancesAndBoltonsRequest>\r\n" + "   </soapenv:Body>\r\n" 
+				+ "</soapenv:Envelope>";
 	}
 
 	public String getXmlRequest2() {
