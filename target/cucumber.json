@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 57882700,
+              "duration": 96107200,
               "status": "passed"
             },
             "line": 4,
@@ -24,19 +24,100 @@
         ]
       },
       {
-        "line": 23,
-        "name": "devolver valor cero como saldo de monederos para saldo bonos",
+        "line": 13,
+        "name": "mensaje de error al consultar saldo de bonos",
         "description": "",
-        "id": "consultar-el-saldo-de-los-bonos-de-un-abonado-en-altamira;devolver-valor-cero-como-saldo-de-monederos-para-saldo-bonos;;2",
+        "id": "consultar-el-saldo-de-los-bonos-de-un-abonado-en-altamira;mensaje-de-error-al-consultar-saldo-de-bonos;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1304300,
+              "duration": 2295000,
               "status": "passed"
             },
-            "line": 17,
+            "line": 7,
+            "name": "que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
+            "match": {
+              "arguments": [
+                {
+                  "val": "963500797",
+                  "offset": 15
+                },
+                {
+                  "val": "http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
+                  "offset": 49
+                }
+              ],
+              "location": "SaldoBonosStepDefinition.que_el_abonado_consulta_saldo_de_bonos(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 29587042600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Altamira retorna un error",
+            "match": {
+              "location": "SaldoBonosStepDefinition.altamira_retorna_un_error()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 107500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "devolvera el mensaje de error en el formato estandar",
+            "match": {
+              "location": "SaldoBonosStepDefinition.devolvera_el_mensaje_de_error_en_el_formato_estandar()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 66700,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "que el abonado que consulta el saldo se encuentra activo Y registra saldos de bonos en Altamira Y los bonos se encuentran en los estados parametrizados.",
+            "match": {
+              "location": "SaldoBonosStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 22,
+        "name": "entregar valores registrados en monederos para saldo bonos",
+        "description": "",
+        "id": "consultar-el-saldo-de-los-bonos-de-un-abonado-en-altamira;entregar-valores-registrados-en-monederos-para-saldo-bonos;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 136900,
+              "status": "passed"
+            },
+            "line": 16,
             "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
             "match": {
               "arguments": [
@@ -59,10 +140,91 @@
           },
           {
             "result": {
-              "duration": 20600,
+              "duration": 24700,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "los valores retornados de Altamira son mayores a cero",
+            "match": {
+              "location": "SaldoBonosStepDefinition.los_valores_retornados_de_altamira_son_mayores_a_cero()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 23000,
               "status": "passed"
             },
             "line": 18,
+            "name": "entregar los valores registrados en los monederos para el abonado en Altamira.",
+            "match": {
+              "location": "SaldoBonosStepDefinition.entregar_los_valores_registrados_en_los_monederos_para_el_abonado_en_altamira()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 49300,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "que el abonado que consulta el saldo se encuentra activo Y registra saldos de bonos en Altamira Y los bonos se encuentran en los estados parametrizados.",
+            "match": {
+              "location": "SaldoBonosStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 31,
+        "name": "devolver valor cero como saldo de monederos para saldo bonos",
+        "description": "",
+        "id": "consultar-el-saldo-de-los-bonos-de-un-abonado-en-altamira;devolver-valor-cero-como-saldo-de-monederos-para-saldo-bonos;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 121300,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
+            "match": {
+              "arguments": [
+                {
+                  "val": "963500797",
+                  "offset": 58
+                },
+                {
+                  "val": "http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
+                  "offset": 92
+                }
+              ],
+              "location": "SaldoBonosStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_bonos(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 43600,
+              "status": "passed"
+            },
+            "line": 26,
             "name": "los valores retornados de Altamira son menores a cero",
             "match": {
               "location": "SaldoBonosStepDefinition.los_valores_retornados_de_altamira_son_menores_a_cero()"
@@ -71,10 +233,10 @@
           },
           {
             "result": {
-              "duration": 20700,
+              "duration": 44600,
               "status": "passed"
             },
-            "line": 19,
+            "line": 27,
             "name": "devolvera el valor cero como saldo de monederos",
             "match": {
               "location": "SaldoBonosStepDefinition.devolvera_el_valor_cero_como_saldo_de_monederos()"

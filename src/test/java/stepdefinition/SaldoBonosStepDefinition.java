@@ -6,10 +6,15 @@ import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
 import cucumber.api.junit.Cucumber;
 
+import java.util.Map;
+
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 public class SaldoBonosStepDefinition {
+	
+	private HttpGetHelp httpGetHelp;
+	private Map<String, String> response;
 
 	@Given("^que el abonado que consulta el saldo se encuentra activo Y registra saldos de bonos en Altamira Y los bonos se encuentran en los estados parametrizados.$")
     public void que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados() throws Throwable {
@@ -19,18 +24,22 @@ public class SaldoBonosStepDefinition {
 	@Given("^que el abonado (.+) consulta saldo de bonos (.+)$")
     public void que_el_abonado_consulta_saldo_de_bonos(String msisdn, String urlservicio) throws Throwable {
         System.out.println("1.1 que el abonado (.+) consulta saldo de bonos (.+)$");
-        System.out.println(msisdn);
-        System.out.println(urlservicio);
+        
+        httpGetHelp = new HttpGetHelp();
+        httpGetHelp.setUrlService(urlservicio, msisdn, "30", "A", "C");       
     }
 
     @When("^Altamira retorna un error$")
     public void altamira_retorna_un_error() throws Throwable {
     	System.out.println("1.2 Altamira retorna un error$");
+    	
+    	httpGetHelp.getJson();
     }
 
     @Then("^devolvera el mensaje de error en el formato estandar$")
     public void devolvera_el_mensaje_de_error_en_el_formato_estandar() throws Throwable {
     	System.out.println("1.3 devolvera el mensaje de error en el formato estandar$");
+    	System.out.println(httpGetHelp.getResponse());
     }
     
  

@@ -1,20 +1,15 @@
 package stepdefinition;
 
-import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.StringReader;
-import java.io.UnsupportedEncodingException;
+
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class HttpGetHelp {
@@ -26,7 +21,7 @@ public class HttpGetHelp {
 
 	}
 
-	private HashMap<String, String> response;
+	private String response;
 
 	private String urlRoot = "http://localhost:8290/Customer/";
 	//private String url1 = "BoltonManagement/queryOCSBoltonsDetails/963500797?recordsNumber=30&boltonStatus1=A&boltonStatus2=C";
@@ -42,86 +37,55 @@ public class HttpGetHelp {
 
 	private String tagNameToGet;
 
-	public void sendMessagePost(String xml) {
+	public String getJson() {
 
 		HttpURLConnection conn = null;
 		try {
-			response = new HashMap<String, String>();
+			response = null;
 
 			URL url = new URL(getUrlService());
 			conn = (HttpURLConnection) url.openConnection();
 
-			conn.setReadTimeout(10000);
+			conn.setRequestMethod("GET");
+	        conn.setRequestProperty("Content-length", "0");
+	        conn.setUseCaches(false);
+	        conn.setAllowUserInteraction(false);
+	        conn.setReadTimeout(10000);
 			conn.setConnectTimeout(15000);
-			conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-			conn.setRequestMethod(getMethod());
-			conn.setDoInput(true);
-			conn.setDoOutput(true);
+	        
+	        conn.connect();
+	        int status = conn.getResponseCode();
 
-			BufferedOutputStream output = new BufferedOutputStream(conn.getOutputStream());
-			if (xml != null) {
-				String body = xml;
-				output.write(body.getBytes());
-			}
-			output.flush();
+	        switch (status) {
+	            case 200:
+	            case 201:
+	                BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+	                StringBuilder sb = new StringBuilder();
+	                String line;
+	                while ((line = br.readLine()) != null) {
+	                    sb.append(line+"\n");
+	                }
+	                br.close();
+	                
+	                response = sb.toString();
+	        }
 
-			InputStream ie = conn.getInputStream();
-			Reader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
-
-			response.put("status", Integer.toString(conn.getResponseCode()));
-			response.put("statusCode", conn.getResponseMessage());
-
-			StringBuilder sb = new StringBuilder();
-			for (int c; (c = in.read()) >= 0;)
-				sb.append((char) c);
-
-			String responseJson = sb.toString();
-			System.out.println(responseJson);
-
-			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-			DocumentBuilder builder;
-			/*InputSource is;
-			try {
-
-				builder = factory.newDocumentBuilder();
-
-				is = new InputSource(new StringReader(responseJson));
-				Document document = builder.parse(is);
-
-				NodeList headerInfoList = document.getElementsByTagName(getTagNameToGet());
-
-				if (headerInfoList.getLength() > 0) {
-					response.put("parentNodeName", headerInfoList.item(0).getNodeName());
-					response.put("parentNodeText", headerInfoList.item(0).getTextContent());
-
-					NodeList cNodes = headerInfoList.item(0).getChildNodes();
-
-					if (cNodes.getLength() > 0) {
-						response.put("childNodeName", cNodes.item(0).getNodeName());
-						response.put("childNodeText", cNodes.item(0).getTextContent());
-					}
-				}
-
-			} catch (ParserConfigurationException pce) {
-				pce.printStackTrace();
-			} catch (SAXException saxe) {
-				saxe.printStackTrace();
-			} catch (IOException ioe) {
-				ioe.printStackTrace();
-			}*/
-
-		} catch (MalformedURLException mfe) {
-			mfe.printStackTrace();
-		}
-
-		catch (UnsupportedEncodingException uee) {
-			uee.printStackTrace();
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		} finally {
-			conn.disconnect();
-		}
-
+	    } catch (MalformedURLException ex) {
+	        Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+	    } catch (IOException ex) {
+	        Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+	    } finally {
+	       if (conn != null) {
+	          try {
+	              conn.disconnect();
+	          } catch (Exception ex) {
+	             Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+	          }
+	       }
+	    }
+		
+		return response;
+	    
 	}
 
 	public String getUrlService() {
@@ -171,7 +135,7 @@ public class HttpGetHelp {
 		this.tagNameToGet = tagNameToGet;
 	}
 
-	public HashMap<String, String> getResponse() {
+	public String getResponse() {
 		return response;
 	}
 	
