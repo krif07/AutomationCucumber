@@ -78,8 +78,11 @@ public class HttpGetHelp {
 	               
                 	JSONArray dataArray = dataJsonObject.getJSONArray("productUsageSpec");            
 	                if(dataArray.length() > 0) {
+	                	//JSONObject obj = dataArray.getString(0);
+	                	
 	                	respuesta.put("totalRegistros", Integer.toString(dataArray.length()));
-	                	//respuesta.put("modality", dataArray.getString(5));
+	                	respuesta.put("amount", dataArray.getJSONObject(0).get("amount").toString());
+	                	respuesta.put("remainingAmount", dataArray.getJSONObject(0).get("remainingAmount").toString());
 	                }
 	                break;
 	                

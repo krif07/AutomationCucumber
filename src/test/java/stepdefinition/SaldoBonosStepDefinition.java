@@ -69,16 +69,24 @@ public class SaldoBonosStepDefinition {
     	System.out.println(respuesta);
     	assertTrue(respuesta.get("status").equals("200"));
     	assertTrue(Integer.parseInt(respuesta.get("totalRegistros")) >= 0);
+    	assertTrue(Long.parseLong(respuesta.get("remainingAmount")) >= Long.parseLong(respuesta.get("amount")) );
     }
 	        
     @When("^los valores retornados de Altamira son menores a cero$")
     public void los_valores_retornados_de_altamira_son_menores_a_cero() throws Throwable {
-    	System.out.println("");
+    	System.out.println("3.2 los valores retornados de Altamira son menores a cero");
+    	httpGetHelp.getJson();
+    	respuesta = httpGetHelp.getRespuesta();
     }
 
     @Then("^devolvera el valor cero como saldo de monederos$")
     public void devolvera_el_valor_cero_como_saldo_de_monederos() throws Throwable {
-    	System.out.println("");
+    	System.out.println("3.3 devolvera el valor cero como saldo de monederos");
+    	System.out.println(respuesta);
+    	assertTrue(respuesta.get("status").equals("200"));
+    	assertTrue(Integer.parseInt(respuesta.get("totalRegistros")) >= 0);
+    	assertTrue(Long.parseLong(respuesta.get("remainingAmount")) <= 0 );
+    	assertTrue(Long.parseLong(respuesta.get("amount")) == 0);
     }
 }
 
