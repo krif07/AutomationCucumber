@@ -16,7 +16,6 @@ import org.junit.runner.RunWith;
 public class SaldoBonosStepDefinition {
 	
 	private HttpGetHelp httpGetHelp;
-	private String response;
 	private Map<String, String> respuesta;
 
 	@Given("^que el abonado que consulta el saldo se encuentra activo Y registra saldos de bonos en Altamira Y los bonos se encuentran en los estados parametrizados.$")
@@ -38,14 +37,14 @@ public class SaldoBonosStepDefinition {
     	
     	httpGetHelp.getJson();
     	respuesta = httpGetHelp.getRespuesta();
+    	assertFalse(respuesta.get("status").equals("200"));
     }
 
     @Then("^devolvera el mensaje de error en el formato estandar$")
     public void devolvera_el_mensaje_de_error_en_el_formato_estandar() throws Throwable {
     	System.out.println("1.3 devolvera el mensaje de error en el formato estandar$");
-    	System.out.println(respuesta);    	
-    	assertFalse(respuesta.get("status").equals("200"));
-    	assertTrue(respuesta.get("legacySystem").equals("ALTAMIRA"));    	
+    	System.out.println(respuesta);    	    	
+    	assertTrue(respuesta.get("service").equals("QueryOCSBoltonsDetailsMI"));    	
     }
     
  
@@ -61,14 +60,15 @@ public class SaldoBonosStepDefinition {
     	System.out.println("2.2 los valores retornados de Altamira son mayores a cero");
     	httpGetHelp.getJson();
     	respuesta = httpGetHelp.getRespuesta();
+    	assertTrue(respuesta.get("status").equals("200"));
+    	assertTrue(Integer.parseInt(respuesta.get("totalRegistros")) >= 0);
+    	assertTrue(Long.parseLong(respuesta.get("amount")) > 0);
     }
 
     @Then("^entregar los valores registrados en los monederos para el abonado en Altamira.$")
     public void entregar_los_valores_registrados_en_los_monederos_para_el_abonado_en_altamira() throws Throwable {
     	System.out.println("2.3 entregar los valores registrados en los monederos para el abonado en Altamira");
     	System.out.println(respuesta);
-    	assertTrue(respuesta.get("status").equals("200"));
-    	assertTrue(Integer.parseInt(respuesta.get("totalRegistros")) >= 0);
     	assertTrue(Long.parseLong(respuesta.get("remainingAmount")) >= Long.parseLong(respuesta.get("amount")) );
     }
 	        
@@ -77,15 +77,15 @@ public class SaldoBonosStepDefinition {
     	System.out.println("3.2 los valores retornados de Altamira son menores a cero");
     	httpGetHelp.getJson();
     	respuesta = httpGetHelp.getRespuesta();
+    	assertTrue(respuesta.get("status").equals("200"));
+    	assertTrue(Integer.parseInt(respuesta.get("totalRegistros")) >= 0);
+    	assertTrue(Long.parseLong(respuesta.get("remainingAmount")) <= 0 );
     }
 
     @Then("^devolvera el valor cero como saldo de monederos$")
     public void devolvera_el_valor_cero_como_saldo_de_monederos() throws Throwable {
     	System.out.println("3.3 devolvera el valor cero como saldo de monederos");
-    	System.out.println(respuesta);
-    	assertTrue(respuesta.get("status").equals("200"));
-    	assertTrue(Integer.parseInt(respuesta.get("totalRegistros")) >= 0);
-    	assertTrue(Long.parseLong(respuesta.get("remainingAmount")) <= 0 );
+    	System.out.println(respuesta);    	
     	assertTrue(Long.parseLong(respuesta.get("amount")) == 0);
     }
 }

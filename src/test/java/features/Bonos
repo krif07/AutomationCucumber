@@ -1,0 +1,23 @@
+Feature: consultar los bonos que tiene un abonado en Altamira
+
+Background:
+Given que el abonado que consulta el saldo se encuentra activo Y tiene bonos en Altamira Y los bonos se encuentran en los estados parametrizados.
+
+Scenario: error de time out al consultar bonos
+Given que el abonado <msisdn> consulta bonos <urlServicio> <recordsNumber>
+When Altamira no responde en el tiempo parametrizado
+Then devolvera un error de time out estandar
+
+Examples:
+| urlServicio 															  | msisdn 	  | recordsNumber |
+| http://localhost:8290/Customer/// | 963500797 | 0			  |
+
+Scenario: mensaje de error al consultar bonos
+Given que el abonado <msisdn> consulta saldo de bonos <urlServicio> <recordsNumber>
+When Altamira retorna un error
+Then devolvera el mensaje de error en el formato estandar
+
+Scenario: lista de bonos para abonado en altamira
+Given que los escenarios 1 o 2 fueron fallidos y que el abonado <msisdn> consulta saldo de bonos <urlServicio> <recordsNumber>
+When el abonado tiene bonos en Altamira
+Then entregar la lista de bonos para el abonado en Altamira.

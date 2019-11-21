@@ -28,8 +28,8 @@ public class HttpGetHelp {
 	private Map<String, String> respuesta;
 
 	private String urlRoot = "http://localhost:8290/Customer/";
-	//private String url1 = "BoltonManagement/queryOCSBoltonsDetails/963500797?recordsNumber=30&boltonStatus1=A&boltonStatus2=C";
-	//private String url2 = "GroupManagement/queryOCSGroupMemberAttributes/987421201?recordsNumber=30";
+	private static String URL_SALDOS_BONOS = "http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/";
+	private static String URL_LIMITE_CONSUMO = "http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/";
 	//private String url3 = "BalanceManagement/queryOCSBalances/963500797?recordsNumber=30";
 
 	private String methodGet = "GET";
@@ -75,15 +75,25 @@ public class HttpGetHelp {
 	                
 	                response = sb.toString();
 	                JSONObject dataJsonObject = new JSONObject(response);	                
-	               
-                	JSONArray dataArray = dataJsonObject.getJSONArray("productUsageSpec");            
-	                if(dataArray.length() > 0) {
-	                	//JSONObject obj = dataArray.getString(0);
-	                	
-	                	respuesta.put("totalRegistros", Integer.toString(dataArray.length()));
-	                	respuesta.put("amount", dataArray.getJSONObject(0).get("amount").toString());
-	                	respuesta.put("remainingAmount", dataArray.getJSONObject(0).get("remainingAmount").toString());
+	                
+	                if(getUrlService().contains(URL_SALDOS_BONOS)) {	                
+	                
+	                	JSONArray dataArray = dataJsonObject.getJSONArray("productUsageSpec");            
+		                if(dataArray.length() > 0) {
+		                	respuesta.put("totalRegistros", Integer.toString(dataArray.length()));
+		                	respuesta.put("amount", dataArray.getJSONObject(0).get("amount").toString());
+		                	respuesta.put("remainingAmount", dataArray.getJSONObject(0).get("remainingAmount").toString());
+		                }
 	                }
+		            else if(getUrlService().contains(URL_LIMITE_CONSUMO)) {
+		            	JSONArray dataArray = dataJsonObject.getJSONArray("spendAttributesInfo");            
+		                if(dataArray.length() > 0) {
+		                	respuesta.put("totalRegistros", Integer.toString(dataArray.length()));
+		                	respuesta.put("spendLimitAmount", dataArray.getJSONObject(0).get("spendLimitAmount").toString());
+		                	respuesta.put("spendValue", dataArray.getJSONObject(0).get("spendValue").toString());
+		                }		                
+		            }
+	                
 	                break;
 	                
 	            case 500:
@@ -100,7 +110,7 @@ public class HttpGetHelp {
 	                JSONObject dataSubJson = dataJsonObjectErr.getJSONObject("LegacyFault");
 	                
 	                respuesta.put("LegacyFault", dataJsonObjectErr.get("LegacyFault").toString());
-	                respuesta.put("legacySystem", dataSubJson.getString("legacySystem").toString());
+	                respuesta.put("service", dataSubJson.getString("service").toString());
 	                break;
 	            	
 	        }
