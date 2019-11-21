@@ -8,9 +8,12 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class HttpGetHelp {
 
@@ -22,6 +25,7 @@ public class HttpGetHelp {
 	}
 
 	private String response;
+	private Map<String, String> respuesta;
 
 	private String urlRoot = "http://localhost:8290/Customer/";
 	//private String url1 = "BoltonManagement/queryOCSBoltonsDetails/963500797?recordsNumber=30&boltonStatus1=A&boltonStatus2=C";
@@ -55,7 +59,9 @@ public class HttpGetHelp {
 	        
 	        conn.connect();
 	        int status = conn.getResponseCode();
-
+	        respuesta = new HashMap<String, String>();
+	        respuesta.put("status", Integer.toString(status));
+	        
 	        switch (status) {
 	            case 200:
 	            case 201:
@@ -68,6 +74,13 @@ public class HttpGetHelp {
 	                br.close();
 	                
 	                response = sb.toString();
+	                JSONObject dataJsonObject = new JSONObject(response);
+	                JSONArray dataArray = dataJsonObject.getJSONArray("productUsageSpec");
+	                
+	                if(dataArray.length() > 0) {
+	                	respuesta.put("totalRegistros", Integer.toString(dataArray.length()));
+	                	//respuesta.put("modality", dataArray.getString(5));
+	                }
 	        }
 
 	    } catch (MalformedURLException ex) {
@@ -162,5 +175,9 @@ public class HttpGetHelp {
 
 	public void setUrlRoot(String urlRoot) {
 		this.urlRoot = urlRoot;
+	}
+
+	public Map<String, String> getRespuesta() {
+		return respuesta;
 	}
 }

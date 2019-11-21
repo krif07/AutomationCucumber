@@ -9,7 +9,7 @@ When Altamira retorna un error
 Then devolvera el mensaje de error en el formato estandar
 
 Examples:
-| urlServicio 															  | msisdn 	  |
+| urlServicio 															  | msisdn 	  | 
 | http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/ | 963500797 |
 
 Scenario Outline: entregar valores registrados en monederos para saldo bonos
