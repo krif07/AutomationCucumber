@@ -24,12 +24,12 @@ public class SaldoBonosStepDefinition {
         System.out.println("0.0 que el abonado que consulta el saldo se encuentra activo Y registra saldos de bonos en Altamira Y los bonos se encuentran en los estados parametrizados");
     }
 
-	@Given("^que el abonado (.+) consulta saldo de bonos (.+)$")
-    public void que_el_abonado_consulta_saldo_de_bonos(String msisdn, String urlservicio) throws Throwable {
-        System.out.println("1.1 que el abonado (.+) consulta saldo de bonos (.+)$");
+	@Given("^que el abonado (.+) consulta saldo de bonos (.+) (.+)$")
+    public void que_el_abonado_consulta_saldo_de_bonos(String msisdn, String urlservicio, String recordsnumber) throws Throwable {
+        System.out.println("1.1 que el abonado (.+) consulta saldo de bonos (.+) (.+)$");
         
         httpGetHelp = new HttpGetHelp();
-        httpGetHelp.setUrlService(urlservicio, msisdn, "0", "A", "C");       
+        httpGetHelp.setUrlService(urlservicio, msisdn, recordsnumber, "A", "C");       
     }
 
     @When("^Altamira retorna un error$")
@@ -49,11 +49,11 @@ public class SaldoBonosStepDefinition {
     }
     
  
-    @Given("^que los escenarios 1 o 2 fueron fallidos y que el abonado (.+) consulta saldo de bonos (.+)$")
-    public void que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_bonos(String msisdn, String urlservicio) throws Throwable {
-    	System.out.println("2.1 que los escenarios 1 o 2 fueron fallidos y que el abonado (.+) consulta saldo de bonos (.+)");
+    @Given("^que los escenarios 1 o 2 fueron fallidos y que el abonado (.+) consulta saldo de bonos (.+) (.+)$")
+    public void que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_bonos(String msisdn, String urlservicio, String recordsnumber) throws Throwable {
+    	System.out.println("2.1 que los escenarios 1 o 2 fueron fallidos y que el abonado (.+) consulta saldo de bonos (.+) (.+)");
     	httpGetHelp = new HttpGetHelp();
-        httpGetHelp.setUrlService(urlservicio, msisdn, "30", "A", "C");
+        httpGetHelp.setUrlService(urlservicio, msisdn, recordsnumber, "A", "C");
     }
     
     @When("^los valores retornados de Altamira son mayores a cero$")

@@ -16,7 +16,7 @@ formatter.scenarioOutline({
 });
 formatter.step({
   "line": 7,
-  "name": "que el abonado \u003cmsisdn\u003e consulta saldo de bonos \u003curlServicio\u003e",
+  "name": "que el abonado \u003cmsisdn\u003e consulta saldo de bonos \u003curlServicio\u003e \u003crecordsNumber\u003e",
   "keyword": "Given "
 });
 formatter.step({
@@ -38,7 +38,8 @@ formatter.examples({
     {
       "cells": [
         "urlServicio",
-        "msisdn"
+        "msisdn",
+        "recordsNumber"
       ],
       "line": 12,
       "id": "consultar-el-saldo-de-los-bonos-de-un-abonado-en-altamira;mensaje-de-error-al-consultar-saldo-de-bonos;;1"
@@ -46,7 +47,8 @@ formatter.examples({
     {
       "cells": [
         "http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
-        "963500797"
+        "963500797",
+        "0"
       ],
       "line": 13,
       "id": "consultar-el-saldo-de-los-bonos-de-un-abonado-en-altamira;mensaje-de-error-al-consultar-saldo-de-bonos;;2"
@@ -70,7 +72,7 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados()"
 });
 formatter.result({
-  "duration": 56111400,
+  "duration": 93038400,
   "status": "passed"
 });
 formatter.scenario({
@@ -83,10 +85,11 @@ formatter.scenario({
 });
 formatter.step({
   "line": 7,
-  "name": "que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
+  "name": "que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/ 0",
   "matchedColumns": [
     0,
-    1
+    1,
+    2
   ],
   "keyword": "Given "
 });
@@ -109,26 +112,30 @@ formatter.match({
     {
       "val": "http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
       "offset": 49
+    },
+    {
+      "val": "0",
+      "offset": 121
     }
   ],
-  "location": "SaldoBonosStepDefinition.que_el_abonado_consulta_saldo_de_bonos(String,String)"
+  "location": "SaldoBonosStepDefinition.que_el_abonado_consulta_saldo_de_bonos(String,String,String)"
 });
 formatter.result({
-  "duration": 1333000,
+  "duration": 4288501400,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.altamira_retorna_un_error()"
 });
 formatter.result({
-  "duration": 488826800,
+  "duration": 4644778100,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.devolvera_el_mensaje_de_error_en_el_formato_estandar()"
 });
 formatter.result({
-  "duration": 2413300,
+  "duration": 4144300,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -141,7 +148,7 @@ formatter.scenarioOutline({
 });
 formatter.step({
   "line": 16,
-  "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado \u003cmsisdn\u003e consulta saldo de bonos \u003curlServicio\u003e",
+  "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado \u003cmsisdn\u003e consulta saldo de bonos \u003curlServicio\u003e \u003crecordsNumber\u003e",
   "keyword": "Given "
 });
 formatter.step({
@@ -163,7 +170,8 @@ formatter.examples({
     {
       "cells": [
         "urlServicio",
-        "msisdn"
+        "msisdn",
+        "recordsNumber"
       ],
       "line": 21,
       "id": "consultar-el-saldo-de-los-bonos-de-un-abonado-en-altamira;entregar-valores-registrados-en-monederos-para-saldo-bonos;;1"
@@ -171,7 +179,8 @@ formatter.examples({
     {
       "cells": [
         "http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
-        "963500797"
+        "963500797",
+        "30"
       ],
       "line": 22,
       "id": "consultar-el-saldo-de-los-bonos-de-un-abonado-en-altamira;entregar-valores-registrados-en-monederos-para-saldo-bonos;;2"
@@ -195,7 +204,7 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados()"
 });
 formatter.result({
-  "duration": 56500,
+  "duration": 109800,
   "status": "passed"
 });
 formatter.scenario({
@@ -208,10 +217,11 @@ formatter.scenario({
 });
 formatter.step({
   "line": 16,
-  "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
+  "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/ 30",
   "matchedColumns": [
     0,
-    1
+    1,
+    2
   ],
   "keyword": "Given "
 });
@@ -234,26 +244,30 @@ formatter.match({
     {
       "val": "http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
       "offset": 92
+    },
+    {
+      "val": "30",
+      "offset": 164
     }
   ],
-  "location": "SaldoBonosStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_bonos(String,String)"
+  "location": "SaldoBonosStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_bonos(String,String,String)"
 });
 formatter.result({
-  "duration": 108700,
+  "duration": 4472763700,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.los_valores_retornados_de_altamira_son_mayores_a_cero()"
 });
 formatter.result({
-  "duration": 486778700,
+  "duration": 9535960000,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.entregar_los_valores_registrados_en_los_monederos_para_el_abonado_en_altamira()"
 });
 formatter.result({
-  "duration": 119700,
+  "duration": 159900,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -266,7 +280,7 @@ formatter.scenarioOutline({
 });
 formatter.step({
   "line": 25,
-  "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado \u003cmsisdn\u003e consulta saldo de bonos \u003curlServicio\u003e",
+  "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado \u003cmsisdn\u003e consulta saldo de bonos \u003curlServicio\u003e \u003crecordsNumber\u003e",
   "keyword": "Given "
 });
 formatter.step({
@@ -288,7 +302,8 @@ formatter.examples({
     {
       "cells": [
         "urlServicio",
-        "msisdn"
+        "msisdn",
+        "recordsNumber"
       ],
       "line": 30,
       "id": "consultar-el-saldo-de-los-bonos-de-un-abonado-en-altamira;devolver-valor-cero-como-saldo-de-monederos-para-saldo-bonos;;1"
@@ -296,7 +311,8 @@ formatter.examples({
     {
       "cells": [
         "http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
-        "963500797"
+        "963500797",
+        "30"
       ],
       "line": 31,
       "id": "consultar-el-saldo-de-los-bonos-de-un-abonado-en-altamira;devolver-valor-cero-como-saldo-de-monederos-para-saldo-bonos;;2"
@@ -320,7 +336,7 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados()"
 });
 formatter.result({
-  "duration": 126300,
+  "duration": 111800,
   "status": "passed"
 });
 formatter.scenario({
@@ -333,10 +349,11 @@ formatter.scenario({
 });
 formatter.step({
   "line": 25,
-  "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
+  "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/ 30",
   "matchedColumns": [
     0,
-    1
+    1,
+    2
   ],
   "keyword": "Given "
 });
@@ -359,26 +376,30 @@ formatter.match({
     {
       "val": "http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
       "offset": 92
+    },
+    {
+      "val": "30",
+      "offset": 164
     }
   ],
-  "location": "SaldoBonosStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_bonos(String,String)"
+  "location": "SaldoBonosStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_bonos(String,String,String)"
 });
 formatter.result({
-  "duration": 173600,
+  "duration": 2019177000,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.los_valores_retornados_de_altamira_son_menores_a_cero()"
 });
 formatter.result({
-  "duration": 65300,
+  "duration": 42300,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.devolvera_el_valor_cero_como_saldo_de_monederos()"
 });
 formatter.result({
-  "duration": 52000,
+  "duration": 21000,
   "status": "passed"
 });
 });

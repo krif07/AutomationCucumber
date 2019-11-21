@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 56111400,
+              "duration": 93038400,
               "status": "passed"
             },
             "line": 4,
@@ -33,11 +33,11 @@
         "steps": [
           {
             "result": {
-              "duration": 1333000,
+              "duration": 4288501400,
               "status": "passed"
             },
             "line": 7,
-            "name": "que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
+            "name": "que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/ 0",
             "match": {
               "arguments": [
                 {
@@ -47,19 +47,24 @@
                 {
                   "val": "http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
                   "offset": 49
+                },
+                {
+                  "val": "0",
+                  "offset": 121
                 }
               ],
-              "location": "SaldoBonosStepDefinition.que_el_abonado_consulta_saldo_de_bonos(String,String)"
+              "location": "SaldoBonosStepDefinition.que_el_abonado_consulta_saldo_de_bonos(String,String,String)"
             },
             "matchedColumns": [
               0,
-              1
+              1,
+              2
             ],
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 488826800,
+              "duration": 4644778100,
               "status": "passed"
             },
             "line": 8,
@@ -71,7 +76,7 @@
           },
           {
             "result": {
-              "duration": 2413300,
+              "duration": 4144300,
               "status": "passed"
             },
             "line": 9,
@@ -92,7 +97,7 @@
         "steps": [
           {
             "result": {
-              "duration": 56500,
+              "duration": 109800,
               "status": "passed"
             },
             "line": 4,
@@ -114,11 +119,11 @@
         "steps": [
           {
             "result": {
-              "duration": 108700,
+              "duration": 4472763700,
               "status": "passed"
             },
             "line": 16,
-            "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
+            "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/ 30",
             "match": {
               "arguments": [
                 {
@@ -128,19 +133,24 @@
                 {
                   "val": "http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
                   "offset": 92
+                },
+                {
+                  "val": "30",
+                  "offset": 164
                 }
               ],
-              "location": "SaldoBonosStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_bonos(String,String)"
+              "location": "SaldoBonosStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_bonos(String,String,String)"
             },
             "matchedColumns": [
               0,
-              1
+              1,
+              2
             ],
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 486778700,
+              "duration": 9535960000,
               "status": "passed"
             },
             "line": 17,
@@ -152,7 +162,7 @@
           },
           {
             "result": {
-              "duration": 119700,
+              "duration": 159900,
               "status": "passed"
             },
             "line": 18,
@@ -173,7 +183,7 @@
         "steps": [
           {
             "result": {
-              "duration": 126300,
+              "duration": 111800,
               "status": "passed"
             },
             "line": 4,
@@ -195,11 +205,11 @@
         "steps": [
           {
             "result": {
-              "duration": 173600,
+              "duration": 2019177000,
               "status": "passed"
             },
             "line": 25,
-            "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
+            "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/ 30",
             "match": {
               "arguments": [
                 {
@@ -209,19 +219,24 @@
                 {
                   "val": "http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/",
                   "offset": 92
+                },
+                {
+                  "val": "30",
+                  "offset": 164
                 }
               ],
-              "location": "SaldoBonosStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_bonos(String,String)"
+              "location": "SaldoBonosStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_bonos(String,String,String)"
             },
             "matchedColumns": [
               0,
-              1
+              1,
+              2
             ],
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 65300,
+              "duration": 42300,
               "status": "passed"
             },
             "line": 26,
@@ -233,7 +248,7 @@
           },
           {
             "result": {
-              "duration": 52000,
+              "duration": 21000,
               "status": "passed"
             },
             "line": 27,
