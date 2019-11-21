@@ -70,7 +70,7 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados()"
 });
 formatter.result({
-  "duration": 58677500,
+  "duration": 56111400,
   "status": "passed"
 });
 formatter.scenario({
@@ -114,21 +114,21 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_el_abonado_consulta_saldo_de_bonos(String,String)"
 });
 formatter.result({
-  "duration": 1357400,
+  "duration": 1333000,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.altamira_retorna_un_error()"
 });
 formatter.result({
-  "duration": 845815500,
+  "duration": 488826800,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.devolvera_el_mensaje_de_error_en_el_formato_estandar()"
 });
 formatter.result({
-  "duration": 1079000,
+  "duration": 2413300,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -195,7 +195,7 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados()"
 });
 formatter.result({
-  "duration": 50300,
+  "duration": 56500,
   "status": "passed"
 });
 formatter.scenario({
@@ -239,21 +239,21 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_bonos(String,String)"
 });
 formatter.result({
-  "duration": 81300,
+  "duration": 108700,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.los_valores_retornados_de_altamira_son_mayores_a_cero()"
 });
 formatter.result({
-  "duration": 725120700,
+  "duration": 486778700,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.entregar_los_valores_registrados_en_los_monederos_para_el_abonado_en_altamira()"
 });
 formatter.result({
-  "duration": 76300,
+  "duration": 119700,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -320,7 +320,7 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados()"
 });
 formatter.result({
-  "duration": 52000,
+  "duration": 126300,
   "status": "passed"
 });
 formatter.scenario({
@@ -364,21 +364,21 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_bonos(String,String)"
 });
 formatter.result({
-  "duration": 102200,
+  "duration": 173600,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.los_valores_retornados_de_altamira_son_menores_a_cero()"
 });
 formatter.result({
-  "duration": 38500,
+  "duration": 65300,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.devolvera_el_valor_cero_como_saldo_de_monederos()"
 });
 formatter.result({
-  "duration": 34000,
+  "duration": 52000,
   "status": "passed"
 });
 });

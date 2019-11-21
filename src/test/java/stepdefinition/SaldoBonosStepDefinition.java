@@ -45,6 +45,7 @@ public class SaldoBonosStepDefinition {
     	System.out.println("1.3 devolvera el mensaje de error en el formato estandar$");
     	System.out.println(respuesta);    	
     	assertFalse(respuesta.get("status").equals("200"));
+    	assertTrue(respuesta.get("legacySystem").equals("ALTAMIRA"));    	
     }
     
  

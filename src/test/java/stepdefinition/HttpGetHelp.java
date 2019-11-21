@@ -74,13 +74,32 @@ public class HttpGetHelp {
 	                br.close();
 	                
 	                response = sb.toString();
-	                JSONObject dataJsonObject = new JSONObject(response);
-	                JSONArray dataArray = dataJsonObject.getJSONArray("productUsageSpec");
-	                
+	                JSONObject dataJsonObject = new JSONObject(response);	                
+	               
+                	JSONArray dataArray = dataJsonObject.getJSONArray("productUsageSpec");            
 	                if(dataArray.length() > 0) {
 	                	respuesta.put("totalRegistros", Integer.toString(dataArray.length()));
 	                	//respuesta.put("modality", dataArray.getString(5));
 	                }
+	                break;
+	                
+	            case 500:
+	            	BufferedReader bErr = new BufferedReader(new InputStreamReader(conn.getErrorStream()));
+		            StringBuilder sbErr = new StringBuilder();
+	                String lineErr;
+	                while ((lineErr = bErr.readLine()) != null) {
+	                    sbErr.append(lineErr+"\n");
+	                }
+	                bErr.close();
+	                
+	                response = sbErr.toString();
+	                JSONObject dataJsonObjectErr = new JSONObject(response);
+	                JSONObject dataSubJson = dataJsonObjectErr.getJSONObject("LegacyFault");
+	                
+	                respuesta.put("LegacyFault", dataJsonObjectErr.get("LegacyFault").toString());
+	                respuesta.put("legacySystem", dataSubJson.getString("legacySystem").toString());
+	                break;
+	            	
 	        }
 
 	    } catch (MalformedURLException ex) {
