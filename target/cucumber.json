@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 54939100,
+              "duration": 57672800,
               "status": "passed"
             },
             "line": 4,
@@ -33,7 +33,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1374800,
+              "duration": 1599600,
               "status": "passed"
             },
             "line": 7,
@@ -64,7 +64,7 @@
           },
           {
             "result": {
-              "duration": 626000500,
+              "duration": 534096000,
               "status": "passed"
             },
             "line": 8,
@@ -76,7 +76,7 @@
           },
           {
             "result": {
-              "duration": 246100,
+              "duration": 106500,
               "status": "passed"
             },
             "line": 9,
@@ -97,7 +97,7 @@
         "steps": [
           {
             "result": {
-              "duration": 176300,
+              "duration": 50100,
               "status": "passed"
             },
             "line": 4,
@@ -119,11 +119,11 @@
         "steps": [
           {
             "result": {
-              "duration": 249900,
+              "duration": 132600,
               "status": "passed"
             },
             "line": 16,
-            "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 987421201 consulta limites de consumo http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ 0",
+            "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 987421201 consulta limites de consumo http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ 30",
             "match": {
               "arguments": [
                 {
@@ -135,7 +135,7 @@
                   "offset": 96
                 },
                 {
-                  "val": "0",
+                  "val": "30",
                   "offset": 174
                 }
               ],
@@ -150,9 +150,8 @@
           },
           {
             "result": {
-              "duration": 357104000,
-              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat stepdefinition.LimiteConsumoStepDefinition.los_valores_retornados_de_altamira_son_mayores_a_cero(LimiteConsumoStepDefinition.java:65)\r\n\tat ✽.When los valores retornados de Altamira son mayores a cero LC(LimiteConsumo.feature:17)\r\n",
-              "status": "failed"
+              "duration": 425645200,
+              "status": "passed"
             },
             "line": 17,
             "name": "los valores retornados de Altamira son mayores a cero LC",
@@ -163,7 +162,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 61100,
+              "status": "passed"
             },
             "line": 18,
             "name": "entregar los valores registrados en los monederos para el abonado en Altamira LC",
@@ -183,7 +183,7 @@
         "steps": [
           {
             "result": {
-              "duration": 112900,
+              "duration": 79400,
               "status": "passed"
             },
             "line": 4,
@@ -205,11 +205,11 @@
         "steps": [
           {
             "result": {
-              "duration": 123200,
+              "duration": 95800,
               "status": "passed"
             },
             "line": 25,
-            "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 987421201 consulta limites de consumo http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ 0",
+            "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 987421201 consulta limites de consumo http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ 30",
             "match": {
               "arguments": [
                 {
@@ -221,7 +221,7 @@
                   "offset": 96
                 },
                 {
-                  "val": "0",
+                  "val": "30",
                   "offset": 174
                 }
               ],
@@ -236,9 +236,8 @@
           },
           {
             "result": {
-              "duration": 358267300,
-              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat stepdefinition.LimiteConsumoStepDefinition.los_valores_retornados_de_altamira_son_menores_a_cero(LimiteConsumoStepDefinition.java:83)\r\n\tat ✽.When los valores retornados de Altamira son menores a cero LC(LimiteConsumo.feature:26)\r\n",
-              "status": "failed"
+              "duration": 346327300,
+              "status": "passed"
             },
             "line": 26,
             "name": "los valores retornados de Altamira son menores a cero LC",
@@ -249,7 +248,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 40200,
+              "status": "passed"
             },
             "line": 27,
             "name": "devolvera el valor cero como saldo de monederos LC",
@@ -279,7 +279,7 @@
         "steps": [
           {
             "result": {
-              "duration": 196600,
+              "duration": 78600,
               "status": "passed"
             },
             "line": 4,
@@ -301,7 +301,7 @@
         "steps": [
           {
             "result": {
-              "duration": 285600,
+              "duration": 100800,
               "status": "passed"
             },
             "line": 7,
@@ -332,7 +332,7 @@
           },
           {
             "result": {
-              "duration": 368265900,
+              "duration": 274137600,
               "status": "passed"
             },
             "line": 8,
@@ -344,7 +344,7 @@
           },
           {
             "result": {
-              "duration": 509100,
+              "duration": 93300,
               "status": "passed"
             },
             "line": 9,
@@ -365,7 +365,7 @@
         "steps": [
           {
             "result": {
-              "duration": 151800,
+              "duration": 92900,
               "status": "passed"
             },
             "line": 4,
@@ -387,7 +387,7 @@
         "steps": [
           {
             "result": {
-              "duration": 304700,
+              "duration": 125500,
               "status": "passed"
             },
             "line": 16,
@@ -418,7 +418,7 @@
           },
           {
             "result": {
-              "duration": 761235000,
+              "duration": 713819500,
               "status": "passed"
             },
             "line": 17,
@@ -430,7 +430,7 @@
           },
           {
             "result": {
-              "duration": 332900,
+              "duration": 111200,
               "status": "passed"
             },
             "line": 18,
@@ -451,7 +451,7 @@
         "steps": [
           {
             "result": {
-              "duration": 77800,
+              "duration": 60200,
               "status": "passed"
             },
             "line": 4,
@@ -473,7 +473,7 @@
         "steps": [
           {
             "result": {
-              "duration": 118200,
+              "duration": 121800,
               "status": "passed"
             },
             "line": 25,
@@ -504,9 +504,8 @@
           },
           {
             "result": {
-              "duration": 3409712900,
-              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat stepdefinition.SaldoBonosStepDefinition.los_valores_retornados_de_altamira_son_menores_a_cero(SaldoBonosStepDefinition.java:82)\r\n\tat ✽.When los valores retornados de Altamira son menores a cero(SaldoBonos.feature:26)\r\n",
-              "status": "failed"
+              "duration": 499164400,
+              "status": "passed"
             },
             "line": 26,
             "name": "los valores retornados de Altamira son menores a cero",
@@ -517,7 +516,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 88500,
+              "status": "passed"
             },
             "line": 27,
             "name": "devolvera el valor cero como saldo de monederos",
@@ -534,5 +534,273 @@
     "id": "consultar-el-saldo-de-los-bonos-de-un-abonado-en-altamira",
     "keyword": "Feature",
     "uri": "SaldoBonos.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 95200,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "que el abonado que consulta el saldo se encuentra activo y registra saldos de monederos en Altamira",
+            "match": {
+              "location": "SaldoMonederoStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_monederos_en_altamira()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "mensaje de error al consultar saldo monederos",
+        "description": "",
+        "id": " consultar-el-saldo-de-los-monederos-de-un-abonado-en-altamira;mensaje-de-error-al-consultar-saldo-monederos;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 104800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "que el abonado 963500797 consulta saldo de monederos http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "963500797",
+                  "offset": 15
+                },
+                {
+                  "val": "http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/",
+                  "offset": 53
+                },
+                {
+                  "val": "0",
+                  "offset": 120
+                }
+              ],
+              "location": "SaldoMonederoStepDefinition.que_el_abonado_consulta_saldo_de_monederos(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 278068800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Altamira retorna un error SM",
+            "match": {
+              "location": "SaldoMonederoStepDefinition.altamira_retorna_un_error_sm()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 314700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "devolvera el mensaje de error en el formato estandar SM",
+            "match": {
+              "location": "SaldoMonederoStepDefinition.devolvera_el_mensaje_de_error_en_el_formato_estandar_sm()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 837100,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "que el abonado que consulta el saldo se encuentra activo y registra saldos de monederos en Altamira",
+            "match": {
+              "location": "SaldoMonederoStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_monederos_en_altamira()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 22,
+        "name": "entregar valores registrados en monederos para saldo monederos",
+        "description": "",
+        "id": " consultar-el-saldo-de-los-monederos-de-un-abonado-en-altamira;entregar-valores-registrados-en-monederos-para-saldo-monederos;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 172200,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de monederos http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 30",
+            "match": {
+              "arguments": [
+                {
+                  "val": "963500797",
+                  "offset": 58
+                },
+                {
+                  "val": "http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/",
+                  "offset": 96
+                },
+                {
+                  "val": "30",
+                  "offset": 163
+                }
+              ],
+              "location": "SaldoMonederoStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_monederos(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 316916600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "los valores retornados de Altamira son mayores a cero SM",
+            "match": {
+              "location": "SaldoMonederoStepDefinition.los_valores_retornados_de_altamira_son_mayores_a_cero_sm()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 116800,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "entregar los valores registrados en los monederos para el abonado en Altamira SM",
+            "match": {
+              "location": "SaldoMonederoStepDefinition.entregar_los_valores_registrados_en_los_monederos_para_el_abonado_en_altamira_sm()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 55800,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "que el abonado que consulta el saldo se encuentra activo y registra saldos de monederos en Altamira",
+            "match": {
+              "location": "SaldoMonederoStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_monederos_en_altamira()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 31,
+        "name": "devolver valor cero como saldo de monederos para saldo monederos",
+        "description": "",
+        "id": " consultar-el-saldo-de-los-monederos-de-un-abonado-en-altamira;devolver-valor-cero-como-saldo-de-monederos-para-saldo-monederos;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 90700,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de monederos http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 30",
+            "match": {
+              "arguments": [
+                {
+                  "val": "963500797",
+                  "offset": 58
+                },
+                {
+                  "val": "http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/",
+                  "offset": 96
+                },
+                {
+                  "val": "30",
+                  "offset": 163
+                }
+              ],
+              "location": "SaldoMonederoStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_monederos(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 323646900,
+              "error_message": "java.lang.NumberFormatException: For input string: \"8.99\"\r\n\tat java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\r\n\tat java.lang.Long.parseLong(Long.java:589)\r\n\tat java.lang.Long.parseLong(Long.java:631)\r\n\tat stepdefinition.SaldoMonederoStepDefinition.los_valores_retornados_de_altamira_son_menores_a_cero_sm(SaldoMonederoStepDefinition.java:87)\r\n\tat ✽.When los valores retornados de Altamira son menores a cero SM(SaldoMonedero.feature:26)\r\n",
+              "status": "failed"
+            },
+            "line": 26,
+            "name": "los valores retornados de Altamira son menores a cero SM",
+            "match": {
+              "location": "SaldoMonederoStepDefinition.los_valores_retornados_de_altamira_son_menores_a_cero_sm()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 27,
+            "name": "devolvera el valor cero como saldo de monederos SM",
+            "match": {
+              "location": "SaldoMonederoStepDefinition.devolvera_el_valor_cero_como_saldo_de_monederos_sm()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": " consultar el saldo de los monederos de un abonado en Altamira",
+    "description": "",
+    "id": " consultar-el-saldo-de-los-monederos-de-un-abonado-en-altamira",
+    "keyword": "Feature",
+    "uri": "SaldoMonedero.feature"
   }
 ]

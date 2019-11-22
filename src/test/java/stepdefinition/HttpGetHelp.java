@@ -28,9 +28,9 @@ public class HttpGetHelp {
 	private Map<String, String> respuesta;
 
 	private String urlRoot = "http://localhost:8290/Customer/";
-	private static String URL_SALDOS_BONOS = "http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/";
+	private static String URL_SALDO_BONOS = "http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/";
 	private static String URL_LIMITE_CONSUMO = "http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/";
-	//private String url3 = "BalanceManagement/queryOCSBalances/963500797?recordsNumber=30";
+	private static String URL_SALDO_MONEDERO = "http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/";
 
 	private String methodGet = "GET";
 	private String methodPost = "POST";
@@ -76,7 +76,7 @@ public class HttpGetHelp {
 	                response = sb.toString();
 	                JSONObject dataJsonObject = new JSONObject(response);	                
 	                
-	                if(getUrlService().contains(URL_SALDOS_BONOS)) {	                
+	                if(getUrlService().contains(URL_SALDO_BONOS)) {	                
 	                
 	                	JSONArray dataArray = dataJsonObject.getJSONArray("productUsageSpec");            
 		                if(dataArray.length() > 0) {
@@ -91,6 +91,14 @@ public class HttpGetHelp {
 		                	respuesta.put("totalRegistros", Integer.toString(dataArray.length()));
 		                	respuesta.put("spendLimitAmount", dataArray.getJSONObject(0).get("spendLimitAmount").toString());
 		                	respuesta.put("spendValue", dataArray.getJSONObject(0).get("spendValue").toString());
+		                }		                
+		            }
+		            else if(getUrlService().contains(URL_SALDO_MONEDERO)) {
+		            	JSONArray dataArray = dataJsonObject.getJSONArray("customerAccountBalance");            
+		                if(dataArray.length() > 0) {
+		                	respuesta.put("totalRegistros", Integer.toString(dataArray.length()));
+		                	//respuesta.put("amount", dataArray.getJSONObject(0).get("amount").toString());
+		                	respuesta.put("remainedAmount", dataArray.getJSONObject(0).get("remainedAmount").toString());
 		                }		                
 		            }
 	                
