@@ -28,11 +28,11 @@ public class LimiteConsumoStepDefinition {
         System.out.println("1.1 que el abonado (.+) consulta limites de consumo (.+) (.+)$");
         
         httpGetHelp = new HttpGetHelp();
-        httpGetHelp.setUrlService(urlservicio, msisdn, recordsnumber, null, null);
+        httpGetHelp.setUrlService(urlservicio, msisdn, recordsnumber, null, null, null, null);
     }
 
     @When("^Altamira retorna un error LC$")
-    public void altamira_retorna_un_error() throws Throwable {
+    public void altamira_retorna_un_error_lc() throws Throwable {
         System.out.println("1.2 Altamira retorna un error$");
         
         httpGetHelp.getJson();
@@ -41,7 +41,7 @@ public class LimiteConsumoStepDefinition {
     }
 
     @Then("^devolvera el mensaje de error en el formato estandar LC$")
-    public void devolvera_el_mensaje_de_error_en_el_formato_estandar() throws Throwable {
+    public void devolvera_el_mensaje_de_error_en_el_formato_estandar_lc() throws Throwable {
         System.out.println("1.3 devolvera el mensaje de error en el formato estandar$");
         
         System.out.println(respuesta);	    	
@@ -53,11 +53,11 @@ public class LimiteConsumoStepDefinition {
     	System.out.println("2.1 que los escenarios 1 o 2 fueron fallidos y que el abonado (.+) consulta limites de consumo (.+) (.+)");
     	
     	httpGetHelp = new HttpGetHelp();
-        httpGetHelp.setUrlService(urlservicio, msisdn, recordsnumber, null, null);
+        httpGetHelp.setUrlService(urlservicio, msisdn, recordsnumber, null, null, null, null);
     }
 
     @When("^los valores retornados de Altamira son mayores a cero LC$")
-    public void los_valores_retornados_de_altamira_son_mayores_a_cero() throws Throwable {
+    public void los_valores_retornados_de_altamira_son_mayores_a_cero_lc() throws Throwable {
         System.out.println("2.2 los valores retornados de Altamira son mayores a cero$");
         
         httpGetHelp.getJson();
@@ -67,7 +67,7 @@ public class LimiteConsumoStepDefinition {
     }
 
     @Then("^entregar los valores registrados en los monederos para el abonado en Altamira LC$")
-    public void entregar_los_valores_registrados_en_los_monederos_para_el_abonado_en_altamira() throws Throwable {
+    public void entregar_los_valores_registrados_en_los_monederos_para_el_abonado_en_altamira_lc() throws Throwable {
     	System.out.println("2.3 entregar los valores registrados en los monederos para el abonado en Altamira$");    	
     	
     	assertTrue(Long.parseLong(respuesta.get("spendLimitAmount")) >= Long.parseLong(respuesta.get("spendValue")) );
@@ -75,7 +75,7 @@ public class LimiteConsumoStepDefinition {
    
    
     @When("^los valores retornados de Altamira son menores a cero LC$")
-    public void los_valores_retornados_de_altamira_son_menores_a_cero() throws Throwable {
+    public void los_valores_retornados_de_altamira_son_menores_a_cero_lc() throws Throwable {
         System.out.println("3.2 los valores retornados de Altamira son menores a cero$");
         
         httpGetHelp.getJson();
@@ -86,7 +86,7 @@ public class LimiteConsumoStepDefinition {
     }
 
     @Then("^devolvera el valor cero como saldo de monederos LC$")
-    public void devolvera_el_valor_cero_como_saldo_de_monederos() throws Throwable {
+    public void devolvera_el_valor_cero_como_saldo_de_monederos_lc() throws Throwable {
     	System.out.println("3.3 devolvera el valor cero como saldo de monederos$");
     	
     	assertTrue(Long.parseLong(respuesta.get("spendValue")) == 0);

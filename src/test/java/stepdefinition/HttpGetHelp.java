@@ -24,14 +24,16 @@ public class HttpGetHelp {
 
 	}
 
+	private static String URL_SALDO_BONOS = "http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/";
+	private static String URL_LIMITE_CONSUMO = "http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/";
+	private static String URL_SALDO_MONEDERO = "http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/";
+	private static String URL_BONOS = "http://localhost:8290/Customer/BoltonManagement/queryOCSBoltons/";
+	
 	private String response;
 	private Map<String, String> respuesta;
 
 	private String urlRoot = "http://localhost:8290/Customer/";
-	private static String URL_SALDO_BONOS = "http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/";
-	private static String URL_LIMITE_CONSUMO = "http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/";
-	private static String URL_SALDO_MONEDERO = "http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/";
-
+		
 	private String methodGet = "GET";
 	private String methodPost = "POST";
 
@@ -101,7 +103,14 @@ public class HttpGetHelp {
 		                	respuesta.put("remainedAmount", dataArray.getJSONObject(0).get("remainedAmount").toString());
 		                }		                
 		            }
-	                
+		            else if(getUrlService().contains(URL_BONOS)) {
+		            	JSONArray dataArray = dataJsonObject.getJSONArray("BoltonDetailsInfo");            
+		                if(dataArray.length() > 0) {
+		                	respuesta.put("totalRegistros", Integer.toString(dataArray.length()));
+		                	respuesta.put("boltonBasicInfo", dataArray.getJSONObject(0).get("boltonBasicInfo").toString());
+		                }		                
+		            }
+	                	                
 	                break;
 	                
 	            case 500:
@@ -145,7 +154,9 @@ public class HttpGetHelp {
 		return urlService;
 	}
 
-	public void setUrlService(String urlServicio, String msisdn, String recordsNumber, String boltonStatus1, String boltonStatus2) {
+	public void setUrlService(String urlServicio, String msisdn, String recordsNumber, 
+								String boltonStatus1, String boltonStatus2,
+								String boltonCode, String boltonTypeCode) {
 		this.urlService = urlServicio + msisdn;
 		
 		if(recordsNumber != null && !recordsNumber.equals("")) {
@@ -159,10 +170,20 @@ public class HttpGetHelp {
 			if(boltonStatus2 != null && !boltonStatus2.equals("")) {
 				this.urlService += "&boltonStatus2=" + boltonStatus2; 
 			}
+			
+			if(boltonCode != null && !boltonCode.equals("")) {
+				this.urlService += "&boltonCode=" + boltonCode;
+			}
+			
+			if(boltonTypeCode != null && !boltonTypeCode.equals("")) {
+				this.urlService += "&boltonTypeCode=" + boltonTypeCode;
+			}
 		}
 	}
 	
-	public void setUrlService(String functionGroup, String functionName, String msisdn, String recordsNumber, String boltonStatus1, String boltonStatus2) {
+	public void setUrlService(String functionGroup, String functionName, String msisdn, String recordsNumber, 
+								String boltonStatus1, String boltonStatus2,
+								String boltoncode, String boltontypecode) {
 		this.urlService = getUrlRoot() + functionGroup + "/" + functionName + "/" + msisdn;
 		
 		if(recordsNumber != null && !recordsNumber.equals("")) {
@@ -175,6 +196,14 @@ public class HttpGetHelp {
 			
 			if(boltonStatus2 != null && !boltonStatus2.equals("")) {
 				this.urlService += "&boltonStatus2=" + boltonStatus2; 
+			}
+			
+			if(boltoncode != null && !boltoncode.equals("")) {
+				this.urlService += "&boltoncode=" + boltoncode;
+			}
+			
+			if(boltontypecode != null && !boltontypecode.equals("")) {
+				this.urlService += "&boltontypecode=" + boltontypecode;
 			}
 		}			
 				

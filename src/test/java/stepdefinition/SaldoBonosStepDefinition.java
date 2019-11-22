@@ -28,7 +28,7 @@ public class SaldoBonosStepDefinition {
         System.out.println("1.1 que el abonado (.+) consulta saldo de bonos (.+) (.+)$");
         
         httpGetHelp = new HttpGetHelp();
-        httpGetHelp.setUrlService(urlservicio, msisdn, recordsnumber, "A", "C");       
+        httpGetHelp.setUrlService(urlservicio, msisdn, recordsnumber, "A", "C", null, null);       
     }
 
     @When("^Altamira retorna un error$")
@@ -52,7 +52,7 @@ public class SaldoBonosStepDefinition {
     public void que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_bonos(String msisdn, String urlservicio, String recordsnumber) throws Throwable {
     	System.out.println("2.1 que los escenarios 1 o 2 fueron fallidos y que el abonado (.+) consulta saldo de bonos (.+) (.+)");
     	httpGetHelp = new HttpGetHelp();
-        httpGetHelp.setUrlService(urlservicio, msisdn, recordsnumber, "A", "C");
+        httpGetHelp.setUrlService(urlservicio, msisdn, recordsnumber, "A", "C", null, null);
     }
     
     @When("^los valores retornados de Altamira son mayores a cero$")

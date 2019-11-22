@@ -28,7 +28,7 @@ public class SaldoMonederoStepDefinition {
 	    System.out.println("1.1 que el abonado (.+) consulta saldo de monederos (.+) (.+)$");
 	    
 	    httpGetHelp = new HttpGetHelp();
-        httpGetHelp.setUrlService(urlservicio, msisdn, recordsnumber, null, null);
+        httpGetHelp.setUrlService(urlservicio, msisdn, recordsnumber, null, null, null, null);
 	}
 	
 	@When("^Altamira retorna un error SM$")
@@ -53,7 +53,7 @@ public class SaldoMonederoStepDefinition {
         System.out.println("2.1 que los escenarios 1 o 2 fueron fallidos y que el abonado (.+) consulta saldo de monederos (.+) (.+)$");
         
         httpGetHelp = new HttpGetHelp();
-        httpGetHelp.setUrlService(urlservicio, msisdn, recordsnumber, null, null);
+        httpGetHelp.setUrlService(urlservicio, msisdn, recordsnumber, null, null, null, null);
     }
 
     @When("^los valores retornados de Altamira son mayores a cero SM$")

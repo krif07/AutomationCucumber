@@ -1,74 +1,80 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="9" time="3.77432">
-<testcase classname="consultar los limites de consumo de un abonado VPN en Altamira" name="mensaje de error al consultar limite de consumo" time="0.593475">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="11" time="3.906555">
+<testcase classname=" consultar los bonos que tiene un abonado en Altamira" name="mensaje de error al consultar bonos" time="0.413216">
+<system-out><![CDATA[Given que el abonado que consulta el saldo se encuentra activo Y tiene bonos en Altamira Y los bonos se encuentran en los estados parametrizados B.passed
+Given que el abonado 963500797 consulta saldo bonos B http://localhost:8290/Customer/BoltonManagement/queryOCSBoltons/ 0 AE22 DA26.passed
+When Altamira retorna un error B............................................passed
+Then devolvera el mensaje de error en el formato estandar B.................passed
+]]></system-out>
+</testcase>
+<testcase classname=" consultar los bonos que tiene un abonado en Altamira" name="lista de bonos para abonado en altamira" time="0.00006">
+<skipped><![CDATA[Given que el abonado que consulta el saldo se encuentra activo Y tiene bonos en Altamira Y los bonos se encuentran en los estados parametrizados B.passed
+Given que los escenarios 1 o 2 fueron fallidos y que el abonado B 963500797 consulta saldo bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltons/ 30 AE22 DA26.undefined
+When el abonado tiene bonos en Altamira.....................................undefined
+Then entregar la lista de bonos para el abonado en Altamira.................undefined
+]]></skipped>
+</testcase>
+<testcase classname="consultar los limites de consumo de un abonado VPN en Altamira" name="mensaje de error al consultar limite de consumo" time="0.286371">
 <system-out><![CDATA[Given que el abonado que consulta el saldo se encuentra activo Y es VPN Y registra limites de consumo en Altamira.passed
 Given que el abonado 987421201 consulta limites de consumo http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ 0.passed
 When Altamira retorna un error LC...........................................passed
 Then devolvera el mensaje de error en el formato estandar LC................passed
 ]]></system-out>
 </testcase>
-<testcase classname="consultar los limites de consumo de un abonado VPN en Altamira" name="entregar valores registrados en monederos para limite consumo" time="0.425889">
+<testcase classname="consultar los limites de consumo de un abonado VPN en Altamira" name="entregar valores registrados en monederos para limite consumo" time="0.488492">
 <system-out><![CDATA[Given que el abonado que consulta el saldo se encuentra activo Y es VPN Y registra limites de consumo en Altamira.passed
 Given que los escenarios 1 o 2 fueron fallidos y que el abonado 987421201 consulta limites de consumo http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ 30.passed
 When los valores retornados de Altamira son mayores a cero LC...............passed
 Then entregar los valores registrados en los monederos para el abonado en Altamira LC.passed
 ]]></system-out>
 </testcase>
-<testcase classname="consultar los limites de consumo de un abonado VPN en Altamira" name="devolver valor cero como saldo de monederos para limite consumo" time="0.346543">
+<testcase classname="consultar los limites de consumo de un abonado VPN en Altamira" name="devolver valor cero como saldo de monederos para limite consumo" time="0.387567">
 <system-out><![CDATA[Given que el abonado que consulta el saldo se encuentra activo Y es VPN Y registra limites de consumo en Altamira.passed
 Given que los escenarios 1 o 2 fueron fallidos y que el abonado 987421201 consulta limites de consumo http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ 30.passed
 When los valores retornados de Altamira son menores a cero LC...............passed
 Then devolvera el valor cero como saldo de monederos LC.....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="consultar el saldo de los bonos de un abonado en Altamira" name="mensaje de error al consultar saldo de bonos" time="0.27441">
+<testcase classname="consultar el saldo de los bonos de un abonado en Altamira" name="mensaje de error al consultar saldo de bonos" time="0.265081">
 <system-out><![CDATA[Given que el abonado que consulta el saldo se encuentra activo Y registra saldos de bonos en Altamira Y los bonos se encuentran en los estados parametrizados..passed
 Given que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/ 0.passed
 When Altamira retorna un error..............................................passed
 Then devolvera el mensaje de error en el formato estandar...................passed
 ]]></system-out>
 </testcase>
-<testcase classname="consultar el saldo de los bonos de un abonado en Altamira" name="entregar valores registrados en monederos para saldo bonos" time="0.714149">
+<testcase classname="consultar el saldo de los bonos de un abonado en Altamira" name="entregar valores registrados en monederos para saldo bonos" time="0.504006">
 <system-out><![CDATA[Given que el abonado que consulta el saldo se encuentra activo Y registra saldos de bonos en Altamira Y los bonos se encuentran en los estados parametrizados..passed
 Given que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/ 30.passed
 When los valores retornados de Altamira son mayores a cero..................passed
 Then entregar los valores registrados en los monederos para el abonado en Altamira..passed
 ]]></system-out>
 </testcase>
-<testcase classname="consultar el saldo de los bonos de un abonado en Altamira" name="devolver valor cero como saldo de monederos para saldo bonos" time="0.499435">
+<testcase classname="consultar el saldo de los bonos de un abonado en Altamira" name="devolver valor cero como saldo de monederos para saldo bonos" time="0.550195">
 <system-out><![CDATA[Given que el abonado que consulta el saldo se encuentra activo Y registra saldos de bonos en Altamira Y los bonos se encuentran en los estados parametrizados..passed
 Given que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/ 30.passed
 When los valores retornados de Altamira son menores a cero..................passed
 Then devolvera el valor cero como saldo de monederos........................passed
 ]]></system-out>
 </testcase>
-<testcase classname=" consultar el saldo de los monederos de un abonado en Altamira" name="mensaje de error al consultar saldo monederos" time="0.278583">
+<testcase classname=" consultar el saldo de los monederos de un abonado en Altamira" name="mensaje de error al consultar saldo monederos" time="0.290214">
 <system-out><![CDATA[Given que el abonado que consulta el saldo se encuentra activo y registra saldos de monederos en Altamira.passed
 Given que el abonado 963500797 consulta saldo de monederos http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 0.passed
 When Altamira retorna un error SM...........................................passed
 Then devolvera el mensaje de error en el formato estandar SM................passed
 ]]></system-out>
 </testcase>
-<testcase classname=" consultar el saldo de los monederos de un abonado en Altamira" name="entregar valores registrados en monederos para saldo monederos" time="0.318043">
+<testcase classname=" consultar el saldo de los monederos de un abonado en Altamira" name="entregar valores registrados en monederos para saldo monederos" time="0.350141">
 <system-out><![CDATA[Given que el abonado que consulta el saldo se encuentra activo y registra saldos de monederos en Altamira.passed
 Given que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de monederos http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 30.passed
 When los valores retornados de Altamira son mayores a cero SM...............passed
 Then entregar los valores registrados en los monederos para el abonado en Altamira SM.passed
 ]]></system-out>
 </testcase>
-<testcase classname=" consultar el saldo de los monederos de un abonado en Altamira" name="devolver valor cero como saldo de monederos para saldo monederos" time="0.323793">
-<failure message="java.lang.NumberFormatException: For input string: &quot;8.99&quot;&#13;&#10;&#9;at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)&#13;&#10;&#9;at java.lang.Long.parseLong(Long.java:589)&#13;&#10;&#9;at java.lang.Long.parseLong(Long.java:631)&#13;&#10;&#9;at stepdefinition.SaldoMonederoStepDefinition.los_valores_retornados_de_altamira_son_menores_a_cero_sm(SaldoMonederoStepDefinition.java:87)&#13;&#10;&#9;at ✽.When los valores retornados de Altamira son menores a cero SM(SaldoMonedero.feature:26)&#13;&#10;"><![CDATA[Given que el abonado que consulta el saldo se encuentra activo y registra saldos de monederos en Altamira.passed
+<testcase classname=" consultar el saldo de los monederos de un abonado en Altamira" name="devolver valor cero como saldo de monederos para saldo monederos" time="0.371212">
+<system-out><![CDATA[Given que el abonado que consulta el saldo se encuentra activo y registra saldos de monederos en Altamira.passed
 Given que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de monederos http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 30.passed
-When los valores retornados de Altamira son menores a cero SM...............failed
-Then devolvera el valor cero como saldo de monederos SM.....................skipped
-
-StackTrace:
-java.lang.NumberFormatException: For input string: "8.99"
-	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.lang.Long.parseLong(Long.java:589)
-	at java.lang.Long.parseLong(Long.java:631)
-	at stepdefinition.SaldoMonederoStepDefinition.los_valores_retornados_de_altamira_son_menores_a_cero_sm(SaldoMonederoStepDefinition.java:87)
-	at ✽.When los valores retornados de Altamira son menores a cero SM(SaldoMonedero.feature:26)
-]]></failure>
+When los valores retornados de Altamira son menores a cero SM...............passed
+Then devolvera el valor cero como saldo de monederos SM.....................passed
+]]></system-out>
 </testcase>
 </testsuite>
