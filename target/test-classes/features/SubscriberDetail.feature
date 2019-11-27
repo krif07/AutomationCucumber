@@ -28,4 +28,4 @@ Then devolvera el mensaje de error en formato estandar SD
 
 Examples:
 | urlServicio 															  				  | msisdn 	  | recordsNumber |
-| http://localhost:8290/Customer/BalanceManagement/querySubscriberOCSServiceDetail/ 	  | 963500797 | 0			  |
+| http://localhost:8290/Customer/BalanceManagement/querySubscriberOCSServiceDetail/ 	  | 96350079  | 0			  |

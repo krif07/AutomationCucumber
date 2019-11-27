@@ -83,11 +83,14 @@ public class SubscriberDetailStepDefinition {
         httpGetHelp.setUrlService(urlservicio, msisdn, recordsnumber, null, null, null, null);
         httpGetHelp.getJson();
     	respuesta = httpGetHelp.getRespuesta();
-    	assertTrue(respuesta.get("status").equals("200"));
+    	assertFalse(respuesta.get("status").equals("200"));
     }
 
     @Then("^devolvera el mensaje de error en formato estandar SD$")
     public void devolvera_el_mensaje_de_error_en_formato_estandar_sd() throws Throwable {
         System.out.println("3.3 devolvera el mensaje de error en formato estandar SD$");
+        
+        System.out.println(respuesta);	    	
+    	assertTrue(respuesta.get("service").equals("QuerySubscriberOCSServiceDetailMI"));
     }
 }
