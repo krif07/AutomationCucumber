@@ -28,6 +28,8 @@ public class HttpGetHelp {
 	private static String URL_LIMITE_CONSUMO = "http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/";
 	private static String URL_SALDO_MONEDERO = "http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/";
 	private static String URL_BONOS = "http://localhost:8290/Customer/BoltonManagement/queryOCSBoltons/";
+	private static String URL_CACHE_BALANCEBI = "http://localhost:8290/Cache/Balance/QueryBoltonInfo/";
+	private static String URL_CACHE_BALANCEGS = "http://localhost:8290/Cache/Balance/GetShowBalances/";
 	
 	private String response;
 	private Map<String, String> respuesta;
@@ -110,6 +112,14 @@ public class HttpGetHelp {
 		                	respuesta.put("boltonBasicInfo", dataArray.getJSONObject(0).get("boltonBasicInfo").toString());
 		                }		                
 		            }
+	                
+		            else if(getUrlService().contains(URL_CACHE_BALANCEBI)) {		            	
+		                respuesta.put("bonusType", dataJsonObject.get("bonusType").toString());		                
+		            }
+	                
+		            else if(getUrlService().contains(URL_CACHE_BALANCEGS)) {		            	
+		                respuesta.put("showBalances", dataJsonObject.get("showBalances").toString());		                
+		            }
 	                	                
 	                break;
 	                
@@ -179,6 +189,10 @@ public class HttpGetHelp {
 				this.urlService += "&boltonTypeCode=" + boltonTypeCode;
 			}
 		}
+	}
+	
+	public void setUrlService(String urlServicio, String complemento) {
+		this.urlService = urlServicio + complemento;
 	}
 	
 	public void setUrlService(String functionGroup, String functionName, String msisdn, String recordsNumber, 

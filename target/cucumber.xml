@@ -1,104 +1,104 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="15" time="6.1537">
-<testcase classname=" consultar los bonos que tiene un abonado en Altamira" name="mensaje de error al consultar bonos" time="0.971487">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="15" time="6.989875">
+<testcase classname=" consultar los bonos que tiene un abonado en Altamira" name="mensaje de error al consultar bonos" time="0.579893">
 <system-out><![CDATA[Given que el abonado que consulta el saldo se encuentra activo Y tiene bonos en Altamira Y los bonos se encuentran en los estados parametrizados B.passed
 Given que el abonado 963500797 consulta saldo bonos B http://localhost:8290/Customer/BoltonManagement/queryOCSBoltons/ 0 AE22 DA26.passed
 When Altamira retorna un error B............................................passed
 Then devolvera el mensaje de error en el formato estandar B.................passed
 ]]></system-out>
 </testcase>
-<testcase classname=" consultar los bonos que tiene un abonado en Altamira" name="lista de bonos para abonado en altamira" time="0.000069">
+<testcase classname=" consultar los bonos que tiene un abonado en Altamira" name="lista de bonos para abonado en altamira" time="0.000113">
 <skipped><![CDATA[Given que el abonado que consulta el saldo se encuentra activo Y tiene bonos en Altamira Y los bonos se encuentran en los estados parametrizados B.passed
 Given que los escenarios 1 o 2 fueron fallidos y que el abonado B 963500797 consulta saldo bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltons/ 30 AE22 DA26.undefined
 When el abonado tiene bonos en Altamira.....................................undefined
 Then entregar la lista de bonos para el abonado en Altamira.................undefined
 ]]></skipped>
 </testcase>
-<testcase classname=" consultar los bonos almacenados en la cache" name="mensaje de error al consultar los bonos en la cache" time="0.000261">
+<testcase classname=" consultar los bonos almacenados en la cache" name="mensaje de error al consultar los bonos en la cache" time="0.801328">
 <system-out><![CDATA[Given que los bonos a consultar por tipo se encuentran en la memoria cache..passed
 Given que la consulta de bonos http://localhost:8290/Cache/Balance/QueryBoltonInfo/ por tipo de bono ABCD.passed
 When el microservicio no encuentra los bonos................................passed
 Then se devuelve el mensaje de error al no encontrar el bono................passed
 ]]></system-out>
 </testcase>
-<testcase classname=" consultar los bonos almacenados en la cache" name="lista de los bonos consultados por tipo de bono" time="0.000176">
+<testcase classname=" consultar los bonos almacenados en la cache" name="lista de los bonos consultados por tipo de bono" time="0.865875">
 <system-out><![CDATA[Given que los bonos a consultar por tipo se encuentran en la memoria cache..passed
 Given que la consulta de bonos http://localhost:8290/Cache/Balance/QueryBoltonInfo/ por tipo de bono DIN9.passed
 When el microservicio encuentra los bonos...................................passed
 Then se devuelve la lista con los bonos.....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname=" consultar los bonos almacenados en la cache" name="mensaje de error al consultar el balance en la cache" time="0.00015">
+<testcase classname=" consultar los bonos almacenados en la cache" name="mensaje de error al consultar el balance en la cache" time="0.837005">
 <system-out><![CDATA[Given que los bonos a consultar por tipo se encuentran en la memoria cache..passed
 Given que la consulta del balance http://localhost:8290/Cache/Balance/GetShowBalances/ por codigo 99999.passed
 When el microservicio no encuentra el balance...............................passed
 Then se devuelve el mensaje de error al no encontrar el balance.............passed
 ]]></system-out>
 </testcase>
-<testcase classname=" consultar los bonos almacenados en la cache" name="balance encontrado en la cache" time="0.000192">
+<testcase classname=" consultar los bonos almacenados en la cache" name="balance encontrado en la cache" time="0.813472">
 <system-out><![CDATA[Given que los bonos a consultar por tipo se encuentran en la memoria cache..passed
 Given que la consulta del balance http://localhost:8290/Cache/Balance/GetShowBalances/ por codigo 90.passed
 When el microservicio encuentra el balance..................................passed
 Then se devuelve el balance encontrado......................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="consultar los limites de consumo de un abonado VPN en Altamira" name="mensaje de error al consultar limite de consumo" time="0.274926">
+<testcase classname="consultar los limites de consumo de un abonado VPN en Altamira" name="mensaje de error al consultar limite de consumo" time="0.250671">
 <system-out><![CDATA[Given que el abonado que consulta el saldo se encuentra activo Y es VPN Y registra limites de consumo en Altamira.passed
 Given que el abonado 987421201 consulta limites de consumo http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ 0.passed
 When Altamira retorna un error LC...........................................passed
 Then devolvera el mensaje de error en el formato estandar LC................passed
 ]]></system-out>
 </testcase>
-<testcase classname="consultar los limites de consumo de un abonado VPN en Altamira" name="entregar valores registrados en monederos para limite consumo" time="0.7482">
+<testcase classname="consultar los limites de consumo de un abonado VPN en Altamira" name="entregar valores registrados en monederos para limite consumo" time="0.332761">
 <system-out><![CDATA[Given que el abonado que consulta el saldo se encuentra activo Y es VPN Y registra limites de consumo en Altamira.passed
 Given que los escenarios 1 o 2 fueron fallidos y que el abonado 987421201 consulta limites de consumo http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ 30.passed
 When los valores retornados de Altamira son mayores a cero LC...............passed
 Then entregar los valores registrados en los monederos para el abonado en Altamira LC.passed
 ]]></system-out>
 </testcase>
-<testcase classname="consultar los limites de consumo de un abonado VPN en Altamira" name="devolver valor cero como saldo de monederos para limite consumo" time="0.793156">
+<testcase classname="consultar los limites de consumo de un abonado VPN en Altamira" name="devolver valor cero como saldo de monederos para limite consumo" time="0.337904">
 <system-out><![CDATA[Given que el abonado que consulta el saldo se encuentra activo Y es VPN Y registra limites de consumo en Altamira.passed
 Given que los escenarios 1 o 2 fueron fallidos y que el abonado 987421201 consulta limites de consumo http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ 30.passed
 When los valores retornados de Altamira son menores a cero LC...............passed
 Then devolvera el valor cero como saldo de monederos LC.....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="consultar el saldo de los bonos de un abonado en Altamira" name="mensaje de error al consultar saldo de bonos" time="0.280909">
+<testcase classname="consultar el saldo de los bonos de un abonado en Altamira" name="mensaje de error al consultar saldo de bonos" time="0.246282">
 <system-out><![CDATA[Given que el abonado que consulta el saldo se encuentra activo Y registra saldos de bonos en Altamira Y los bonos se encuentran en los estados parametrizados..passed
 Given que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/ 0.passed
 When Altamira retorna un error..............................................passed
 Then devolvera el mensaje de error en el formato estandar...................passed
 ]]></system-out>
 </testcase>
-<testcase classname="consultar el saldo de los bonos de un abonado en Altamira" name="entregar valores registrados en monederos para saldo bonos" time="0.653937">
+<testcase classname="consultar el saldo de los bonos de un abonado en Altamira" name="entregar valores registrados en monederos para saldo bonos" time="0.485905">
 <system-out><![CDATA[Given que el abonado que consulta el saldo se encuentra activo Y registra saldos de bonos en Altamira Y los bonos se encuentran en los estados parametrizados..passed
 Given que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/ 30.passed
 When los valores retornados de Altamira son mayores a cero..................passed
 Then entregar los valores registrados en los monederos para el abonado en Altamira..passed
 ]]></system-out>
 </testcase>
-<testcase classname="consultar el saldo de los bonos de un abonado en Altamira" name="devolver valor cero como saldo de monederos para saldo bonos" time="0.887934">
+<testcase classname="consultar el saldo de los bonos de un abonado en Altamira" name="devolver valor cero como saldo de monederos para saldo bonos" time="0.51328">
 <system-out><![CDATA[Given que el abonado que consulta el saldo se encuentra activo Y registra saldos de bonos en Altamira Y los bonos se encuentran en los estados parametrizados..passed
 Given que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de bonos http://localhost:8290/Customer/BoltonManagement/queryOCSBoltonsDetails/ 30.passed
 When los valores retornados de Altamira son menores a cero..................passed
 Then devolvera el valor cero como saldo de monederos........................passed
 ]]></system-out>
 </testcase>
-<testcase classname=" consultar el saldo de los monederos de un abonado en Altamira" name="mensaje de error al consultar saldo monederos" time="0.305064">
+<testcase classname=" consultar el saldo de los monederos de un abonado en Altamira" name="mensaje de error al consultar saldo monederos" time="0.258644">
 <system-out><![CDATA[Given que el abonado que consulta el saldo se encuentra activo y registra saldos de monederos en Altamira.passed
 Given que el abonado 963500797 consulta saldo de monederos http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 0.passed
 When Altamira retorna un error SM...........................................passed
 Then devolvera el mensaje de error en el formato estandar SM................passed
 ]]></system-out>
 </testcase>
-<testcase classname=" consultar el saldo de los monederos de un abonado en Altamira" name="entregar valores registrados en monederos para saldo monederos" time="0.382085">
+<testcase classname=" consultar el saldo de los monederos de un abonado en Altamira" name="entregar valores registrados en monederos para saldo monederos" time="0.334195">
 <system-out><![CDATA[Given que el abonado que consulta el saldo se encuentra activo y registra saldos de monederos en Altamira.passed
 Given que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de monederos http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 30.passed
 When los valores retornados de Altamira son mayores a cero SM...............passed
 Then entregar los valores registrados en los monederos para el abonado en Altamira SM.passed
 ]]></system-out>
 </testcase>
-<testcase classname=" consultar el saldo de los monederos de un abonado en Altamira" name="devolver valor cero como saldo de monederos para saldo monederos" time="0.855154">
+<testcase classname=" consultar el saldo de los monederos de un abonado en Altamira" name="devolver valor cero como saldo de monederos para saldo monederos" time="0.332547">
 <system-out><![CDATA[Given que el abonado que consulta el saldo se encuentra activo y registra saldos de monederos en Altamira.passed
 Given que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de monederos http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 30.passed
 When los valores retornados de Altamira son menores a cero SM...............passed
