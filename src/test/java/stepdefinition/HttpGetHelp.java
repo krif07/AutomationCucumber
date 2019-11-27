@@ -30,6 +30,7 @@ public class HttpGetHelp {
 	private static String URL_BONOS = "http://localhost:8290/Customer/BoltonManagement/queryOCSBoltons/";
 	private static String URL_CACHE_BALANCEBI = "http://localhost:8290/Cache/Balance/QueryBoltonInfo/";
 	private static String URL_CACHE_BALANCEGS = "http://localhost:8290/Cache/Balance/GetShowBalances/";
+	private static String URL_CACHE_SUBSCRIBER_DETAILS = "http://localhost:8290/Customer/BalanceManagement/querySubscriberOCSServiceDetail/";	
 	
 	private static String URL_CACHE_BALANCEBI_LOAD = "http://localhost:8290/Cache/Balance/RefreshBoltonInfo/load";
 	private static String URL_CACHE_BALANCEGS_LOAD = "http://localhost:8290/Cache/Balance/RefreshShowBalance/load";
@@ -115,15 +116,24 @@ public class HttpGetHelp {
 		                	respuesta.put("boltonBasicInfo", dataArray.getJSONObject(0).get("boltonBasicInfo").toString());
 		                }		                
 		            }
-	                
+		            else if(getUrlService().contains(URL_CACHE_SUBSCRIBER_DETAILS)) {
+		            	JSONObject obj = dataJsonObject.getJSONObject("subscriberBasicInfo");
+		            	if(obj != null){
+		            		respuesta.put("subscriberBasicInfo", "OK");
+		            		respuesta.put("lifeCycleStatusDate", obj.get("lifeCycleStatusDate").toString());		            		
+		            		respuesta.put("tariffPlanId", obj.get("tariffPlanId").toString());
+		            		
+		            	}
+		            	else {
+		            		respuesta.put("subscriberBasicInfo", null);
+		            	}
+		            }	                
 		            else if(getUrlService().contains(URL_CACHE_BALANCEBI)) {		            	
 		                respuesta.put("bonusType", dataJsonObject.get("bonusType").toString());		                
-		            }
-	                
+		            }	                
 		            else if(getUrlService().contains(URL_CACHE_BALANCEGS)) {		            	
 		                respuesta.put("showBalances", dataJsonObject.get("showBalances").toString());		                
-		            }
-	                	               
+		            }	                	               
 		            else if(getUrlService().contains(URL_CACHE_BALANCEBI_LOAD) || getUrlService().contains(URL_CACHE_BALANCEGS_LOAD)) {
 		            	respuesta.put("opCode", dataJsonObject.get("opCode").toString());
 		            	respuesta.put("opMsg", dataJsonObject.get("opMsg").toString());
