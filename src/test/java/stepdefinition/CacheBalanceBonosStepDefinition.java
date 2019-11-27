@@ -24,6 +24,33 @@ public class CacheBalanceBonosStepDefinition {
     public void que_la_base_de_datos_redis_exista() throws Throwable {
         System.out.println("0. que la base de datos redis exista$");
     }
+	
+	@Given("^que existan bonos en Altamira$")
+    public void que_existan_bonos_en_altamira() throws Throwable {
+        System.out.println("0.1 que existan bonos en Altamira$");
+        
+        httpGetHelp = new HttpGetHelp();
+    }
+
+    @When("^el microservicio (.+) carga los bonos a la cache $")
+    public void el_microservicio_carga_los_bonos_a_la_cache(String urlservicio) throws Throwable {
+        System.out.println("0.2 el microservicio (.+) carga los bonos a la cache $");
+        
+        httpGetHelp.setUrlService(urlservicio);
+        httpGetHelp.getJson();
+    	respuesta = httpGetHelp.getRespuesta();
+    	assertFalse(respuesta.get("status").equals("200"));
+    }
+
+    @Then("^se devuelve mensaje ok$")
+    public void se_devuelve_mensaje_ok() throws Throwable {
+        System.out.println("0.3 se devuelve mensaje ok$");
+        
+        System.out.println(respuesta);    	
+    	assertTrue(respuesta.get("opCode").equals("00"));
+    	assertTrue(respuesta.get("opMsg").equals("OK"));
+    }
+	
 
 	@Given("^que los bonos se encuentren cargados en memoria$")
     public void que_los_bonos_se_encuentren_cargados_en_memoria() throws Throwable {

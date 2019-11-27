@@ -31,6 +31,9 @@ public class HttpGetHelp {
 	private static String URL_CACHE_BALANCEBI = "http://localhost:8290/Cache/Balance/QueryBoltonInfo/";
 	private static String URL_CACHE_BALANCEGS = "http://localhost:8290/Cache/Balance/GetShowBalances/";
 	
+	private static String URL_CACHE_BALANCEBI_LOAD = "http://localhost:8290/Cache/Balance/RefreshBoltonInfo/load";
+	private static String URL_CACHE_BALANCEGS_LOAD = "http://localhost:8290/Cache/Balance/RefreshShowBalance/load";
+		
 	private String response;
 	private Map<String, String> respuesta;
 
@@ -120,7 +123,11 @@ public class HttpGetHelp {
 		            else if(getUrlService().contains(URL_CACHE_BALANCEGS)) {		            	
 		                respuesta.put("showBalances", dataJsonObject.get("showBalances").toString());		                
 		            }
-	                	                
+	                	               
+		            else if(getUrlService().contains(URL_CACHE_BALANCEBI_LOAD) || getUrlService().contains(URL_CACHE_BALANCEGS_LOAD)) {
+		            	respuesta.put("opCode", dataJsonObject.get("opCode").toString());
+		            	respuesta.put("opMsg", dataJsonObject.get("opMsg").toString());
+		            }
 	                break;
 	                
 	            case 500:
@@ -163,6 +170,14 @@ public class HttpGetHelp {
 	public String getUrlService() {
 		return urlService;
 	}
+	
+	public void setUrlService(String urlServicio) {
+		this.urlService = urlServicio;
+	}
+	
+	public void setUrlService(String urlServicio, String complemento) {
+		this.urlService = urlServicio + complemento;
+	}
 
 	public void setUrlService(String urlServicio, String msisdn, String recordsNumber, 
 								String boltonStatus1, String boltonStatus2,
@@ -190,11 +205,7 @@ public class HttpGetHelp {
 			}
 		}
 	}
-	
-	public void setUrlService(String urlServicio, String complemento) {
-		this.urlService = urlServicio + complemento;
-	}
-	
+		
 	public void setUrlService(String functionGroup, String functionName, String msisdn, String recordsNumber, 
 								String boltonStatus1, String boltonStatus2,
 								String boltoncode, String boltontypecode) {

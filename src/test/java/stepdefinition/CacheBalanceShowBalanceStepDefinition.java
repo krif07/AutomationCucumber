@@ -18,13 +18,37 @@ public class CacheBalanceShowBalanceStepDefinition {
 	private HttpGetHelp httpGetHelp;
 	private Map<String, String> respuesta;
 	
-	private String complemento;
-	
 	@Given("^que la base de datos redis para balance exista$")
     public void que_la_base_de_datos_redis_para_balance_exista() throws Throwable {
         System.out.println("0. que la base de datos redis para balance exista$");
     }
+	
+	@Given("^que existan balances en Altamira$")
+	public void que_existan_balances_en_altamira() throws Throwable {
+		System.out.println("0.1 que existan balances en Altamira");
+		
+		httpGetHelp = new HttpGetHelp();
+	}
 
+    @When("^el microservicio (.+) carga los balances a la cache $")
+    public void el_microservicio_carga_los_balances_a_la_cache(String urlservicio) throws Throwable {
+        System.out.println("0.2 el microservicio (.+) carga los balances a la cache $");
+        
+        httpGetHelp.setUrlService(urlservicio);
+        httpGetHelp.getJson();
+    	respuesta = httpGetHelp.getRespuesta();
+    	assertFalse(respuesta.get("status").equals("200"));
+    }
+
+    @Then("^se devuelve mensaje ok para balances$")
+    public void se_devuelve_mensaje_ok_para_balances() throws Throwable {
+        System.out.println("0.3 se devuelve mensaje ok para balances$");
+        
+        System.out.println(respuesta);    	
+    	assertTrue(respuesta.get("opCode").equals("00"));
+    	assertTrue(respuesta.get("opMsg").equals("OK"));
+    }
+	
     @Given("^que los balances se encuentren cargados en memoria $")
     public void que_los_balances_se_encuentren_cargados_en_memoria() throws Throwable {
         System.out.println("1-2.1 que los balances se encuentren cargados en memoria $");
@@ -36,7 +60,6 @@ public class CacheBalanceShowBalanceStepDefinition {
     public void el_microservicio_no_encuentra_el_balance_buscado_por_codigo(String urlservicio, String codigo) throws Throwable {
         System.out.println("1.2 el microservicio (.+) no encuentra el balance buscado por codigo (.+)$");
         
-        this.complemento = codigo;
         httpGetHelp.setUrlService(urlservicio, codigo);
         
         httpGetHelp.getJson();
@@ -56,8 +79,7 @@ public class CacheBalanceShowBalanceStepDefinition {
     @When("^el microservicio (.+) si encuentra el balance buscado por codigo (.+)$")
     public void el_microservicio_si_encuentra_el_balance_buscado_por_codigo(String urlservicio, String codigo) throws Throwable {
         System.out.println("2.2 el microservicio (.+) encuentra el balance buscado por codigo (.+)$");
-        
-        this.complemento = codigo;
+                
         httpGetHelp.setUrlService(urlservicio, codigo);
         
         httpGetHelp.getJson();

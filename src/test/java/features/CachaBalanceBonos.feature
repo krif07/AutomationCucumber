@@ -1,9 +1,16 @@
-# http://localhost:8290/Cache/Balance/RefreshBoltonInfo/load
-
 Feature: consultar los bonos almacenados en la cache
 
 Background:
 Given que la base de datos redis exista
+
+Scenario Outline: mensaje de exito al subir los bonos a la cache
+Given que existan bonos en Altamira
+When el microservicio <urlServicio> carga los bonos a la cache 
+Then se devuelve mensaje ok
+
+Examples:
+| urlServicio 												  |
+| http://localhost:8290/Cache/Balance/RefreshBoltonInfo/load  |
 
 Scenario Outline: mensaje de error al consultar los bonos en la cache
 Given que los bonos se encuentren cargados en memoria
