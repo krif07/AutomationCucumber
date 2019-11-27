@@ -76,7 +76,7 @@ public class SubscriberDetailStepDefinition {
         
     }
   
-    @When("^el estado del abonado (.+) no este dentro de los valores parametrizados SD (.+) (.+)$")
+   /* @When("^el estado del abonado (.+) no este dentro de los valores parametrizados SD (.+) (.+)$")
     public void el_estado_del_abonado_no_este_dentro_de_los_valores_parametrizados_sd(String msisdn, String urlservicio, String recordsnumber) throws Throwable {
         System.out.println("3.2 el estado del abonado no este dentro de los valores parametrizados SD$");
         
@@ -92,5 +92,5 @@ public class SubscriberDetailStepDefinition {
         
         System.out.println(respuesta);	    	
     	assertTrue(respuesta.get("service").equals("QuerySubscriberOCSServiceDetailMI"));
-    }
+    }*/
 }

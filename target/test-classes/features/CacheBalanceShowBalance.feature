@@ -1,7 +1,7 @@
-Feature: consultar los bonos almacenados en la cache
+Feature: consultar el saldo de los monederos de un abonado en Altamira
 
 Background:
-Given que la base de datos redis para balance exista
+Given que el servicio QueryOCSBalance devolvio los saldos de monederos en Altamira
 
 Scenario Outline: mensaje de exito al subir los balances a la cache
 Given que existan balances en Altamira
@@ -13,9 +13,9 @@ Examples:
 | http://localhost:8290/Cache/Balance/RefreshBoltonInfo/load  |
 
 Scenario Outline: mensaje de error al consultar el balance en la cache
-Given que los balances se encuentren cargados en memoria 
-When el microservicio <urlServicio> no encuentra el balance buscado por codigo <codigo>
-Then se devuelve el mensaje de error al no encontrar el balance
+Given que el abonado consulta saldo de monederos <urlServicio> <codigo>
+When los monederos no correspondan a los configurados y cargados en la Cache
+Then devolvera un error estándar controlado
 
 Examples:
 | urlServicio 															  | codigo |
@@ -23,27 +23,10 @@ Examples:
 
 
 Scenario Outline: balance encontrado en la cache
-Given que los balances se encuentren cargados en memoria
-When el microservicio <urlServicio> si encuentra el balance buscado por codigo <codigo>
-Then se devuelve el balance encontrado
+Given que el abonado consulta saldo de monederos <urlServicio> <codigo>
+When los monederos correspondan a los configurados y cargados en la Cache
+Then devolvera el saldo de los monederos correspondientes
 
 Examples:
 | urlServicio 															  | codigo |
 | http://localhost:8290/Cache/Balance/GetShowBalances/ 		  			  | 90     |
-
-
-#Para consultar el saldo de los monederos de un abonado en Altamira
-
-#Dado que el servicio QueryOCSBalance devolvió los saldos de monederos en Altamira.
-
-#Escenario 1:
-
-#(Dado|Dada|Dados|Dadas) que el abonado consulta saldo de monederos
-#Cuando los monederos no correspondan a los configurados y cargados en la Caché
-#Entonces devolverá un error estándar controlado.
-
-#Escenario 2:
-
-#(Dado|Dada|Dados|Dadas) que el abonado consulta saldo de monederos
-#Cuando los monederos correspondan a los configurados y cargados en la Caché
-#Entonces devolverá el saldo de los monederos correspondientes.

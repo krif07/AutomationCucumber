@@ -21,11 +21,11 @@ Examples:
 | urlServicio 															  				  | msisdn 	  | recordsNumber |
 | http://localhost:8290/Customer/BalanceManagement/querySubscriberOCSServiceDetail/ 	  | 963500797 | 0			  |
 
-Scenario Outline: mensaje de error en formato estandar
-Given que los escenarios 1 o 2 fueron fallidos y que existe información del abonado en Altamira SD
-When el estado del abonado <msisdn> no este dentro de los valores parametrizados SD <urlServicio> <recordsNumber>
-Then devolvera el mensaje de error en formato estandar SD
+# Scenario Outline: mensaje de error en formato estandar
+# Given que los escenarios 1 o 2 fueron fallidos y que existe información del abonado en Altamira SD
+# When el estado del abonado <msisdn> no este dentro de los valores parametrizados SD <urlServicio> <recordsNumber>
+# Then devolvera el mensaje de error en formato estandar SD
 
-Examples:
-| urlServicio 															  				  | msisdn 	  | recordsNumber |
-| http://localhost:8290/Customer/BalanceManagement/querySubscriberOCSServiceDetail/ 	  | 96350079  | 0			  |
+# Examples:
+# | urlServicio 															  				  | msisdn 	  | recordsNumber |
+# | http://localhost:8290/Customer/BalanceManagement/querySubscriberOCSServiceDetail/ 	  | 96350079  | 0			  |
