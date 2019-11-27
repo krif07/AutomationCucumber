@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 83829200,
+              "duration": 90201100,
               "status": "passed"
             },
             "line": 4,
@@ -33,7 +33,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2242500,
+              "duration": 2557000,
               "status": "passed"
             },
             "line": 7,
@@ -74,7 +74,7 @@
           },
           {
             "result": {
-              "duration": 1092093200,
+              "duration": 817240000,
               "status": "passed"
             },
             "line": 8,
@@ -86,7 +86,7 @@
           },
           {
             "result": {
-              "duration": 134700,
+              "duration": 120500,
               "status": "passed"
             },
             "line": 9,
@@ -107,7 +107,7 @@
         "steps": [
           {
             "result": {
-              "duration": 54400,
+              "duration": 52400,
               "status": "passed"
             },
             "line": 4,
@@ -182,7 +182,7 @@
         "steps": [
           {
             "result": {
-              "duration": 95300,
+              "duration": 92600,
               "status": "passed"
             },
             "line": 4,
@@ -204,7 +204,7 @@
         "steps": [
           {
             "result": {
-              "duration": 54300,
+              "duration": 71900,
               "status": "passed"
             },
             "line": 7,
@@ -248,7 +248,7 @@
         "steps": [
           {
             "result": {
-              "duration": 35500,
+              "duration": 46100,
               "status": "passed"
             },
             "line": 4,
@@ -270,7 +270,7 @@
         "steps": [
           {
             "result": {
-              "duration": 30400,
+              "duration": 37400,
               "status": "passed"
             },
             "line": 16,
@@ -282,7 +282,7 @@
           },
           {
             "result": {
-              "duration": 1639674800,
+              "duration": 1065242400,
               "status": "passed"
             },
             "line": 17,
@@ -308,7 +308,7 @@
           },
           {
             "result": {
-              "duration": 249600,
+              "duration": 79200,
               "status": "passed"
             },
             "line": 18,
@@ -329,7 +329,7 @@
         "steps": [
           {
             "result": {
-              "duration": 109900,
+              "duration": 62100,
               "status": "passed"
             },
             "line": 4,
@@ -351,7 +351,7 @@
         "steps": [
           {
             "result": {
-              "duration": 59100,
+              "duration": 44600,
               "status": "passed"
             },
             "line": 25,
@@ -363,7 +363,7 @@
           },
           {
             "result": {
-              "duration": 957067400,
+              "duration": 1428671800,
               "status": "passed"
             },
             "line": 26,
@@ -389,7 +389,7 @@
           },
           {
             "result": {
-              "duration": 72800,
+              "duration": 55000,
               "status": "passed"
             },
             "line": 27,
@@ -420,7 +420,7 @@
         "steps": [
           {
             "result": {
-              "duration": 103700,
+              "duration": 68800,
               "status": "passed"
             },
             "line": 4,
@@ -442,7 +442,7 @@
         "steps": [
           {
             "result": {
-              "duration": 57400,
+              "duration": 38200,
               "status": "passed"
             },
             "line": 7,
@@ -486,7 +486,7 @@
         "steps": [
           {
             "result": {
-              "duration": 64300,
+              "duration": 46900,
               "status": "passed"
             },
             "line": 4,
@@ -562,7 +562,7 @@
         "steps": [
           {
             "result": {
-              "duration": 63800,
+              "duration": 47700,
               "status": "passed"
             },
             "line": 4,
@@ -648,7 +648,7 @@
         "steps": [
           {
             "result": {
-              "duration": 105600,
+              "duration": 85800,
               "status": "passed"
             },
             "line": 4,
@@ -670,7 +670,7 @@
         "steps": [
           {
             "result": {
-              "duration": 147700,
+              "duration": 132300,
               "status": "passed"
             },
             "line": 7,
@@ -701,7 +701,7 @@
           },
           {
             "result": {
-              "duration": 273044100,
+              "duration": 251097000,
               "status": "passed"
             },
             "line": 8,
@@ -713,7 +713,7 @@
           },
           {
             "result": {
-              "duration": 164100,
+              "duration": 78300,
               "status": "passed"
             },
             "line": 9,
@@ -734,7 +734,7 @@
         "steps": [
           {
             "result": {
-              "duration": 114200,
+              "duration": 45400,
               "status": "passed"
             },
             "line": 4,
@@ -756,7 +756,7 @@
         "steps": [
           {
             "result": {
-              "duration": 301400,
+              "duration": 96800,
               "status": "passed"
             },
             "line": 16,
@@ -787,7 +787,7 @@
           },
           {
             "result": {
-              "duration": 324560100,
+              "duration": 358154600,
               "status": "passed"
             },
             "line": 17,
@@ -799,7 +799,7 @@
           },
           {
             "result": {
-              "duration": 302500,
+              "duration": 41600,
               "status": "passed"
             },
             "line": 18,
@@ -820,7 +820,7 @@
         "steps": [
           {
             "result": {
-              "duration": 221600,
+              "duration": 39300,
               "status": "passed"
             },
             "line": 4,
@@ -842,7 +842,7 @@
         "steps": [
           {
             "result": {
-              "duration": 479800,
+              "duration": 58200,
               "status": "passed"
             },
             "line": 25,
@@ -873,7 +873,7 @@
           },
           {
             "result": {
-              "duration": 337580400,
+              "duration": 342357700,
               "status": "passed"
             },
             "line": 26,
@@ -885,7 +885,7 @@
           },
           {
             "result": {
-              "duration": 52400,
+              "duration": 34300,
               "status": "passed"
             },
             "line": 27,
@@ -916,7 +916,7 @@
         "steps": [
           {
             "result": {
-              "duration": 79100,
+              "duration": 51200,
               "status": "passed"
             },
             "line": 4,
@@ -938,7 +938,7 @@
         "steps": [
           {
             "result": {
-              "duration": 125500,
+              "duration": 84000,
               "status": "passed"
             },
             "line": 7,
@@ -969,7 +969,7 @@
           },
           {
             "result": {
-              "duration": 647438700,
+              "duration": 270424200,
               "status": "passed"
             },
             "line": 8,
@@ -981,7 +981,7 @@
           },
           {
             "result": {
-              "duration": 228500,
+              "duration": 289800,
               "status": "passed"
             },
             "line": 9,
@@ -1002,7 +1002,7 @@
         "steps": [
           {
             "result": {
-              "duration": 220900,
+              "duration": 197000,
               "status": "passed"
             },
             "line": 4,
@@ -1024,7 +1024,7 @@
         "steps": [
           {
             "result": {
-              "duration": 326100,
+              "duration": 390400,
               "status": "passed"
             },
             "line": 16,
@@ -1055,7 +1055,7 @@
           },
           {
             "result": {
-              "duration": 765271200,
+              "duration": 535906400,
               "status": "passed"
             },
             "line": 17,
@@ -1067,7 +1067,7 @@
           },
           {
             "result": {
-              "duration": 70200,
+              "duration": 68800,
               "status": "passed"
             },
             "line": 18,
@@ -1088,7 +1088,7 @@
         "steps": [
           {
             "result": {
-              "duration": 41800,
+              "duration": 37900,
               "status": "passed"
             },
             "line": 4,
@@ -1110,7 +1110,7 @@
         "steps": [
           {
             "result": {
-              "duration": 93300,
+              "duration": 77900,
               "status": "passed"
             },
             "line": 25,
@@ -1141,7 +1141,7 @@
           },
           {
             "result": {
-              "duration": 964186900,
+              "duration": 519848300,
               "status": "passed"
             },
             "line": 26,
@@ -1153,7 +1153,7 @@
           },
           {
             "result": {
-              "duration": 47200,
+              "duration": 70600,
               "status": "passed"
             },
             "line": 27,
@@ -1184,7 +1184,7 @@
         "steps": [
           {
             "result": {
-              "duration": 95700,
+              "duration": 106900,
               "status": "passed"
             },
             "line": 4,
@@ -1206,7 +1206,7 @@
         "steps": [
           {
             "result": {
-              "duration": 83000,
+              "duration": 135100,
               "status": "passed"
             },
             "line": 7,
@@ -1237,7 +1237,7 @@
           },
           {
             "result": {
-              "duration": 282248500,
+              "duration": 274573000,
               "status": "passed"
             },
             "line": 8,
@@ -1249,7 +1249,7 @@
           },
           {
             "result": {
-              "duration": 221000,
+              "duration": 49000,
               "status": "passed"
             },
             "line": 9,
@@ -1270,7 +1270,7 @@
         "steps": [
           {
             "result": {
-              "duration": 76600,
+              "duration": 34700,
               "status": "passed"
             },
             "line": 4,
@@ -1292,7 +1292,7 @@
         "steps": [
           {
             "result": {
-              "duration": 173100,
+              "duration": 72000,
               "status": "passed"
             },
             "line": 16,
@@ -1323,7 +1323,7 @@
           },
           {
             "result": {
-              "duration": 344954700,
+              "duration": 382858000,
               "status": "passed"
             },
             "line": 17,
@@ -1335,7 +1335,7 @@
           },
           {
             "result": {
-              "duration": 323800,
+              "duration": 84900,
               "status": "passed"
             },
             "line": 18,
@@ -1356,7 +1356,7 @@
         "steps": [
           {
             "result": {
-              "duration": 190100,
+              "duration": 34200,
               "status": "passed"
             },
             "line": 4,
@@ -1378,7 +1378,7 @@
         "steps": [
           {
             "result": {
-              "duration": 268500,
+              "duration": 108800,
               "status": "passed"
             },
             "line": 25,
@@ -1409,7 +1409,7 @@
           },
           {
             "result": {
-              "duration": 365722400,
+              "duration": 300911600,
               "status": "passed"
             },
             "line": 26,
@@ -1421,7 +1421,7 @@
           },
           {
             "result": {
-              "duration": 106900,
+              "duration": 63100,
               "status": "passed"
             },
             "line": 27,
@@ -1439,5 +1439,216 @@
     "id": " consultar-el-saldo-de-los-monederos-de-un-abonado-en-altamira",
     "keyword": "Feature",
     "uri": "SaldoMonedero.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 148000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "que el abonado que consulta el saldo se encuentra activo Y registra saldos de bonos en Altamira Y los bonos se encuentran en los estados parametrizados",
+            "match": {
+              "location": "SubscriberDetailStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "mensaje de error al consultar saldos de suscriptor",
+        "description": "",
+        "id": "consultar-información-de-un-abonado-en-altamira;mensaje-de-error-al-consultar-saldos-de-suscriptor;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 57500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "que el abonado consulta saldos SD",
+            "match": {
+              "location": "SubscriberDetailStepDefinition.que_el_abonado_consulta_saldos_sd()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 35600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Altamira retorna un error SD",
+            "match": {
+              "location": "SubscriberDetailStepDefinition.altamira_retorna_un_error_sd()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 35100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "devolvera el mensaje de error en el formato estandar SD",
+            "match": {
+              "location": "SubscriberDetailStepDefinition.devolvera_el_mensaje_de_error_en_el_formato_estandar_sd()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 52600,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "que el abonado que consulta el saldo se encuentra activo Y registra saldos de bonos en Altamira Y los bonos se encuentran en los estados parametrizados",
+            "match": {
+              "location": "SubscriberDetailStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 22,
+        "name": "entregar la informacion del suscriptor",
+        "description": "",
+        "id": "consultar-información-de-un-abonado-en-altamira;entregar-la-informacion-del-suscriptor;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 37300,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "que los escenarios 1 o 2 fueron fallidos y que existe información del abonado en Altamira SD",
+            "match": {
+              "location": "SubscriberDetailStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_existe_informacin_del_abonado_en_altamira_sd()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 49700,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "el estado del abonado este dentro de los valores parametrizados SD",
+            "match": {
+              "location": "SubscriberDetailStepDefinition.el_estado_del_abonado_este_dentro_de_los_valores_parametrizados_sd()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 34700,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "entregar la información del abonado en Altamira plan, fecha de alta, ciclo, estado",
+            "match": {
+              "location": "SubscriberDetailStepDefinition.entregar_la_informacin_del_abonado_en_altamira_plan_fecha_de_alta_ciclo_estado()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 47700,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "que el abonado que consulta el saldo se encuentra activo Y registra saldos de bonos en Altamira Y los bonos se encuentran en los estados parametrizados",
+            "match": {
+              "location": "SubscriberDetailStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 31,
+        "name": "mensaje de error en formato estandar",
+        "description": "",
+        "id": "consultar-información-de-un-abonado-en-altamira;mensaje-de-error-en-formato-estandar;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 31300,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "que los escenarios 1 o 2 fueron fallidos y que existe información del abonado en Altamira SD",
+            "match": {
+              "location": "SubscriberDetailStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_existe_informacin_del_abonado_en_altamira_sd()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 36700,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "el estado del abonado no este dentro de los valores parametrizados SD",
+            "match": {
+              "location": "SubscriberDetailStepDefinition.el_estado_del_abonado_no_este_dentro_de_los_valores_parametrizados_sd()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 34200,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "devolvera el mensaje de error en formato estandar SD",
+            "match": {
+              "location": "SubscriberDetailStepDefinition.devolvera_el_mensaje_de_error_en_formato_estandar_sd()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "consultar información de un abonado en Altamira",
+    "description": "",
+    "id": "consultar-información-de-un-abonado-en-altamira",
+    "keyword": "Feature",
+    "uri": "SubscriberDetail.feature"
   }
 ]

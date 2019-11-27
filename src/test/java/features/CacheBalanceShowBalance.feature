@@ -30,3 +30,20 @@ Then se devuelve el balance encontrado
 Examples:
 | urlServicio 															  | codigo |
 | http://localhost:8290/Cache/Balance/GetShowBalances/ 		  			  | 90     |
+
+
+#Para consultar el saldo de los monederos de un abonado en Altamira
+
+#Dado que el servicio QueryOCSBalance devolvió los saldos de monederos en Altamira.
+
+#Escenario 1:
+
+#(Dado|Dada|Dados|Dadas) que el abonado consulta saldo de monederos
+#Cuando los monederos no correspondan a los configurados y cargados en la Caché
+#Entonces devolverá un error estándar controlado.
+
+#Escenario 2:
+
+#(Dado|Dada|Dados|Dadas) que el abonado consulta saldo de monederos
+#Cuando los monederos correspondan a los configurados y cargados en la Caché
+#Entonces devolverá el saldo de los monederos correspondientes.

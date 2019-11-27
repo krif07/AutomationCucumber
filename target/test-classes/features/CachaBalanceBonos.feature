@@ -29,4 +29,3 @@ Then se devuelve el bono encontrado
 Examples:
 | urlServicio 															  | tipoBono |
 | http://localhost:8290/Cache/Balance/QueryBoltonInfo/ 		  			  | DIN9     |
-
