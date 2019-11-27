@@ -76,7 +76,7 @@ formatter.match({
   "location": "BonosStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_tiene_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados_b()"
 });
 formatter.result({
-  "duration": 54835200,
+  "duration": 88152900,
   "status": "passed"
 });
 formatter.scenario({
@@ -135,21 +135,21 @@ formatter.match({
   "location": "BonosStepDefinition.que_el_abonado_consulta_saldo_bonos_b(String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 1368800,
+  "duration": 2018300,
   "status": "passed"
 });
 formatter.match({
   "location": "BonosStepDefinition.altamira_retorna_un_error_b()"
 });
 formatter.result({
-  "duration": 523458700,
+  "duration": 540133100,
   "status": "passed"
 });
 formatter.match({
   "location": "BonosStepDefinition.devolvera_el_mensaje_de_error_en_el_formato_estandar_b()"
 });
 formatter.result({
-  "duration": 230800,
+  "duration": 340800,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -222,7 +222,7 @@ formatter.match({
   "location": "BonosStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_tiene_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados_b()"
 });
 formatter.result({
-  "duration": 112700,
+  "duration": 74100,
   "status": "passed"
 });
 formatter.scenario({
@@ -267,16 +267,22 @@ formatter.match({});
 formatter.result({
   "status": "undefined"
 });
-formatter.uri("CacheBalance.feature");
+formatter.uri("CachaBalanceBonos.feature");
 formatter.feature({
-  "line": 1,
+  "comments": [
+    {
+      "line": 1,
+      "value": "# http://localhost:8290/Cache/Balance/RefreshBoltonInfo/load"
+    }
+  ],
+  "line": 3,
   "name": " consultar los bonos almacenados en la cache",
   "description": "",
   "id": " consultar-los-bonos-almacenados-en-la-cache",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "line": 6,
+  "line": 8,
   "name": "mensaje de error al consultar los bonos en la cache",
   "description": "",
   "id": " consultar-los-bonos-almacenados-en-la-cache;mensaje-de-error-al-consultar-los-bonos-en-la-cache",
@@ -284,22 +290,22 @@ formatter.scenarioOutline({
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 7,
-  "name": "que la consulta de bonos \u003curlServicio\u003e por tipo de bono \u003ctipoBono\u003e",
+  "line": 9,
+  "name": "que los bonos se encuentren cargados en memoria",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 8,
-  "name": "el microservicio no encuentra los bonos",
+  "line": 10,
+  "name": "el microservicio \u003curlServicio\u003e no encuentra los bonos por tipo de bono \u003ctipoBono\u003e",
   "keyword": "When "
 });
 formatter.step({
-  "line": 9,
+  "line": 11,
   "name": "se devuelve el mensaje de error al no encontrar el bono",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 11,
+  "line": 13,
   "name": "",
   "description": "",
   "id": " consultar-los-bonos-almacenados-en-la-cache;mensaje-de-error-al-consultar-los-bonos-en-la-cache;",
@@ -309,7 +315,7 @@ formatter.examples({
         "urlServicio",
         "tipoBono"
       ],
-      "line": 12,
+      "line": 14,
       "id": " consultar-los-bonos-almacenados-en-la-cache;mensaje-de-error-al-consultar-los-bonos-en-la-cache;;1"
     },
     {
@@ -317,33 +323,33 @@ formatter.examples({
         "http://localhost:8290/Cache/Balance/QueryBoltonInfo/",
         "ABCD"
       ],
-      "line": 13,
+      "line": 15,
       "id": " consultar-los-bonos-almacenados-en-la-cache;mensaje-de-error-al-consultar-los-bonos-en-la-cache;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.background({
-  "line": 3,
+  "line": 5,
   "name": "",
   "description": "",
   "type": "background",
   "keyword": "Background"
 });
 formatter.step({
-  "line": 4,
-  "name": "que los bonos a consultar por tipo se encuentran en la memoria cache",
+  "line": 6,
+  "name": "que la base de datos redis exista",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "CacheBalanceStepDefinition.que_los_bonos_a_consultar_por_tipo_se_encuentran_en_la_memoria_cache()"
+  "location": "CacheBalanceBonosStepDefinition.que_la_base_de_datos_redis_exista()"
 });
 formatter.result({
-  "duration": 162900,
+  "duration": 114600,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 13,
+  "line": 15,
   "name": "mensaje de error al consultar los bonos en la cache",
   "description": "",
   "id": " consultar-los-bonos-almacenados-en-la-cache;mensaje-de-error-al-consultar-los-bonos-en-la-cache;;2",
@@ -351,57 +357,57 @@ formatter.scenario({
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 7,
-  "name": "que la consulta de bonos http://localhost:8290/Cache/Balance/QueryBoltonInfo/ por tipo de bono ABCD",
+  "line": 9,
+  "name": "que los bonos se encuentren cargados en memoria",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 10,
+  "name": "el microservicio http://localhost:8290/Cache/Balance/QueryBoltonInfo/ no encuentra los bonos por tipo de bono ABCD",
   "matchedColumns": [
     0,
     1
   ],
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "el microservicio no encuentra los bonos",
   "keyword": "When "
 });
 formatter.step({
-  "line": 9,
+  "line": 11,
   "name": "se devuelve el mensaje de error al no encontrar el bono",
   "keyword": "Then "
+});
+formatter.match({
+  "location": "CacheBalanceBonosStepDefinition.que_los_bonos_se_encuentren_cargados_en_memoria()"
+});
+formatter.result({
+  "duration": 76100,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "http://localhost:8290/Cache/Balance/QueryBoltonInfo/",
-      "offset": 25
+      "offset": 17
     },
     {
       "val": "ABCD",
-      "offset": 95
+      "offset": 110
     }
   ],
-  "location": "CacheBalanceStepDefinition.que_la_consulta_de_bonos_por_tipo_de_bono(String,String)"
+  "location": "CacheBalanceBonosStepDefinition.el_microservicio_no_encuentra_los_bonos_por_tipo_de_bono(String,String)"
 });
 formatter.result({
-  "duration": 98400,
+  "duration": 6073129000,
   "status": "passed"
 });
 formatter.match({
-  "location": "CacheBalanceStepDefinition.el_microservicio_no_encuentra_los_bonos()"
+  "location": "CacheBalanceBonosStepDefinition.se_devuelve_el_mensaje_de_error_al_no_encontrar_el_bono()"
 });
 formatter.result({
-  "duration": 800988100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CacheBalanceStepDefinition.se_devuelve_el_mensaje_de_error_al_no_encontrar_el_bono()"
-});
-formatter.result({
-  "duration": 79100,
+  "duration": 91900,
   "status": "passed"
 });
 formatter.scenarioOutline({
-  "line": 15,
+  "line": 17,
   "name": "lista de los bonos consultados por tipo de bono",
   "description": "",
   "id": " consultar-los-bonos-almacenados-en-la-cache;lista-de-los-bonos-consultados-por-tipo-de-bono",
@@ -409,22 +415,22 @@ formatter.scenarioOutline({
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 16,
-  "name": "que la consulta de bonos \u003curlServicio\u003e por tipo de bono \u003ctipoBono\u003e",
+  "line": 18,
+  "name": "que los bonos se encuentren cargados en memoria",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 17,
-  "name": "el microservicio encuentra los bonos",
+  "line": 19,
+  "name": "el microservicio \u003curlServicio\u003e si encuentra los bonos por tipo de bono \u003ctipoBono\u003e",
   "keyword": "When "
 });
 formatter.step({
-  "line": 18,
-  "name": "se devuelve la lista con los bonos",
+  "line": 20,
+  "name": "se devuelve el bono encontrado",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 20,
+  "line": 22,
   "name": "",
   "description": "",
   "id": " consultar-los-bonos-almacenados-en-la-cache;lista-de-los-bonos-consultados-por-tipo-de-bono;",
@@ -434,7 +440,7 @@ formatter.examples({
         "urlServicio",
         "tipoBono"
       ],
-      "line": 21,
+      "line": 23,
       "id": " consultar-los-bonos-almacenados-en-la-cache;lista-de-los-bonos-consultados-por-tipo-de-bono;;1"
     },
     {
@@ -442,33 +448,33 @@ formatter.examples({
         "http://localhost:8290/Cache/Balance/QueryBoltonInfo/",
         "DIN9"
       ],
-      "line": 22,
+      "line": 24,
       "id": " consultar-los-bonos-almacenados-en-la-cache;lista-de-los-bonos-consultados-por-tipo-de-bono;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.background({
-  "line": 3,
+  "line": 5,
   "name": "",
   "description": "",
   "type": "background",
   "keyword": "Background"
 });
 formatter.step({
-  "line": 4,
-  "name": "que los bonos a consultar por tipo se encuentran en la memoria cache",
+  "line": 6,
+  "name": "que la base de datos redis exista",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "CacheBalanceStepDefinition.que_los_bonos_a_consultar_por_tipo_se_encuentran_en_la_memoria_cache()"
+  "location": "CacheBalanceBonosStepDefinition.que_la_base_de_datos_redis_exista()"
 });
 formatter.result({
-  "duration": 35000,
+  "duration": 46900,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 22,
+  "line": 24,
   "name": "lista de los bonos consultados por tipo de bono",
   "description": "",
   "id": " consultar-los-bonos-almacenados-en-la-cache;lista-de-los-bonos-consultados-por-tipo-de-bono;;2",
@@ -476,57 +482,65 @@ formatter.scenario({
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 16,
-  "name": "que la consulta de bonos http://localhost:8290/Cache/Balance/QueryBoltonInfo/ por tipo de bono DIN9",
+  "line": 18,
+  "name": "que los bonos se encuentren cargados en memoria",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 19,
+  "name": "el microservicio http://localhost:8290/Cache/Balance/QueryBoltonInfo/ si encuentra los bonos por tipo de bono DIN9",
   "matchedColumns": [
     0,
     1
   ],
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 17,
-  "name": "el microservicio encuentra los bonos",
   "keyword": "When "
 });
 formatter.step({
-  "line": 18,
-  "name": "se devuelve la lista con los bonos",
+  "line": 20,
+  "name": "se devuelve el bono encontrado",
   "keyword": "Then "
+});
+formatter.match({
+  "location": "CacheBalanceBonosStepDefinition.que_los_bonos_se_encuentren_cargados_en_memoria()"
+});
+formatter.result({
+  "duration": 27300,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "http://localhost:8290/Cache/Balance/QueryBoltonInfo/",
-      "offset": 25
+      "offset": 17
     },
     {
       "val": "DIN9",
-      "offset": 95
+      "offset": 110
     }
   ],
-  "location": "CacheBalanceStepDefinition.que_la_consulta_de_bonos_por_tipo_de_bono(String,String)"
+  "location": "CacheBalanceBonosStepDefinition.el_microservicio_si_encuentra_los_bonos_por_tipo_de_bono(String,String)"
 });
 formatter.result({
-  "duration": 83800,
+  "duration": 6795530000,
   "status": "passed"
 });
 formatter.match({
-  "location": "CacheBalanceStepDefinition.el_microservicio_encuentra_los_bonos()"
+  "location": "CacheBalanceBonosStepDefinition.se_devuelve_el_bono_encontrado()"
 });
 formatter.result({
-  "duration": 865629300,
+  "duration": 142300,
   "status": "passed"
 });
-formatter.match({
-  "location": "CacheBalanceStepDefinition.se_devuelve_la_lista_con_los_bonos()"
-});
-formatter.result({
-  "duration": 126500,
-  "status": "passed"
+formatter.uri("CacheBalanceShowBalance.feature");
+formatter.feature({
+  "line": 1,
+  "name": " consultar los bonos almacenados en la cache",
+  "description": "",
+  "id": " consultar-los-bonos-almacenados-en-la-cache",
+  "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "line": 25,
+  "line": 6,
   "name": "mensaje de error al consultar el balance en la cache",
   "description": "",
   "id": " consultar-los-bonos-almacenados-en-la-cache;mensaje-de-error-al-consultar-el-balance-en-la-cache",
@@ -534,22 +548,22 @@ formatter.scenarioOutline({
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 26,
-  "name": "que la consulta del balance \u003curlServicio\u003e por codigo \u003ccodigo\u003e",
+  "line": 7,
+  "name": "que los balances se encuentren cargados en memoria",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 27,
-  "name": "el microservicio no encuentra el balance",
+  "line": 8,
+  "name": "el microservicio \u003curlServicio\u003e no encuentra el balance buscado por codigo \u003ccodigo\u003e",
   "keyword": "When "
 });
 formatter.step({
-  "line": 28,
+  "line": 9,
   "name": "se devuelve el mensaje de error al no encontrar el balance",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 30,
+  "line": 11,
   "name": "",
   "description": "",
   "id": " consultar-los-bonos-almacenados-en-la-cache;mensaje-de-error-al-consultar-el-balance-en-la-cache;",
@@ -559,7 +573,7 @@ formatter.examples({
         "urlServicio",
         "codigo"
       ],
-      "line": 31,
+      "line": 12,
       "id": " consultar-los-bonos-almacenados-en-la-cache;mensaje-de-error-al-consultar-el-balance-en-la-cache;;1"
     },
     {
@@ -567,7 +581,7 @@ formatter.examples({
         "http://localhost:8290/Cache/Balance/GetShowBalances/",
         "99999"
       ],
-      "line": 32,
+      "line": 13,
       "id": " consultar-los-bonos-almacenados-en-la-cache;mensaje-de-error-al-consultar-el-balance-en-la-cache;;2"
     }
   ],
@@ -582,18 +596,18 @@ formatter.background({
 });
 formatter.step({
   "line": 4,
-  "name": "que los bonos a consultar por tipo se encuentran en la memoria cache",
+  "name": "que la base de datos redis para balance exista",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "CacheBalanceStepDefinition.que_los_bonos_a_consultar_por_tipo_se_encuentran_en_la_memoria_cache()"
+  "location": "CacheBalanceShowBalanceStepDefinition.que_la_base_de_datos_redis_para_balance_exista()"
 });
 formatter.result({
-  "duration": 59600,
+  "duration": 202500,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 32,
+  "line": 13,
   "name": "mensaje de error al consultar el balance en la cache",
   "description": "",
   "id": " consultar-los-bonos-almacenados-en-la-cache;mensaje-de-error-al-consultar-el-balance-en-la-cache;;2",
@@ -601,57 +615,52 @@ formatter.scenario({
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 26,
-  "name": "que la consulta del balance http://localhost:8290/Cache/Balance/GetShowBalances/ por codigo 99999",
+  "line": 7,
+  "name": "que los balances se encuentren cargados en memoria",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 8,
+  "name": "el microservicio http://localhost:8290/Cache/Balance/GetShowBalances/ no encuentra el balance buscado por codigo 99999",
   "matchedColumns": [
     0,
     1
   ],
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 27,
-  "name": "el microservicio no encuentra el balance",
   "keyword": "When "
 });
 formatter.step({
-  "line": 28,
+  "line": 9,
   "name": "se devuelve el mensaje de error al no encontrar el balance",
   "keyword": "Then "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
 });
 formatter.match({
   "arguments": [
     {
       "val": "http://localhost:8290/Cache/Balance/GetShowBalances/",
-      "offset": 28
+      "offset": 17
     },
     {
       "val": "99999",
-      "offset": 92
+      "offset": 113
     }
   ],
-  "location": "CacheBalanceStepDefinition.que_la_consulta_del_balance_por_codigo(String,String)"
+  "location": "CacheBalanceShowBalanceStepDefinition.el_microservicio_no_encuentra_el_balance_buscado_por_codigo(String,String)"
 });
 formatter.result({
-  "duration": 97300,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
-  "location": "CacheBalanceStepDefinition.el_microservicio_no_encuentra_el_balance()"
+  "location": "CacheBalanceShowBalanceStepDefinition.se_devuelve_el_mensaje_de_error_al_no_encontrar_el_balance()"
 });
 formatter.result({
-  "duration": 836734700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CacheBalanceStepDefinition.se_devuelve_el_mensaje_de_error_al_no_encontrar_el_balance()"
-});
-formatter.result({
-  "duration": 112900,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.scenarioOutline({
-  "line": 35,
+  "line": 16,
   "name": "balance encontrado en la cache",
   "description": "",
   "id": " consultar-los-bonos-almacenados-en-la-cache;balance-encontrado-en-la-cache",
@@ -659,22 +668,22 @@ formatter.scenarioOutline({
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 36,
-  "name": "que la consulta del balance \u003curlServicio\u003e por codigo \u003ccodigo\u003e",
+  "line": 17,
+  "name": "que los balances se encuentren cargados en memoria",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 37,
-  "name": "el microservicio encuentra el balance",
+  "line": 18,
+  "name": "el microservicio \u003curlServicio\u003e si encuentra el balance buscado por codigo \u003ccodigo\u003e",
   "keyword": "When "
 });
 formatter.step({
-  "line": 38,
+  "line": 19,
   "name": "se devuelve el balance encontrado",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 40,
+  "line": 21,
   "name": "",
   "description": "",
   "id": " consultar-los-bonos-almacenados-en-la-cache;balance-encontrado-en-la-cache;",
@@ -684,7 +693,7 @@ formatter.examples({
         "urlServicio",
         "codigo"
       ],
-      "line": 41,
+      "line": 22,
       "id": " consultar-los-bonos-almacenados-en-la-cache;balance-encontrado-en-la-cache;;1"
     },
     {
@@ -692,7 +701,7 @@ formatter.examples({
         "http://localhost:8290/Cache/Balance/GetShowBalances/",
         "90"
       ],
-      "line": 42,
+      "line": 23,
       "id": " consultar-los-bonos-almacenados-en-la-cache;balance-encontrado-en-la-cache;;2"
     }
   ],
@@ -707,18 +716,18 @@ formatter.background({
 });
 formatter.step({
   "line": 4,
-  "name": "que los bonos a consultar por tipo se encuentran en la memoria cache",
+  "name": "que la base de datos redis para balance exista",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "CacheBalanceStepDefinition.que_los_bonos_a_consultar_por_tipo_se_encuentran_en_la_memoria_cache()"
+  "location": "CacheBalanceShowBalanceStepDefinition.que_la_base_de_datos_redis_para_balance_exista()"
 });
 formatter.result({
-  "duration": 74900,
+  "duration": 54700,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 42,
+  "line": 23,
   "name": "balance encontrado en la cache",
   "description": "",
   "id": " consultar-los-bonos-almacenados-en-la-cache;balance-encontrado-en-la-cache;;2",
@@ -726,54 +735,49 @@ formatter.scenario({
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 36,
-  "name": "que la consulta del balance http://localhost:8290/Cache/Balance/GetShowBalances/ por codigo 90",
+  "line": 17,
+  "name": "que los balances se encuentren cargados en memoria",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 18,
+  "name": "el microservicio http://localhost:8290/Cache/Balance/GetShowBalances/ si encuentra el balance buscado por codigo 90",
   "matchedColumns": [
     0,
     1
   ],
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 37,
-  "name": "el microservicio encuentra el balance",
   "keyword": "When "
 });
 formatter.step({
-  "line": 38,
+  "line": 19,
   "name": "se devuelve el balance encontrado",
   "keyword": "Then "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
 });
 formatter.match({
   "arguments": [
     {
       "val": "http://localhost:8290/Cache/Balance/GetShowBalances/",
-      "offset": 28
+      "offset": 17
     },
     {
       "val": "90",
-      "offset": 92
+      "offset": 113
     }
   ],
-  "location": "CacheBalanceStepDefinition.que_la_consulta_del_balance_por_codigo(String,String)"
+  "location": "CacheBalanceShowBalanceStepDefinition.el_microservicio_si_encuentra_el_balance_buscado_por_codigo(String,String)"
 });
 formatter.result({
-  "duration": 173700,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
-  "location": "CacheBalanceStepDefinition.el_microservicio_encuentra_el_balance()"
+  "location": "CacheBalanceShowBalanceStepDefinition.se_devuelve_el_balance_encontrado()"
 });
 formatter.result({
-  "duration": 812866100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CacheBalanceStepDefinition.se_devuelve_el_balance_encontrado()"
-});
-formatter.result({
-  "duration": 356800,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.uri("LimiteConsumo.feature");
 formatter.feature({
@@ -849,7 +853,7 @@ formatter.match({
   "location": "LimiteConsumoStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_es_vpn_y_registra_limites_de_consumo_en_altamira()"
 });
 formatter.result({
-  "duration": 360100,
+  "duration": 96800,
   "status": "passed"
 });
 formatter.scenario({
@@ -898,21 +902,21 @@ formatter.match({
   "location": "LimiteConsumoStepDefinition.que_el_abonado_consulta_limites_de_consumo(String,String,String)"
 });
 formatter.result({
-  "duration": 201900,
+  "duration": 135300,
   "status": "passed"
 });
 formatter.match({
   "location": "LimiteConsumoStepDefinition.altamira_retorna_un_error_lc()"
 });
 formatter.result({
-  "duration": 250007100,
+  "duration": 338699800,
   "status": "passed"
 });
 formatter.match({
   "location": "LimiteConsumoStepDefinition.devolvera_el_mensaje_de_error_en_el_formato_estandar_lc()"
 });
 formatter.result({
-  "duration": 102200,
+  "duration": 254700,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -981,7 +985,7 @@ formatter.match({
   "location": "LimiteConsumoStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_es_vpn_y_registra_limites_de_consumo_en_altamira()"
 });
 formatter.result({
-  "duration": 58600,
+  "duration": 241200,
   "status": "passed"
 });
 formatter.scenario({
@@ -1030,21 +1034,21 @@ formatter.match({
   "location": "LimiteConsumoStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_limites_de_consumo(String,String,String)"
 });
 formatter.result({
-  "duration": 216600,
+  "duration": 365100,
   "status": "passed"
 });
 formatter.match({
   "location": "LimiteConsumoStepDefinition.los_valores_retornados_de_altamira_son_mayores_a_cero_lc()"
 });
 formatter.result({
-  "duration": 332403500,
+  "duration": 378620700,
   "status": "passed"
 });
 formatter.match({
   "location": "LimiteConsumoStepDefinition.entregar_los_valores_registrados_en_los_monederos_para_el_abonado_en_altamira_lc()"
 });
 formatter.result({
-  "duration": 82300,
+  "duration": 225300,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -1113,7 +1117,7 @@ formatter.match({
   "location": "LimiteConsumoStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_es_vpn_y_registra_limites_de_consumo_en_altamira()"
 });
 formatter.result({
-  "duration": 93700,
+  "duration": 344000,
   "status": "passed"
 });
 formatter.scenario({
@@ -1162,21 +1166,21 @@ formatter.match({
   "location": "LimiteConsumoStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_limites_de_consumo(String,String,String)"
 });
 formatter.result({
-  "duration": 94400,
+  "duration": 514900,
   "status": "passed"
 });
 formatter.match({
   "location": "LimiteConsumoStepDefinition.los_valores_retornados_de_altamira_son_menores_a_cero_lc()"
 });
 formatter.result({
-  "duration": 337655800,
+  "duration": 388848500,
   "status": "passed"
 });
 formatter.match({
   "location": "LimiteConsumoStepDefinition.devolvera_el_valor_cero_como_saldo_de_monederos_lc()"
 });
 formatter.result({
-  "duration": 60000,
+  "duration": 99600,
   "status": "passed"
 });
 formatter.uri("SaldoBonos.feature");
@@ -1253,7 +1257,7 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados()"
 });
 formatter.result({
-  "duration": 106600,
+  "duration": 233400,
   "status": "passed"
 });
 formatter.scenario({
@@ -1302,21 +1306,21 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_el_abonado_consulta_saldo_de_bonos(String,String,String)"
 });
 formatter.result({
-  "duration": 140100,
+  "duration": 179600,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.altamira_retorna_un_error()"
 });
 formatter.result({
-  "duration": 245967900,
+  "duration": 378697300,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.devolvera_el_mensaje_de_error_en_el_formato_estandar()"
 });
 formatter.result({
-  "duration": 67700,
+  "duration": 300900,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -1385,7 +1389,7 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados()"
 });
 formatter.result({
-  "duration": 31600,
+  "duration": 288600,
   "status": "passed"
 });
 formatter.scenario({
@@ -1434,21 +1438,21 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_bonos(String,String,String)"
 });
 formatter.result({
-  "duration": 93900,
+  "duration": 371600,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.los_valores_retornados_de_altamira_son_mayores_a_cero()"
 });
 formatter.result({
-  "duration": 485694100,
+  "duration": 571869900,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.entregar_los_valores_registrados_en_los_monederos_para_el_abonado_en_altamira()"
 });
 formatter.result({
-  "duration": 85100,
+  "duration": 88200,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -1517,7 +1521,7 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados()"
 });
 formatter.result({
-  "duration": 78800,
+  "duration": 83900,
   "status": "passed"
 });
 formatter.scenario({
@@ -1566,21 +1570,21 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_bonos(String,String,String)"
 });
 formatter.result({
-  "duration": 131400,
+  "duration": 129200,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.los_valores_retornados_de_altamira_son_menores_a_cero()"
 });
 formatter.result({
-  "duration": 512988700,
+  "duration": 684979400,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.devolvera_el_valor_cero_como_saldo_de_monederos()"
 });
 formatter.result({
-  "duration": 81200,
+  "duration": 47300,
   "status": "passed"
 });
 formatter.uri("SaldoMonedero.feature");
@@ -1657,7 +1661,7 @@ formatter.match({
   "location": "SaldoMonederoStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_monederos_en_altamira()"
 });
 formatter.result({
-  "duration": 116500,
+  "duration": 109800,
   "status": "passed"
 });
 formatter.scenario({
@@ -1706,21 +1710,21 @@ formatter.match({
   "location": "SaldoMonederoStepDefinition.que_el_abonado_consulta_saldo_de_monederos(String,String,String)"
 });
 formatter.result({
-  "duration": 111400,
+  "duration": 123400,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoMonederoStepDefinition.altamira_retorna_un_error_sm()"
 });
 formatter.result({
-  "duration": 258222900,
+  "duration": 261420300,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoMonederoStepDefinition.devolvera_el_mensaje_de_error_en_el_formato_estandar_sm()"
 });
 formatter.result({
-  "duration": 193000,
+  "duration": 51600,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -1789,7 +1793,7 @@ formatter.match({
   "location": "SaldoMonederoStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_monederos_en_altamira()"
 });
 formatter.result({
-  "duration": 105700,
+  "duration": 25500,
   "status": "passed"
 });
 formatter.scenario({
@@ -1838,21 +1842,21 @@ formatter.match({
   "location": "SaldoMonederoStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_monederos(String,String,String)"
 });
 formatter.result({
-  "duration": 193600,
+  "duration": 66000,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoMonederoStepDefinition.los_valores_retornados_de_altamira_son_mayores_a_cero_sm()"
 });
 formatter.result({
-  "duration": 333682000,
+  "duration": 347481200,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoMonederoStepDefinition.entregar_los_valores_registrados_en_los_monederos_para_el_abonado_en_altamira_sm()"
 });
 formatter.result({
-  "duration": 213400,
+  "duration": 315300,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -1921,7 +1925,7 @@ formatter.match({
   "location": "SaldoMonederoStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_monederos_en_altamira()"
 });
 formatter.result({
-  "duration": 145700,
+  "duration": 84800,
   "status": "passed"
 });
 formatter.scenario({
@@ -1970,21 +1974,21 @@ formatter.match({
   "location": "SaldoMonederoStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_monederos(String,String,String)"
 });
 formatter.result({
-  "duration": 112600,
+  "duration": 144000,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoMonederoStepDefinition.los_valores_retornados_de_altamira_son_menores_a_cero_sm()"
 });
 formatter.result({
-  "duration": 332195800,
+  "duration": 326076300,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoMonederoStepDefinition.devolvera_el_valor_cero_como_saldo_de_monederos_sm()"
 });
 formatter.result({
-  "duration": 93100,
+  "duration": 70900,
   "status": "passed"
 });
 });

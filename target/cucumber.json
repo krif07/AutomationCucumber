@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 54835200,
+              "duration": 88152900,
               "status": "passed"
             },
             "line": 4,
@@ -33,7 +33,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1368800,
+              "duration": 2018300,
               "status": "passed"
             },
             "line": 7,
@@ -74,7 +74,7 @@
           },
           {
             "result": {
-              "duration": 523458700,
+              "duration": 540133100,
               "status": "passed"
             },
             "line": 8,
@@ -86,7 +86,7 @@
           },
           {
             "result": {
-              "duration": 230800,
+              "duration": 340800,
               "status": "passed"
             },
             "line": 9,
@@ -107,7 +107,7 @@
         "steps": [
           {
             "result": {
-              "duration": 112700,
+              "duration": 74100,
               "status": "passed"
             },
             "line": 4,
@@ -171,10 +171,16 @@
     "uri": "Bonos.feature"
   },
   {
-    "line": 1,
+    "comments": [
+      {
+        "line": 1,
+        "value": "# http://localhost:8290/Cache/Balance/RefreshBoltonInfo/load"
+      }
+    ],
+    "line": 3,
     "elements": [
       {
-        "line": 3,
+        "line": 5,
         "name": "",
         "description": "",
         "type": "background",
@@ -182,20 +188,20 @@
         "steps": [
           {
             "result": {
-              "duration": 162900,
+              "duration": 114600,
               "status": "passed"
             },
-            "line": 4,
-            "name": "que los bonos a consultar por tipo se encuentran en la memoria cache",
+            "line": 6,
+            "name": "que la base de datos redis exista",
             "match": {
-              "location": "CacheBalanceStepDefinition.que_los_bonos_a_consultar_por_tipo_se_encuentran_en_la_memoria_cache()"
+              "location": "CacheBalanceBonosStepDefinition.que_la_base_de_datos_redis_exista()"
             },
             "keyword": "Given "
           }
         ]
       },
       {
-        "line": 13,
+        "line": 15,
         "name": "mensaje de error al consultar los bonos en la cache",
         "description": "",
         "id": " consultar-los-bonos-almacenados-en-la-cache;mensaje-de-error-al-consultar-los-bonos-en-la-cache;;2",
@@ -204,58 +210,58 @@
         "steps": [
           {
             "result": {
-              "duration": 98400,
+              "duration": 76100,
               "status": "passed"
             },
-            "line": 7,
-            "name": "que la consulta de bonos http://localhost:8290/Cache/Balance/QueryBoltonInfo/ por tipo de bono ABCD",
+            "line": 9,
+            "name": "que los bonos se encuentren cargados en memoria",
+            "match": {
+              "location": "CacheBalanceBonosStepDefinition.que_los_bonos_se_encuentren_cargados_en_memoria()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6073129000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "el microservicio http://localhost:8290/Cache/Balance/QueryBoltonInfo/ no encuentra los bonos por tipo de bono ABCD",
             "match": {
               "arguments": [
                 {
                   "val": "http://localhost:8290/Cache/Balance/QueryBoltonInfo/",
-                  "offset": 25
+                  "offset": 17
                 },
                 {
                   "val": "ABCD",
-                  "offset": 95
+                  "offset": 110
                 }
               ],
-              "location": "CacheBalanceStepDefinition.que_la_consulta_de_bonos_por_tipo_de_bono(String,String)"
+              "location": "CacheBalanceBonosStepDefinition.el_microservicio_no_encuentra_los_bonos_por_tipo_de_bono(String,String)"
             },
             "matchedColumns": [
               0,
               1
             ],
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 800988100,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "el microservicio no encuentra los bonos",
-            "match": {
-              "location": "CacheBalanceStepDefinition.el_microservicio_no_encuentra_los_bonos()"
-            },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 79100,
+              "duration": 91900,
               "status": "passed"
             },
-            "line": 9,
+            "line": 11,
             "name": "se devuelve el mensaje de error al no encontrar el bono",
             "match": {
-              "location": "CacheBalanceStepDefinition.se_devuelve_el_mensaje_de_error_al_no_encontrar_el_bono()"
+              "location": "CacheBalanceBonosStepDefinition.se_devuelve_el_mensaje_de_error_al_no_encontrar_el_bono()"
             },
             "keyword": "Then "
           }
         ]
       },
       {
-        "line": 3,
+        "line": 5,
         "name": "",
         "description": "",
         "type": "background",
@@ -263,20 +269,20 @@
         "steps": [
           {
             "result": {
-              "duration": 35000,
+              "duration": 46900,
               "status": "passed"
             },
-            "line": 4,
-            "name": "que los bonos a consultar por tipo se encuentran en la memoria cache",
+            "line": 6,
+            "name": "que la base de datos redis exista",
             "match": {
-              "location": "CacheBalanceStepDefinition.que_los_bonos_a_consultar_por_tipo_se_encuentran_en_la_memoria_cache()"
+              "location": "CacheBalanceBonosStepDefinition.que_la_base_de_datos_redis_exista()"
             },
             "keyword": "Given "
           }
         ]
       },
       {
-        "line": 22,
+        "line": 24,
         "name": "lista de los bonos consultados por tipo de bono",
         "description": "",
         "id": " consultar-los-bonos-almacenados-en-la-cache;lista-de-los-bonos-consultados-por-tipo-de-bono;;2",
@@ -285,213 +291,51 @@
         "steps": [
           {
             "result": {
-              "duration": 83800,
+              "duration": 27300,
               "status": "passed"
             },
-            "line": 16,
-            "name": "que la consulta de bonos http://localhost:8290/Cache/Balance/QueryBoltonInfo/ por tipo de bono DIN9",
+            "line": 18,
+            "name": "que los bonos se encuentren cargados en memoria",
+            "match": {
+              "location": "CacheBalanceBonosStepDefinition.que_los_bonos_se_encuentren_cargados_en_memoria()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6795530000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "el microservicio http://localhost:8290/Cache/Balance/QueryBoltonInfo/ si encuentra los bonos por tipo de bono DIN9",
             "match": {
               "arguments": [
                 {
                   "val": "http://localhost:8290/Cache/Balance/QueryBoltonInfo/",
-                  "offset": 25
+                  "offset": 17
                 },
                 {
                   "val": "DIN9",
-                  "offset": 95
+                  "offset": 110
                 }
               ],
-              "location": "CacheBalanceStepDefinition.que_la_consulta_de_bonos_por_tipo_de_bono(String,String)"
+              "location": "CacheBalanceBonosStepDefinition.el_microservicio_si_encuentra_los_bonos_por_tipo_de_bono(String,String)"
             },
             "matchedColumns": [
               0,
               1
             ],
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 865629300,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "el microservicio encuentra los bonos",
-            "match": {
-              "location": "CacheBalanceStepDefinition.el_microservicio_encuentra_los_bonos()"
-            },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 126500,
+              "duration": 142300,
               "status": "passed"
             },
-            "line": 18,
-            "name": "se devuelve la lista con los bonos",
+            "line": 20,
+            "name": "se devuelve el bono encontrado",
             "match": {
-              "location": "CacheBalanceStepDefinition.se_devuelve_la_lista_con_los_bonos()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "line": 3,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 59600,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "que los bonos a consultar por tipo se encuentran en la memoria cache",
-            "match": {
-              "location": "CacheBalanceStepDefinition.que_los_bonos_a_consultar_por_tipo_se_encuentran_en_la_memoria_cache()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 32,
-        "name": "mensaje de error al consultar el balance en la cache",
-        "description": "",
-        "id": " consultar-los-bonos-almacenados-en-la-cache;mensaje-de-error-al-consultar-el-balance-en-la-cache;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 97300,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "que la consulta del balance http://localhost:8290/Cache/Balance/GetShowBalances/ por codigo 99999",
-            "match": {
-              "arguments": [
-                {
-                  "val": "http://localhost:8290/Cache/Balance/GetShowBalances/",
-                  "offset": 28
-                },
-                {
-                  "val": "99999",
-                  "offset": 92
-                }
-              ],
-              "location": "CacheBalanceStepDefinition.que_la_consulta_del_balance_por_codigo(String,String)"
-            },
-            "matchedColumns": [
-              0,
-              1
-            ],
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 836734700,
-              "status": "passed"
-            },
-            "line": 27,
-            "name": "el microservicio no encuentra el balance",
-            "match": {
-              "location": "CacheBalanceStepDefinition.el_microservicio_no_encuentra_el_balance()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 112900,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "se devuelve el mensaje de error al no encontrar el balance",
-            "match": {
-              "location": "CacheBalanceStepDefinition.se_devuelve_el_mensaje_de_error_al_no_encontrar_el_balance()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "line": 3,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 74900,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "que los bonos a consultar por tipo se encuentran en la memoria cache",
-            "match": {
-              "location": "CacheBalanceStepDefinition.que_los_bonos_a_consultar_por_tipo_se_encuentran_en_la_memoria_cache()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 42,
-        "name": "balance encontrado en la cache",
-        "description": "",
-        "id": " consultar-los-bonos-almacenados-en-la-cache;balance-encontrado-en-la-cache;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 173700,
-              "status": "passed"
-            },
-            "line": 36,
-            "name": "que la consulta del balance http://localhost:8290/Cache/Balance/GetShowBalances/ por codigo 90",
-            "match": {
-              "arguments": [
-                {
-                  "val": "http://localhost:8290/Cache/Balance/GetShowBalances/",
-                  "offset": 28
-                },
-                {
-                  "val": "90",
-                  "offset": 92
-                }
-              ],
-              "location": "CacheBalanceStepDefinition.que_la_consulta_del_balance_por_codigo(String,String)"
-            },
-            "matchedColumns": [
-              0,
-              1
-            ],
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 812866100,
-              "status": "passed"
-            },
-            "line": 37,
-            "name": "el microservicio encuentra el balance",
-            "match": {
-              "location": "CacheBalanceStepDefinition.el_microservicio_encuentra_el_balance()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 356800,
-              "status": "passed"
-            },
-            "line": 38,
-            "name": "se devuelve el balance encontrado",
-            "match": {
-              "location": "CacheBalanceStepDefinition.se_devuelve_el_balance_encontrado()"
+              "location": "CacheBalanceBonosStepDefinition.se_devuelve_el_bono_encontrado()"
             },
             "keyword": "Then "
           }
@@ -502,7 +346,7 @@
     "description": "",
     "id": " consultar-los-bonos-almacenados-en-la-cache",
     "keyword": "Feature",
-    "uri": "CacheBalance.feature"
+    "uri": "CachaBalanceBonos.feature"
   },
   {
     "line": 1,
@@ -516,7 +360,169 @@
         "steps": [
           {
             "result": {
-              "duration": 360100,
+              "duration": 202500,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "que la base de datos redis para balance exista",
+            "match": {
+              "location": "CacheBalanceShowBalanceStepDefinition.que_la_base_de_datos_redis_para_balance_exista()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "mensaje de error al consultar el balance en la cache",
+        "description": "",
+        "id": " consultar-los-bonos-almacenados-en-la-cache;mensaje-de-error-al-consultar-el-balance-en-la-cache;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "que los balances se encuentren cargados en memoria",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "el microservicio http://localhost:8290/Cache/Balance/GetShowBalances/ no encuentra el balance buscado por codigo 99999",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://localhost:8290/Cache/Balance/GetShowBalances/",
+                  "offset": 17
+                },
+                {
+                  "val": "99999",
+                  "offset": 113
+                }
+              ],
+              "location": "CacheBalanceShowBalanceStepDefinition.el_microservicio_no_encuentra_el_balance_buscado_por_codigo(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "se devuelve el mensaje de error al no encontrar el balance",
+            "match": {
+              "location": "CacheBalanceShowBalanceStepDefinition.se_devuelve_el_mensaje_de_error_al_no_encontrar_el_balance()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 54700,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "que la base de datos redis para balance exista",
+            "match": {
+              "location": "CacheBalanceShowBalanceStepDefinition.que_la_base_de_datos_redis_para_balance_exista()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 23,
+        "name": "balance encontrado en la cache",
+        "description": "",
+        "id": " consultar-los-bonos-almacenados-en-la-cache;balance-encontrado-en-la-cache;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 17,
+            "name": "que los balances se encuentren cargados en memoria",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 18,
+            "name": "el microservicio http://localhost:8290/Cache/Balance/GetShowBalances/ si encuentra el balance buscado por codigo 90",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://localhost:8290/Cache/Balance/GetShowBalances/",
+                  "offset": 17
+                },
+                {
+                  "val": "90",
+                  "offset": 113
+                }
+              ],
+              "location": "CacheBalanceShowBalanceStepDefinition.el_microservicio_si_encuentra_el_balance_buscado_por_codigo(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 19,
+            "name": "se devuelve el balance encontrado",
+            "match": {
+              "location": "CacheBalanceShowBalanceStepDefinition.se_devuelve_el_balance_encontrado()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": " consultar los bonos almacenados en la cache",
+    "description": "",
+    "id": " consultar-los-bonos-almacenados-en-la-cache",
+    "keyword": "Feature",
+    "uri": "CacheBalanceShowBalance.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 96800,
               "status": "passed"
             },
             "line": 4,
@@ -538,7 +544,7 @@
         "steps": [
           {
             "result": {
-              "duration": 201900,
+              "duration": 135300,
               "status": "passed"
             },
             "line": 7,
@@ -569,7 +575,7 @@
           },
           {
             "result": {
-              "duration": 250007100,
+              "duration": 338699800,
               "status": "passed"
             },
             "line": 8,
@@ -581,7 +587,7 @@
           },
           {
             "result": {
-              "duration": 102200,
+              "duration": 254700,
               "status": "passed"
             },
             "line": 9,
@@ -602,7 +608,7 @@
         "steps": [
           {
             "result": {
-              "duration": 58600,
+              "duration": 241200,
               "status": "passed"
             },
             "line": 4,
@@ -624,7 +630,7 @@
         "steps": [
           {
             "result": {
-              "duration": 216600,
+              "duration": 365100,
               "status": "passed"
             },
             "line": 16,
@@ -655,7 +661,7 @@
           },
           {
             "result": {
-              "duration": 332403500,
+              "duration": 378620700,
               "status": "passed"
             },
             "line": 17,
@@ -667,7 +673,7 @@
           },
           {
             "result": {
-              "duration": 82300,
+              "duration": 225300,
               "status": "passed"
             },
             "line": 18,
@@ -688,7 +694,7 @@
         "steps": [
           {
             "result": {
-              "duration": 93700,
+              "duration": 344000,
               "status": "passed"
             },
             "line": 4,
@@ -710,7 +716,7 @@
         "steps": [
           {
             "result": {
-              "duration": 94400,
+              "duration": 514900,
               "status": "passed"
             },
             "line": 25,
@@ -741,7 +747,7 @@
           },
           {
             "result": {
-              "duration": 337655800,
+              "duration": 388848500,
               "status": "passed"
             },
             "line": 26,
@@ -753,7 +759,7 @@
           },
           {
             "result": {
-              "duration": 60000,
+              "duration": 99600,
               "status": "passed"
             },
             "line": 27,
@@ -784,7 +790,7 @@
         "steps": [
           {
             "result": {
-              "duration": 106600,
+              "duration": 233400,
               "status": "passed"
             },
             "line": 4,
@@ -806,7 +812,7 @@
         "steps": [
           {
             "result": {
-              "duration": 140100,
+              "duration": 179600,
               "status": "passed"
             },
             "line": 7,
@@ -837,7 +843,7 @@
           },
           {
             "result": {
-              "duration": 245967900,
+              "duration": 378697300,
               "status": "passed"
             },
             "line": 8,
@@ -849,7 +855,7 @@
           },
           {
             "result": {
-              "duration": 67700,
+              "duration": 300900,
               "status": "passed"
             },
             "line": 9,
@@ -870,7 +876,7 @@
         "steps": [
           {
             "result": {
-              "duration": 31600,
+              "duration": 288600,
               "status": "passed"
             },
             "line": 4,
@@ -892,7 +898,7 @@
         "steps": [
           {
             "result": {
-              "duration": 93900,
+              "duration": 371600,
               "status": "passed"
             },
             "line": 16,
@@ -923,7 +929,7 @@
           },
           {
             "result": {
-              "duration": 485694100,
+              "duration": 571869900,
               "status": "passed"
             },
             "line": 17,
@@ -935,7 +941,7 @@
           },
           {
             "result": {
-              "duration": 85100,
+              "duration": 88200,
               "status": "passed"
             },
             "line": 18,
@@ -956,7 +962,7 @@
         "steps": [
           {
             "result": {
-              "duration": 78800,
+              "duration": 83900,
               "status": "passed"
             },
             "line": 4,
@@ -978,7 +984,7 @@
         "steps": [
           {
             "result": {
-              "duration": 131400,
+              "duration": 129200,
               "status": "passed"
             },
             "line": 25,
@@ -1009,7 +1015,7 @@
           },
           {
             "result": {
-              "duration": 512988700,
+              "duration": 684979400,
               "status": "passed"
             },
             "line": 26,
@@ -1021,7 +1027,7 @@
           },
           {
             "result": {
-              "duration": 81200,
+              "duration": 47300,
               "status": "passed"
             },
             "line": 27,
@@ -1052,7 +1058,7 @@
         "steps": [
           {
             "result": {
-              "duration": 116500,
+              "duration": 109800,
               "status": "passed"
             },
             "line": 4,
@@ -1074,7 +1080,7 @@
         "steps": [
           {
             "result": {
-              "duration": 111400,
+              "duration": 123400,
               "status": "passed"
             },
             "line": 7,
@@ -1105,7 +1111,7 @@
           },
           {
             "result": {
-              "duration": 258222900,
+              "duration": 261420300,
               "status": "passed"
             },
             "line": 8,
@@ -1117,7 +1123,7 @@
           },
           {
             "result": {
-              "duration": 193000,
+              "duration": 51600,
               "status": "passed"
             },
             "line": 9,
@@ -1138,7 +1144,7 @@
         "steps": [
           {
             "result": {
-              "duration": 105700,
+              "duration": 25500,
               "status": "passed"
             },
             "line": 4,
@@ -1160,7 +1166,7 @@
         "steps": [
           {
             "result": {
-              "duration": 193600,
+              "duration": 66000,
               "status": "passed"
             },
             "line": 16,
@@ -1191,7 +1197,7 @@
           },
           {
             "result": {
-              "duration": 333682000,
+              "duration": 347481200,
               "status": "passed"
             },
             "line": 17,
@@ -1203,7 +1209,7 @@
           },
           {
             "result": {
-              "duration": 213400,
+              "duration": 315300,
               "status": "passed"
             },
             "line": 18,
@@ -1224,7 +1230,7 @@
         "steps": [
           {
             "result": {
-              "duration": 145700,
+              "duration": 84800,
               "status": "passed"
             },
             "line": 4,
@@ -1246,7 +1252,7 @@
         "steps": [
           {
             "result": {
-              "duration": 112600,
+              "duration": 144000,
               "status": "passed"
             },
             "line": 25,
@@ -1277,7 +1283,7 @@
           },
           {
             "result": {
-              "duration": 332195800,
+              "duration": 326076300,
               "status": "passed"
             },
             "line": 26,
@@ -1289,7 +1295,7 @@
           },
           {
             "result": {
-              "duration": 93100,
+              "duration": 70900,
               "status": "passed"
             },
             "line": 27,
