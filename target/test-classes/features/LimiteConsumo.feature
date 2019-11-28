@@ -10,7 +10,7 @@ Then devolvera el mensaje de error en el formato estandar LC
 
 Examples:
 | urlServicio 															  		| msisdn 	  | recordsNumber |
-| http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ | 987421201   | 0			  |
+| http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ | 983933642   | 0			  |
 
 Scenario Outline: entregar valores registrados en monederos para limite consumo
 Given que los escenarios 1 o 2 fueron fallidos y que el abonado <msisdn> consulta limites de consumo <urlServicio> <recordsNumber>
@@ -19,7 +19,7 @@ Then entregar los valores registrados en los monederos para el abonado en Altami
 
 Examples:
 | urlServicio 															  		| msisdn 	  | recordsNumber |
-| http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ | 987421201   | 30			  |
+| http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ | 983933642   | 30			  |
 
 Scenario Outline: devolver valor cero como saldo de monederos para limite consumo
 Given que los escenarios 1 o 2 fueron fallidos y que el abonado <msisdn> consulta limites de consumo <urlServicio> <recordsNumber>
@@ -28,4 +28,4 @@ Then devolvera el valor cero como saldo de monederos LC
 
 Examples:
 | urlServicio 															  		| msisdn 	  | recordsNumber |
-| http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ | 987421201   | 30			  |
+| http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ | 983933642   | 30			  |

@@ -63,8 +63,7 @@ public class SaldoMonederoStepDefinition {
         httpGetHelp.getJson();
     	respuesta = httpGetHelp.getRespuesta();
     	assertTrue(respuesta.get("status").equals("200"));
-    	assertTrue(Integer.parseInt(respuesta.get("totalRegistros")) >= 0);
-    	//assertTrue(Long.parseLong(respuesta.get("amount")) > 0);
+    	assertTrue(Integer.parseInt(respuesta.get("totalRegistros")) >= 0);    	
     }
 
     @Then("^entregar los valores registrados en los monederos para el abonado en Altamira SM$")
@@ -84,7 +83,7 @@ public class SaldoMonederoStepDefinition {
     	respuesta = httpGetHelp.getRespuesta();
     	assertTrue(respuesta.get("status").equals("200"));
     	assertTrue(Double.parseDouble(respuesta.get("totalRegistros")) >= 0);
-    	//assertTrue(Long.parseLong(respuesta.get("remainedAmount")) <= 0 );
+    	assertTrue(Long.parseLong(respuesta.get("remainedAmount")) <= 0 );
     }
 
     @Then("^devolvera el valor cero como saldo de monederos SM$")
@@ -92,6 +91,6 @@ public class SaldoMonederoStepDefinition {
         System.out.println("3.3 devolvera el valor cero como saldo de monederos SM$");
         
         System.out.println(respuesta);    	
-    	//assertTrue(Double.parseDouble(respuesta.get("amount")) == 0);
+    	assertTrue(Double.parseDouble(respuesta.get("amount")) == 0);
     }
 }

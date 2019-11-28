@@ -10,7 +10,7 @@ Then devolvera el mensaje de error en el formato estandar SM
 
 Examples:
 | urlServicio 															  | msisdn 	  | recordsNumber |
-| http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 	  | 963500797 | 0			  |
+| http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 	  | 983933642 | 0			  |
 
 Scenario Outline: entregar valores registrados en monederos para saldo monederos
 Given que los escenarios 1 o 2 fueron fallidos y que el abonado <msisdn> consulta saldo de monederos <urlServicio> <recordsNumber>
@@ -19,7 +19,7 @@ Then entregar los valores registrados en los monederos para el abonado en Altami
 
 Examples:
 | urlServicio 															  | msisdn 	  | recordsNumber |
-| http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 	  | 963500797 | 30			  |
+| http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 	  | 958601261 | 30			  |
 
 Scenario Outline: devolver valor cero como saldo de monederos para saldo monederos
 Given que los escenarios 1 o 2 fueron fallidos y que el abonado <msisdn> consulta saldo de monederos <urlServicio> <recordsNumber>
@@ -28,4 +28,4 @@ Then devolvera el valor cero como saldo de monederos SM
 
 Examples:
 | urlServicio 															  | msisdn 	  | recordsNumber |
-| http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 	  | 963500797 | 30			  |
+| http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 	  | 958601261 | 30			  |

@@ -97,8 +97,8 @@ public class HttpGetHelp {
 		            	JSONArray dataArray = dataJsonObject.getJSONArray("spendAttributesInfo");            
 		                if(dataArray.length() > 0) {
 		                	respuesta.put("totalRegistros", Integer.toString(dataArray.length()));
-		                	respuesta.put("spendLimitAmount", dataArray.getJSONObject(0).get("spendLimitAmount").toString());
-		                	respuesta.put("spendValue", dataArray.getJSONObject(0).get("spendValue").toString());
+		                	respuesta.put("spendLimitAmount", dataArray.getJSONObject(4).get("spendLimitAmount").toString());
+		                	respuesta.put("spendValue", dataArray.getJSONObject(4).get("spendValue").toString());
 		                }		                
 		            }
 		            else if(getUrlService().contains(URL_SALDO_MONEDERO)) {

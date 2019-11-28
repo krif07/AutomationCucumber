@@ -76,7 +76,7 @@ formatter.match({
   "location": "BonosStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_tiene_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados_b()"
 });
 formatter.result({
-  "duration": 88353900,
+  "duration": 57022600,
   "status": "passed"
 });
 formatter.scenario({
@@ -135,21 +135,21 @@ formatter.match({
   "location": "BonosStepDefinition.que_el_abonado_consulta_saldo_bonos_b(String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 3036600,
+  "duration": 1374000,
   "status": "passed"
 });
 formatter.match({
   "location": "BonosStepDefinition.altamira_retorna_un_error_b()"
 });
 formatter.result({
-  "duration": 323922300,
+  "duration": 487361400,
   "status": "passed"
 });
 formatter.match({
   "location": "BonosStepDefinition.devolvera_el_mensaje_de_error_en_el_formato_estandar_b()"
 });
 formatter.result({
-  "duration": 103200,
+  "duration": 210200,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -222,7 +222,7 @@ formatter.match({
   "location": "BonosStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_tiene_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados_b()"
 });
 formatter.result({
-  "duration": 63100,
+  "duration": 122000,
   "status": "passed"
 });
 formatter.scenario({
@@ -337,7 +337,7 @@ formatter.match({
   "location": "CacheBalanceBonosStepDefinition.que_la_base_de_datos_redis_exista()"
 });
 formatter.result({
-  "duration": 102300,
+  "duration": 163200,
   "status": "passed"
 });
 formatter.scenario({
@@ -370,7 +370,7 @@ formatter.match({
   "location": "CacheBalanceBonosStepDefinition.que_existan_bonos_en_altamira()"
 });
 formatter.result({
-  "duration": 111600,
+  "duration": 58600,
   "status": "passed"
 });
 formatter.match({});
@@ -447,7 +447,7 @@ formatter.match({
   "location": "CacheBalanceBonosStepDefinition.que_la_base_de_datos_redis_exista()"
 });
 formatter.result({
-  "duration": 46700,
+  "duration": 49100,
   "status": "passed"
 });
 formatter.scenario({
@@ -481,7 +481,7 @@ formatter.match({
   "location": "CacheBalanceBonosStepDefinition.que_los_bonos_se_encuentren_cargados_en_memoria()"
 });
 formatter.result({
-  "duration": 47100,
+  "duration": 45600,
   "status": "passed"
 });
 formatter.match({
@@ -498,14 +498,14 @@ formatter.match({
   "location": "CacheBalanceBonosStepDefinition.el_microservicio_no_encuentra_los_bonos_por_tipo_de_bono(String,String)"
 });
 formatter.result({
-  "duration": 1324850600,
+  "duration": 765771000,
   "status": "passed"
 });
 formatter.match({
   "location": "CacheBalanceBonosStepDefinition.se_devuelve_el_mensaje_de_error_al_no_encontrar_el_bono()"
 });
 formatter.result({
-  "duration": 354000,
+  "duration": 120500,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -572,7 +572,7 @@ formatter.match({
   "location": "CacheBalanceBonosStepDefinition.que_la_base_de_datos_redis_exista()"
 });
 formatter.result({
-  "duration": 168700,
+  "duration": 90500,
   "status": "passed"
 });
 formatter.scenario({
@@ -606,7 +606,7 @@ formatter.match({
   "location": "CacheBalanceBonosStepDefinition.que_los_bonos_se_encuentren_cargados_en_memoria()"
 });
 formatter.result({
-  "duration": 134100,
+  "duration": 83200,
   "status": "passed"
 });
 formatter.match({
@@ -623,14 +623,14 @@ formatter.match({
   "location": "CacheBalanceBonosStepDefinition.el_microservicio_si_encuentra_los_bonos_por_tipo_de_bono(String,String)"
 });
 formatter.result({
-  "duration": 908413800,
+  "duration": 862354200,
   "status": "passed"
 });
 formatter.match({
   "location": "CacheBalanceBonosStepDefinition.se_devuelve_el_bono_encontrado()"
 });
 formatter.result({
-  "duration": 135900,
+  "duration": 146600,
   "status": "passed"
 });
 formatter.uri("CacheBalanceShowBalance.feature");
@@ -703,7 +703,7 @@ formatter.match({
   "location": "CacheBalanceShowBalanceStepDefinition.que_el_servicio_queryocsbalance_devolvio_los_saldos_de_monederos_en_altamira()"
 });
 formatter.result({
-  "duration": 142400,
+  "duration": 167000,
   "status": "passed"
 });
 formatter.scenario({
@@ -736,7 +736,7 @@ formatter.match({
   "location": "CacheBalanceShowBalanceStepDefinition.que_existan_balances_en_altamira()"
 });
 formatter.result({
-  "duration": 79900,
+  "duration": 158200,
   "status": "passed"
 });
 formatter.match({});
@@ -813,7 +813,7 @@ formatter.match({
   "location": "CacheBalanceShowBalanceStepDefinition.que_el_servicio_queryocsbalance_devolvio_los_saldos_de_monederos_en_altamira()"
 });
 formatter.result({
-  "duration": 89700,
+  "duration": 136400,
   "status": "passed"
 });
 formatter.scenario({
@@ -857,14 +857,14 @@ formatter.match({
   "location": "CacheBalanceShowBalanceStepDefinition.que_el_abonado_consulta_saldo_de_monederos(String,String)"
 });
 formatter.result({
-  "duration": 158300,
+  "duration": 224700,
   "status": "passed"
 });
 formatter.match({
   "location": "CacheBalanceShowBalanceStepDefinition.los_monederos_no_correspondan_a_los_configurados_y_cargados_en_la_cache()"
 });
 formatter.result({
-  "duration": 12384584800,
+  "duration": 803439200,
   "status": "passed"
 });
 formatter.match({});
@@ -935,7 +935,7 @@ formatter.match({
   "location": "CacheBalanceShowBalanceStepDefinition.que_el_servicio_queryocsbalance_devolvio_los_saldos_de_monederos_en_altamira()"
 });
 formatter.result({
-  "duration": 44300,
+  "duration": 150100,
   "status": "passed"
 });
 formatter.scenario({
@@ -979,21 +979,21 @@ formatter.match({
   "location": "CacheBalanceShowBalanceStepDefinition.que_el_abonado_consulta_saldo_de_monederos(String,String)"
 });
 formatter.result({
-  "duration": 62800,
+  "duration": 302000,
   "status": "passed"
 });
 formatter.match({
   "location": "CacheBalanceShowBalanceStepDefinition.los_monederos_correspondan_a_los_configurados_y_cargados_en_la_cache()"
 });
 formatter.result({
-  "duration": 8507648700,
+  "duration": 771617900,
   "status": "passed"
 });
 formatter.match({
   "location": "CacheBalanceShowBalanceStepDefinition.devolvera_el_saldo_de_los_monederos_correspondientes()"
 });
 formatter.result({
-  "duration": 4784485100,
+  "duration": 117700,
   "status": "passed"
 });
 formatter.uri("LimiteConsumo.feature");
@@ -1045,7 +1045,7 @@ formatter.examples({
     {
       "cells": [
         "http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/",
-        "987421201",
+        "983933642",
         "0"
       ],
       "line": 13,
@@ -1070,7 +1070,7 @@ formatter.match({
   "location": "LimiteConsumoStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_es_vpn_y_registra_limites_de_consumo_en_altamira()"
 });
 formatter.result({
-  "duration": 82500,
+  "duration": 170600,
   "status": "passed"
 });
 formatter.scenario({
@@ -1083,7 +1083,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 7,
-  "name": "que el abonado 987421201 consulta limites de consumo http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ 0",
+  "name": "que el abonado 983933642 consulta limites de consumo http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ 0",
   "matchedColumns": [
     0,
     1,
@@ -1104,7 +1104,7 @@ formatter.step({
 formatter.match({
   "arguments": [
     {
-      "val": "987421201",
+      "val": "983933642",
       "offset": 15
     },
     {
@@ -1119,21 +1119,21 @@ formatter.match({
   "location": "LimiteConsumoStepDefinition.que_el_abonado_consulta_limites_de_consumo(String,String,String)"
 });
 formatter.result({
-  "duration": 149900,
+  "duration": 249000,
   "status": "passed"
 });
 formatter.match({
   "location": "LimiteConsumoStepDefinition.altamira_retorna_un_error_lc()"
 });
 formatter.result({
-  "duration": 305332400,
+  "duration": 470012400,
   "status": "passed"
 });
 formatter.match({
   "location": "LimiteConsumoStepDefinition.devolvera_el_mensaje_de_error_en_el_formato_estandar_lc()"
 });
 formatter.result({
-  "duration": 261300,
+  "duration": 128000,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -1177,7 +1177,7 @@ formatter.examples({
     {
       "cells": [
         "http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/",
-        "987421201",
+        "983933642",
         "30"
       ],
       "line": 22,
@@ -1202,7 +1202,7 @@ formatter.match({
   "location": "LimiteConsumoStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_es_vpn_y_registra_limites_de_consumo_en_altamira()"
 });
 formatter.result({
-  "duration": 136200,
+  "duration": 78200,
   "status": "passed"
 });
 formatter.scenario({
@@ -1215,7 +1215,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 16,
-  "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 987421201 consulta limites de consumo http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ 30",
+  "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 983933642 consulta limites de consumo http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ 30",
   "matchedColumns": [
     0,
     1,
@@ -1236,7 +1236,7 @@ formatter.step({
 formatter.match({
   "arguments": [
     {
-      "val": "987421201",
+      "val": "983933642",
       "offset": 58
     },
     {
@@ -1251,22 +1251,23 @@ formatter.match({
   "location": "LimiteConsumoStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_limites_de_consumo(String,String,String)"
 });
 formatter.result({
-  "duration": 469700,
+  "duration": 185300,
   "status": "passed"
 });
 formatter.match({
   "location": "LimiteConsumoStepDefinition.los_valores_retornados_de_altamira_son_mayores_a_cero_lc()"
 });
 formatter.result({
-  "duration": 314912800,
+  "duration": 1066759400,
   "status": "passed"
 });
 formatter.match({
   "location": "LimiteConsumoStepDefinition.entregar_los_valores_registrados_en_los_monederos_para_el_abonado_en_altamira_lc()"
 });
 formatter.result({
-  "duration": 129300,
-  "status": "passed"
+  "duration": 769600,
+  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat stepdefinition.LimiteConsumoStepDefinition.entregar_los_valores_registrados_en_los_monederos_para_el_abonado_en_altamira_lc(LimiteConsumoStepDefinition.java:73)\r\n\tat ✽.Then entregar los valores registrados en los monederos para el abonado en Altamira LC(LimiteConsumo.feature:18)\r\n",
+  "status": "failed"
 });
 formatter.scenarioOutline({
   "line": 24,
@@ -1309,7 +1310,7 @@ formatter.examples({
     {
       "cells": [
         "http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/",
-        "987421201",
+        "983933642",
         "30"
       ],
       "line": 31,
@@ -1334,7 +1335,7 @@ formatter.match({
   "location": "LimiteConsumoStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_es_vpn_y_registra_limites_de_consumo_en_altamira()"
 });
 formatter.result({
-  "duration": 76500,
+  "duration": 348000,
   "status": "passed"
 });
 formatter.scenario({
@@ -1347,7 +1348,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 25,
-  "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 987421201 consulta limites de consumo http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ 30",
+  "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 983933642 consulta limites de consumo http://localhost:8290/Customer/GroupManagement/queryOCSGroupMemberAttributes/ 30",
   "matchedColumns": [
     0,
     1,
@@ -1368,7 +1369,7 @@ formatter.step({
 formatter.match({
   "arguments": [
     {
-      "val": "987421201",
+      "val": "983933642",
       "offset": 58
     },
     {
@@ -1383,21 +1384,21 @@ formatter.match({
   "location": "LimiteConsumoStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_limites_de_consumo(String,String,String)"
 });
 formatter.result({
-  "duration": 161300,
+  "duration": 297100,
   "status": "passed"
 });
 formatter.match({
   "location": "LimiteConsumoStepDefinition.los_valores_retornados_de_altamira_son_menores_a_cero_lc()"
 });
 formatter.result({
-  "duration": 354895900,
+  "duration": 611226000,
   "status": "passed"
 });
 formatter.match({
   "location": "LimiteConsumoStepDefinition.devolvera_el_valor_cero_como_saldo_de_monederos_lc()"
 });
 formatter.result({
-  "duration": 75200,
+  "duration": 41700,
   "status": "passed"
 });
 formatter.uri("SaldoBonos.feature");
@@ -1474,7 +1475,7 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados()"
 });
 formatter.result({
-  "duration": 132200,
+  "duration": 77500,
   "status": "passed"
 });
 formatter.scenario({
@@ -1523,21 +1524,21 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_el_abonado_consulta_saldo_de_bonos(String,String,String)"
 });
 formatter.result({
-  "duration": 190700,
+  "duration": 86000,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.altamira_retorna_un_error()"
 });
 formatter.result({
-  "duration": 290388000,
+  "duration": 255071000,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.devolvera_el_mensaje_de_error_en_el_formato_estandar()"
 });
 formatter.result({
-  "duration": 152700,
+  "duration": 124000,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -1606,7 +1607,7 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados()"
 });
 formatter.result({
-  "duration": 71900,
+  "duration": 71700,
   "status": "passed"
 });
 formatter.scenario({
@@ -1655,21 +1656,21 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_bonos(String,String,String)"
 });
 formatter.result({
-  "duration": 164200,
+  "duration": 185700,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.los_valores_retornados_de_altamira_son_mayores_a_cero()"
 });
 formatter.result({
-  "duration": 463455200,
+  "duration": 486551600,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.entregar_los_valores_registrados_en_los_monederos_para_el_abonado_en_altamira()"
 });
 formatter.result({
-  "duration": 66000,
+  "duration": 226400,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -1738,7 +1739,7 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados()"
 });
 formatter.result({
-  "duration": 37300,
+  "duration": 169800,
   "status": "passed"
 });
 formatter.scenario({
@@ -1787,22 +1788,22 @@ formatter.match({
   "location": "SaldoBonosStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_bonos(String,String,String)"
 });
 formatter.result({
-  "duration": 70800,
+  "duration": 256400,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.los_valores_retornados_de_altamira_son_menores_a_cero()"
 });
 formatter.result({
-  "duration": 568547100,
-  "status": "passed"
+  "duration": 437301100,
+  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat stepdefinition.SaldoBonosStepDefinition.los_valores_retornados_de_altamira_son_menores_a_cero(SaldoBonosStepDefinition.java:82)\r\n\tat ✽.When los valores retornados de Altamira son menores a cero(SaldoBonos.feature:26)\r\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "SaldoBonosStepDefinition.devolvera_el_valor_cero_como_saldo_de_monederos()"
 });
 formatter.result({
-  "duration": 46200,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.uri("SaldoMonedero.feature");
 formatter.feature({
@@ -1853,7 +1854,7 @@ formatter.examples({
     {
       "cells": [
         "http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/",
-        "963500797",
+        "983933642",
         "0"
       ],
       "line": 13,
@@ -1878,7 +1879,7 @@ formatter.match({
   "location": "SaldoMonederoStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_monederos_en_altamira()"
 });
 formatter.result({
-  "duration": 83200,
+  "duration": 83100,
   "status": "passed"
 });
 formatter.scenario({
@@ -1891,7 +1892,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 7,
-  "name": "que el abonado 963500797 consulta saldo de monederos http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 0",
+  "name": "que el abonado 983933642 consulta saldo de monederos http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 0",
   "matchedColumns": [
     0,
     1,
@@ -1912,7 +1913,7 @@ formatter.step({
 formatter.match({
   "arguments": [
     {
-      "val": "963500797",
+      "val": "983933642",
       "offset": 15
     },
     {
@@ -1927,21 +1928,21 @@ formatter.match({
   "location": "SaldoMonederoStepDefinition.que_el_abonado_consulta_saldo_de_monederos(String,String,String)"
 });
 formatter.result({
-  "duration": 116900,
+  "duration": 78400,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoMonederoStepDefinition.altamira_retorna_un_error_sm()"
 });
 formatter.result({
-  "duration": 344681800,
+  "duration": 327097800,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoMonederoStepDefinition.devolvera_el_mensaje_de_error_en_el_formato_estandar_sm()"
 });
 formatter.result({
-  "duration": 206200,
+  "duration": 48500,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -1985,7 +1986,7 @@ formatter.examples({
     {
       "cells": [
         "http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/",
-        "963500797",
+        "958601261",
         "30"
       ],
       "line": 22,
@@ -2010,7 +2011,7 @@ formatter.match({
   "location": "SaldoMonederoStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_monederos_en_altamira()"
 });
 formatter.result({
-  "duration": 106400,
+  "duration": 28800,
   "status": "passed"
 });
 formatter.scenario({
@@ -2023,7 +2024,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 16,
-  "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de monederos http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 30",
+  "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 958601261 consulta saldo de monederos http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 30",
   "matchedColumns": [
     0,
     1,
@@ -2044,7 +2045,7 @@ formatter.step({
 formatter.match({
   "arguments": [
     {
-      "val": "963500797",
+      "val": "958601261",
       "offset": 58
     },
     {
@@ -2059,21 +2060,21 @@ formatter.match({
   "location": "SaldoMonederoStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_monederos(String,String,String)"
 });
 formatter.result({
-  "duration": 316800,
+  "duration": 72400,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoMonederoStepDefinition.los_valores_retornados_de_altamira_son_mayores_a_cero_sm()"
 });
 formatter.result({
-  "duration": 371283700,
+  "duration": 402832500,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoMonederoStepDefinition.entregar_los_valores_registrados_en_los_monederos_para_el_abonado_en_altamira_sm()"
 });
 formatter.result({
-  "duration": 58000,
+  "duration": 61500,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -2117,7 +2118,7 @@ formatter.examples({
     {
       "cells": [
         "http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/",
-        "963500797",
+        "958601261",
         "30"
       ],
       "line": 31,
@@ -2142,7 +2143,7 @@ formatter.match({
   "location": "SaldoMonederoStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_monederos_en_altamira()"
 });
 formatter.result({
-  "duration": 44300,
+  "duration": 28100,
   "status": "passed"
 });
 formatter.scenario({
@@ -2155,7 +2156,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 25,
-  "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 963500797 consulta saldo de monederos http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 30",
+  "name": "que los escenarios 1 o 2 fueron fallidos y que el abonado 958601261 consulta saldo de monederos http://localhost:8290/Customer/BalanceManagement/queryOCSBalances/ 30",
   "matchedColumns": [
     0,
     1,
@@ -2176,7 +2177,7 @@ formatter.step({
 formatter.match({
   "arguments": [
     {
-      "val": "963500797",
+      "val": "958601261",
       "offset": 58
     },
     {
@@ -2191,22 +2192,22 @@ formatter.match({
   "location": "SaldoMonederoStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_el_abonado_consulta_saldo_de_monederos(String,String,String)"
 });
 formatter.result({
-  "duration": 69800,
+  "duration": 62700,
   "status": "passed"
 });
 formatter.match({
   "location": "SaldoMonederoStepDefinition.los_valores_retornados_de_altamira_son_menores_a_cero_sm()"
 });
 formatter.result({
-  "duration": 299287600,
-  "status": "passed"
+  "duration": 413377000,
+  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat stepdefinition.SaldoMonederoStepDefinition.los_valores_retornados_de_altamira_son_menores_a_cero_sm(SaldoMonederoStepDefinition.java:86)\r\n\tat ✽.When los valores retornados de Altamira son menores a cero SM(SaldoMonedero.feature:26)\r\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "SaldoMonederoStepDefinition.devolvera_el_valor_cero_como_saldo_de_monederos_sm()"
 });
 formatter.result({
-  "duration": 143300,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.uri("SubscriberDetail.feature");
 formatter.feature({
@@ -2282,7 +2283,7 @@ formatter.match({
   "location": "SubscriberDetailStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados()"
 });
 formatter.result({
-  "duration": 184000,
+  "duration": 287000,
   "status": "passed"
 });
 formatter.scenario({
@@ -2331,21 +2332,21 @@ formatter.match({
   "location": "SubscriberDetailStepDefinition.que_el_abonado_consulta_saldos_sd(String,String,String)"
 });
 formatter.result({
-  "duration": 273300,
+  "duration": 285900,
   "status": "passed"
 });
 formatter.match({
   "location": "SubscriberDetailStepDefinition.altamira_retorna_un_error_sd()"
 });
 formatter.result({
-  "duration": 377100500,
+  "duration": 257599600,
   "status": "passed"
 });
 formatter.match({
   "location": "SubscriberDetailStepDefinition.devolvera_el_mensaje_de_error_en_el_formato_estandar_sd()"
 });
 formatter.result({
-  "duration": 240700,
+  "duration": 49700,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -2414,7 +2415,7 @@ formatter.match({
   "location": "SubscriberDetailStepDefinition.que_el_abonado_que_consulta_el_saldo_se_encuentra_activo_y_registra_saldos_de_bonos_en_altamira_y_los_bonos_se_encuentran_en_los_estados_parametrizados()"
 });
 formatter.result({
-  "duration": 173000,
+  "duration": 34000,
   "status": "passed"
 });
 formatter.scenario({
@@ -2449,7 +2450,7 @@ formatter.match({
   "location": "SubscriberDetailStepDefinition.que_los_escenarios_1_o_2_fueron_fallidos_y_que_existe_informacin_del_abonado_en_altamira_sd()"
 });
 formatter.result({
-  "duration": 231400,
+  "duration": 26700,
   "status": "passed"
 });
 formatter.match({
@@ -2470,14 +2471,14 @@ formatter.match({
   "location": "SubscriberDetailStepDefinition.el_estado_del_abonado_si_este_dentro_de_los_valores_parametrizados_sd(String,String,String)"
 });
 formatter.result({
-  "duration": 323249300,
+  "duration": 260960700,
   "status": "passed"
 });
 formatter.match({
   "location": "SubscriberDetailStepDefinition.entregar_la_informacin_del_abonado_en_altamira_plan_fecha_de_alta_ciclo_estado()"
 });
 formatter.result({
-  "duration": 109500,
+  "duration": 82300,
   "status": "passed"
 });
 });
