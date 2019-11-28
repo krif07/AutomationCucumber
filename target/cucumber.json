@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 57022600,
+              "duration": 57062100,
               "status": "passed"
             },
             "line": 4,
@@ -33,7 +33,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1374000,
+              "duration": 1511900,
               "status": "passed"
             },
             "line": 7,
@@ -74,7 +74,7 @@
           },
           {
             "result": {
-              "duration": 487361400,
+              "duration": 510458900,
               "status": "passed"
             },
             "line": 8,
@@ -86,7 +86,7 @@
           },
           {
             "result": {
-              "duration": 210200,
+              "duration": 215000,
               "status": "passed"
             },
             "line": 9,
@@ -107,7 +107,7 @@
         "steps": [
           {
             "result": {
-              "duration": 122000,
+              "duration": 97200,
               "status": "passed"
             },
             "line": 4,
@@ -182,7 +182,7 @@
         "steps": [
           {
             "result": {
-              "duration": 163200,
+              "duration": 186300,
               "status": "passed"
             },
             "line": 4,
@@ -204,7 +204,7 @@
         "steps": [
           {
             "result": {
-              "duration": 58600,
+              "duration": 62400,
               "status": "passed"
             },
             "line": 7,
@@ -248,7 +248,7 @@
         "steps": [
           {
             "result": {
-              "duration": 49100,
+              "duration": 55700,
               "status": "passed"
             },
             "line": 4,
@@ -270,7 +270,7 @@
         "steps": [
           {
             "result": {
-              "duration": 45600,
+              "duration": 49700,
               "status": "passed"
             },
             "line": 16,
@@ -282,7 +282,7 @@
           },
           {
             "result": {
-              "duration": 765771000,
+              "duration": 810203600,
               "status": "passed"
             },
             "line": 17,
@@ -308,7 +308,7 @@
           },
           {
             "result": {
-              "duration": 120500,
+              "duration": 396600,
               "status": "passed"
             },
             "line": 18,
@@ -329,7 +329,7 @@
         "steps": [
           {
             "result": {
-              "duration": 90500,
+              "duration": 323700,
               "status": "passed"
             },
             "line": 4,
@@ -351,7 +351,7 @@
         "steps": [
           {
             "result": {
-              "duration": 83200,
+              "duration": 106200,
               "status": "passed"
             },
             "line": 25,
@@ -363,7 +363,7 @@
           },
           {
             "result": {
-              "duration": 862354200,
+              "duration": 807167100,
               "status": "passed"
             },
             "line": 26,
@@ -389,7 +389,7 @@
           },
           {
             "result": {
-              "duration": 146600,
+              "duration": 194900,
               "status": "passed"
             },
             "line": 27,
@@ -420,7 +420,7 @@
         "steps": [
           {
             "result": {
-              "duration": 167000,
+              "duration": 202300,
               "status": "passed"
             },
             "line": 4,
@@ -442,7 +442,7 @@
         "steps": [
           {
             "result": {
-              "duration": 158200,
+              "duration": 140900,
               "status": "passed"
             },
             "line": 7,
@@ -486,7 +486,7 @@
         "steps": [
           {
             "result": {
-              "duration": 136400,
+              "duration": 103300,
               "status": "passed"
             },
             "line": 4,
@@ -508,7 +508,7 @@
         "steps": [
           {
             "result": {
-              "duration": 224700,
+              "duration": 206800,
               "status": "passed"
             },
             "line": 16,
@@ -534,7 +534,7 @@
           },
           {
             "result": {
-              "duration": 803439200,
+              "duration": 787167600,
               "status": "passed"
             },
             "line": 17,
@@ -564,7 +564,7 @@
         "steps": [
           {
             "result": {
-              "duration": 150100,
+              "duration": 45700,
               "status": "passed"
             },
             "line": 4,
@@ -586,7 +586,7 @@
         "steps": [
           {
             "result": {
-              "duration": 302000,
+              "duration": 55000,
               "status": "passed"
             },
             "line": 26,
@@ -612,7 +612,7 @@
           },
           {
             "result": {
-              "duration": 771617900,
+              "duration": 781517700,
               "status": "passed"
             },
             "line": 27,
@@ -624,7 +624,7 @@
           },
           {
             "result": {
-              "duration": 117700,
+              "duration": 47500,
               "status": "passed"
             },
             "line": 28,
@@ -655,7 +655,7 @@
         "steps": [
           {
             "result": {
-              "duration": 170600,
+              "duration": 69200,
               "status": "passed"
             },
             "line": 4,
@@ -677,7 +677,7 @@
         "steps": [
           {
             "result": {
-              "duration": 249000,
+              "duration": 85100,
               "status": "passed"
             },
             "line": 7,
@@ -708,7 +708,7 @@
           },
           {
             "result": {
-              "duration": 470012400,
+              "duration": 461239800,
               "status": "passed"
             },
             "line": 8,
@@ -720,7 +720,7 @@
           },
           {
             "result": {
-              "duration": 128000,
+              "duration": 125000,
               "status": "passed"
             },
             "line": 9,
@@ -741,7 +741,7 @@
         "steps": [
           {
             "result": {
-              "duration": 78200,
+              "duration": 85200,
               "status": "passed"
             },
             "line": 4,
@@ -763,7 +763,7 @@
         "steps": [
           {
             "result": {
-              "duration": 185300,
+              "duration": 184900,
               "status": "passed"
             },
             "line": 16,
@@ -794,7 +794,7 @@
           },
           {
             "result": {
-              "duration": 1066759400,
+              "duration": 1083274100,
               "status": "passed"
             },
             "line": 17,
@@ -806,7 +806,7 @@
           },
           {
             "result": {
-              "duration": 769600,
+              "duration": 293500,
               "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat stepdefinition.LimiteConsumoStepDefinition.entregar_los_valores_registrados_en_los_monederos_para_el_abonado_en_altamira_lc(LimiteConsumoStepDefinition.java:73)\r\n\tat ✽.Then entregar los valores registrados en los monederos para el abonado en Altamira LC(LimiteConsumo.feature:18)\r\n",
               "status": "failed"
             },
@@ -828,7 +828,7 @@
         "steps": [
           {
             "result": {
-              "duration": 348000,
+              "duration": 41300,
               "status": "passed"
             },
             "line": 4,
@@ -850,7 +850,7 @@
         "steps": [
           {
             "result": {
-              "duration": 297100,
+              "duration": 69800,
               "status": "passed"
             },
             "line": 25,
@@ -881,7 +881,7 @@
           },
           {
             "result": {
-              "duration": 611226000,
+              "duration": 583148100,
               "status": "passed"
             },
             "line": 26,
@@ -893,7 +893,7 @@
           },
           {
             "result": {
-              "duration": 41700,
+              "duration": 107100,
               "status": "passed"
             },
             "line": 27,
@@ -924,7 +924,7 @@
         "steps": [
           {
             "result": {
-              "duration": 77500,
+              "duration": 109500,
               "status": "passed"
             },
             "line": 4,
@@ -946,7 +946,7 @@
         "steps": [
           {
             "result": {
-              "duration": 86000,
+              "duration": 145400,
               "status": "passed"
             },
             "line": 7,
@@ -977,7 +977,7 @@
           },
           {
             "result": {
-              "duration": 255071000,
+              "duration": 284614100,
               "status": "passed"
             },
             "line": 8,
@@ -989,7 +989,7 @@
           },
           {
             "result": {
-              "duration": 124000,
+              "duration": 115600,
               "status": "passed"
             },
             "line": 9,
@@ -1010,7 +1010,7 @@
         "steps": [
           {
             "result": {
-              "duration": 71700,
+              "duration": 68400,
               "status": "passed"
             },
             "line": 4,
@@ -1032,7 +1032,7 @@
         "steps": [
           {
             "result": {
-              "duration": 185700,
+              "duration": 164300,
               "status": "passed"
             },
             "line": 16,
@@ -1063,7 +1063,7 @@
           },
           {
             "result": {
-              "duration": 486551600,
+              "duration": 605187900,
               "status": "passed"
             },
             "line": 17,
@@ -1075,7 +1075,7 @@
           },
           {
             "result": {
-              "duration": 226400,
+              "duration": 47800,
               "status": "passed"
             },
             "line": 18,
@@ -1096,7 +1096,7 @@
         "steps": [
           {
             "result": {
-              "duration": 169800,
+              "duration": 33300,
               "status": "passed"
             },
             "line": 4,
@@ -1118,7 +1118,7 @@
         "steps": [
           {
             "result": {
-              "duration": 256400,
+              "duration": 85300,
               "status": "passed"
             },
             "line": 25,
@@ -1149,7 +1149,7 @@
           },
           {
             "result": {
-              "duration": 437301100,
+              "duration": 473602100,
               "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat stepdefinition.SaldoBonosStepDefinition.los_valores_retornados_de_altamira_son_menores_a_cero(SaldoBonosStepDefinition.java:82)\r\n\tat ✽.When los valores retornados de Altamira son menores a cero(SaldoBonos.feature:26)\r\n",
               "status": "failed"
             },
@@ -1192,7 +1192,7 @@
         "steps": [
           {
             "result": {
-              "duration": 83100,
+              "duration": 385200,
               "status": "passed"
             },
             "line": 4,
@@ -1214,7 +1214,7 @@
         "steps": [
           {
             "result": {
-              "duration": 78400,
+              "duration": 146000,
               "status": "passed"
             },
             "line": 7,
@@ -1245,7 +1245,7 @@
           },
           {
             "result": {
-              "duration": 327097800,
+              "duration": 417504200,
               "status": "passed"
             },
             "line": 8,
@@ -1257,7 +1257,7 @@
           },
           {
             "result": {
-              "duration": 48500,
+              "duration": 97400,
               "status": "passed"
             },
             "line": 9,
@@ -1278,7 +1278,7 @@
         "steps": [
           {
             "result": {
-              "duration": 28800,
+              "duration": 56100,
               "status": "passed"
             },
             "line": 4,
@@ -1300,7 +1300,7 @@
         "steps": [
           {
             "result": {
-              "duration": 72400,
+              "duration": 189100,
               "status": "passed"
             },
             "line": 16,
@@ -1331,7 +1331,7 @@
           },
           {
             "result": {
-              "duration": 402832500,
+              "duration": 510220800,
               "status": "passed"
             },
             "line": 17,
@@ -1343,7 +1343,7 @@
           },
           {
             "result": {
-              "duration": 61500,
+              "duration": 130500,
               "status": "passed"
             },
             "line": 18,
@@ -1364,7 +1364,7 @@
         "steps": [
           {
             "result": {
-              "duration": 28100,
+              "duration": 62600,
               "status": "passed"
             },
             "line": 4,
@@ -1386,7 +1386,7 @@
         "steps": [
           {
             "result": {
-              "duration": 62700,
+              "duration": 122300,
               "status": "passed"
             },
             "line": 25,
@@ -1417,7 +1417,7 @@
           },
           {
             "result": {
-              "duration": 413377000,
+              "duration": 521907100,
               "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat stepdefinition.SaldoMonederoStepDefinition.los_valores_retornados_de_altamira_son_menores_a_cero_sm(SaldoMonederoStepDefinition.java:86)\r\n\tat ✽.When los valores retornados de Altamira son menores a cero SM(SaldoMonedero.feature:26)\r\n",
               "status": "failed"
             },
@@ -1460,7 +1460,7 @@
         "steps": [
           {
             "result": {
-              "duration": 287000,
+              "duration": 338100,
               "status": "passed"
             },
             "line": 4,
@@ -1482,7 +1482,7 @@
         "steps": [
           {
             "result": {
-              "duration": 285900,
+              "duration": 522000,
               "status": "passed"
             },
             "line": 7,
@@ -1513,7 +1513,7 @@
           },
           {
             "result": {
-              "duration": 257599600,
+              "duration": 314989700,
               "status": "passed"
             },
             "line": 8,
@@ -1525,7 +1525,7 @@
           },
           {
             "result": {
-              "duration": 49700,
+              "duration": 50600,
               "status": "passed"
             },
             "line": 9,
@@ -1546,7 +1546,7 @@
         "steps": [
           {
             "result": {
-              "duration": 34000,
+              "duration": 31400,
               "status": "passed"
             },
             "line": 4,
@@ -1568,7 +1568,7 @@
         "steps": [
           {
             "result": {
-              "duration": 26700,
+              "duration": 23600,
               "status": "passed"
             },
             "line": 16,
@@ -1580,7 +1580,7 @@
           },
           {
             "result": {
-              "duration": 260960700,
+              "duration": 316954400,
               "status": "passed"
             },
             "line": 17,
@@ -1611,7 +1611,7 @@
           },
           {
             "result": {
-              "duration": 82300,
+              "duration": 134900,
               "status": "passed"
             },
             "line": 18,
